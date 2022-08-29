@@ -52,30 +52,49 @@ namespace BioMetrixCore
             string dwEnrollNumber1 = "";
             int dwVerifyMode = 0;
             int dwInOutMode = 0;
-            int dwYear = 0;
-            int dwMonth = 0;
-            int dwDay = 0;
-            int dwHour = 0;
-            int dwMinute = 0;
-            int dwSecond = 0;
+            int dwYear = 2022;
+            int dwMonth = 8;
+            int dwDay = 28;
+            int dwHour = 8;
+            int dwMinute = 1;
+            int dwSecond = 1;
             int dwWorkCode = 0;
 
             ICollection<MachineInfo> lstEnrollData = new List<MachineInfo>();
 
             objZkeeper.ReadAllGLogData(machineNumber);
+            //ReadLastestLogData([In] int dwMachineNumber, [In] int NewLog, [In] int dwYear, [In] int dwMonth, [In] int dwDay, [In] int dwHour, [In] int dwMinute, [In] int dwSecond);
+            //objZkeeper.ReadLastestLogData(machineNumber, 0, dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);            
+            int dwMachineNumber = machineNumber;
+            int dwTMachineNumber = machineNumber;
+            int dwEnrollNumber = 0;
+            int dwEMachineNumber = 1;
 
+            Program.writeToFile("GetAllGLogData# Machine Numbre  "+machineNumber.ToString());
+            //GetAllGLogData
+            
+            //bool done = objZkeeper.GetGeneralExtLogData(dwMachineNumber, ref dwTMachineNumber, ref dwEnrollNumber, ref dwEMachineNumber, ref dwVerifyMode, ref dwInOutMode, ref dwYear, ref dwMonth, ref dwDay, ref dwHour, ref dwMinute);
+
+            //Program.writeToFile("GetAllGLogData:  "+done.ToString());
+            int cnt = 0;
+            
             while (objZkeeper.SSR_GetGeneralLogData(machineNumber, out dwEnrollNumber1, out dwVerifyMode, out dwInOutMode, out dwYear, out dwMonth, out dwDay, out dwHour, out dwMinute, out dwSecond, ref dwWorkCode))
 
 
             {
+                if(cnt<2)Program.writeToFile("GetAllGLogData:  Parsing Started");
                 string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
 
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
+                if (cnt<2) Program.writeToFile("GetAllGLogData# dwEnrollNumber1 = "+dwEnrollNumber1);
+                if (cnt<2) Program.writeToFile("GetAllGLogData# Date = "+dwMonth.ToString()+" "+dwDay.ToString()+" "+dwHour.ToString()+" "+dwMinute.ToString()+" "+dwSecond.ToString());
                 objInfo.IndRegID = int.Parse(dwEnrollNumber1);
+                //objInfo.IndRegID = 123;
                 objInfo.DateTimeRecord = inputDate;
 
                 lstEnrollData.Add(objInfo);
+                if (cnt++<2) Program.writeToFile("GetAllGLogData:  Parsing Done 1");
             }
 
             return lstEnrollData;

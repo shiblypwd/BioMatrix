@@ -155,6 +155,11 @@ namespace BioMetrixCore
             return objCZKEM.ReadAllGLogData(dwMachineNumber);
         }
 
+        public bool ReadLastestLogData(int dwMachineNumber, int NewLog, int dwYear, int dwMonth, int dwDay, int dwHour, int dwMinute, int dwSecond) 
+        {
+            return objCZKEM.ReadLastestLogData(dwMachineNumber, NewLog, dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
+        }
+        
 
         public bool ReadAllTemplate(int dwMachineNumber)
         {
@@ -204,7 +209,8 @@ namespace BioMetrixCore
         }
         public bool GetAllGLogData(int dwMachineNumber, ref int dwTMachineNumber, ref int dwEnrollNumber, ref int dwEMachineNumber, ref int dwVerifyMode, ref int dwInOutMode, ref int dwYear, ref int dwMonth, ref int dwDay, ref int dwHour, ref int dwMinute)
         {
-            throw new NotImplementedException();
+            return objCZKEM.GetAllGLogData(dwMachineNumber, dwTMachineNumber, dwEnrollNumber, dwEMachineNumber, dwVerifyMode, dwInOutMode, dwYear, dwMonth, dwDay, dwHour,dwMinute);
+            //throw new NotImplementedException();
         }
 
         public bool GetAllSLogData(int dwMachineNumber, ref int dwTMachineNumber, ref int dwSEnrollNumber, ref int Params4, ref int Params1, ref int Params2, ref int dwManipulation, ref int Params3, ref int dwYear, ref int dwMonth, ref int dwDay, ref int dwHour, ref int dwMinute)
@@ -546,13 +552,15 @@ namespace BioMetrixCore
         }
 
         public bool GetGeneralExtLogData(int dwMachineNumber, ref int dwEnrollNumber, ref int dwVerifyMode, ref int dwInOutMode, ref int dwYear, ref int dwMonth, ref int dwDay, ref int dwHour, ref int dwMinute, ref int dwSecond, ref int dwWorkCode, ref int dwReserved)
-        {
-            throw new NotImplementedException();
+        {            
+            return objCZKEM.GetGeneralExtLogData(dwMachineNumber, ref dwEnrollNumber, ref dwVerifyMode, ref dwInOutMode, ref dwYear, ref dwMonth, ref dwDay, ref dwHour, ref dwMinute, ref dwSecond, ref dwWorkCode, ref dwReserved);
+            //throw new NotImplementedException();
         }
 
         public bool GetGeneralLogData(int dwMachineNumber, ref int dwTMachineNumber, ref int dwEnrollNumber, ref int dwEMachineNumber, ref int dwVerifyMode, ref int dwInOutMode, ref int dwYear, ref int dwMonth, ref int dwDay, ref int dwHour, ref int dwMinute)
         {
-            throw new NotImplementedException();
+            return objCZKEM.GetGeneralLogData(dwMachineNumber, ref dwTMachineNumber, ref dwEnrollNumber, ref dwEMachineNumber, ref dwVerifyMode, ref dwInOutMode, ref dwYear, ref dwMonth, ref dwDay, ref dwHour, ref dwMinute);
+            //throw new NotImplementedException();
         }
 
         public bool GetGeneralLogDataStr(int dwMachineNumber, ref int dwEnrollNumber, ref int dwVerifyMode, ref int dwInOutMode, ref string TimeStr)
@@ -930,10 +938,10 @@ namespace BioMetrixCore
             throw new NotImplementedException();
         }
 
-        public bool ReadLastestLogData(int dwMachineNumber, int NewLog, int dwYear, int dwMonth, int dwDay, int dwHour, int dwMinute, int dwSecond)
-        {
-            throw new NotImplementedException();
-        }
+        //public bool ReadLastestLogData(int dwMachineNumber, int NewLog, int dwYear, int dwMonth, int dwDay, int dwHour, int dwMinute, int dwSecond)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public bool ReadRTLog(int dwMachineNumber)
         {
