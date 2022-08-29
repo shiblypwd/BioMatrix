@@ -29,9 +29,15 @@ namespace BioMetrixCore
         {
             
             writeToFile("Started+++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Master());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Master());
+
+            Master master = new Master();
+            master._Connect();
+            master._getLog();
+
+            writeToFile("DONE");
         }
     }
 }

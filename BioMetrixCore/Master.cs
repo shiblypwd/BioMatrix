@@ -89,6 +89,49 @@ namespace BioMetrixCore
 
         }
 
+        public void _Connect()
+        {
+            try
+            {
+
+                if (IsDeviceConnected)
+                {
+                    IsDeviceConnected = false;
+                    return;
+                }
+
+                string ipAddress = tbxDeviceIP.Text.Trim();
+                string port = tbxPort.Text.Trim();
+                if (ipAddress == string.Empty || port == string.Empty)
+                    throw new Exception("The Device IP Address and Port is mandotory !!");
+
+                int portNumber = 4370;
+                if (!int.TryParse(port, out portNumber))
+                    throw new Exception("Not a valid port number");
+
+                bool isValidIpA = UniversalStatic.ValidateIP(ipAddress);
+                if (!isValidIpA)
+                    throw new Exception("The Device IP is invalid !!");
+
+                isValidIpA = UniversalStatic.PingTheDevice(ipAddress);
+                if (!isValidIpA)
+                    throw new Exception("The device at " + ipAddress + ":" + port + " did not respond!!");
+
+                objZkeeper = new ZkemClient(RaiseDeviceEvent);
+                IsDeviceConnected = objZkeeper.Connect_Net(ipAddress, portNumber);
+
+                if (IsDeviceConnected)
+                {
+                    string deviceInfo = manipulator.FetchDeviceInfo(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
+                    lblDeviceInfo.Text = deviceInfo;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                
+            }            
+        }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -229,6 +272,19 @@ namespace BioMetrixCore
 
         }
 
+        public  void _getLog()
+        {
+            try
+            {                
+                ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
+                
+            }
+            catch (Exception ex)
+            {
+                
+            }
+
+        }
 
         private void btnPullData_Click(object sender, EventArgs e)
         {
