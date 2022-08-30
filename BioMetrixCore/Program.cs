@@ -17,13 +17,13 @@ namespace BioMetrixCore
         private static string logPath = @"E:\Gate\log.txt";
         private static string debugPath = @"E:\Gate\debug.txt";
 
-        //public static string IP_ADDRESS = "172.16.1.72";
-        public static string IP_ADDRESS = "172.16.1.74";
+        public static string IP_ADDRESS = "172.16.1.72";
+        //public static string IP_ADDRESS = "172.16.1.74";
         public static int PORT = 4370;
         public static int DEFAULT_MACHINE_NUMBER = 1;
 
         //static TimeSpan waitingTime = new TimeSpan(0, 10, 0);
-        static TimeSpan waitingTime = new TimeSpan(0, 5, 0);
+        static TimeSpan waitingTime = new TimeSpan(0, 0, 10);
 
 
         public static void debug(string content)
@@ -84,10 +84,10 @@ namespace BioMetrixCore
                 logReadingTime = stopwatchFetch.ElapsedMilliseconds;
 
 
-                stopwatchClear.Start();
-                master._clearLog();
-                stopwatchClear.Stop();
-                logClearTime = stopwatchClear.ElapsedMilliseconds;                
+                //stopwatchClear.Start();
+                //master._clearLog();
+                //stopwatchClear.Stop();
+                //logClearTime = stopwatchClear.ElapsedMilliseconds;                
 
                 master._disconnet();
 
