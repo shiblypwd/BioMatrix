@@ -70,7 +70,7 @@ namespace BioMetrixCore
             int dwEnrollNumber = 0;
             int dwEMachineNumber = 1;
 
-            Program.writeToFile("GetAllGLogData# Machine Numbre  "+machineNumber.ToString());
+            Program.debug("GetAllGLogData# Machine Numbre  "+machineNumber.ToString());
             //GetAllGLogData
             
             //bool done = objZkeeper.GetGeneralExtLogData(dwMachineNumber, ref dwTMachineNumber, ref dwEnrollNumber, ref dwEMachineNumber, ref dwVerifyMode, ref dwInOutMode, ref dwYear, ref dwMonth, ref dwDay, ref dwHour, ref dwMinute);
@@ -78,21 +78,27 @@ namespace BioMetrixCore
             //Program.writeToFile("GetAllGLogData:  "+done.ToString());
             int cnt = 0;
             
+
+
             while (objZkeeper.SSR_GetGeneralLogData(machineNumber, out dwEnrollNumber1, out dwVerifyMode, out dwInOutMode, out dwYear, out dwMonth, out dwDay, out dwHour, out dwMinute, out dwSecond, ref dwWorkCode))
             {
+                cnt++;
                 //Program.writeToFile("GetAllGLogData:  Parsing Started");
                 string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
 
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
 
-                Program.writeToFile(dwEnrollNumber1.ToString()+", "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
+                Program.writeToFile(cnt.ToString()+", "+ dwEnrollNumber1.ToString()+", "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
                 objInfo.IndRegID = int.Parse(dwEnrollNumber1);                
                 objInfo.DateTimeRecord = inputDate;
 
                 //lstEnrollData.Add(objInfo);
                 //if (cnt++<2) Program.writeToFile("GetAllGLogData:  Parsing Done 1");
+                if (cnt %1000 == 0) Console.WriteLine(cnt);
+                
             }
+            Console.WriteLine("Entry Count: "+cnt);
 
             return lstEnrollData;
         }

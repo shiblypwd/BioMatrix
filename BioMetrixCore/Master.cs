@@ -6,6 +6,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace BioMetrixCore
 {
@@ -89,6 +90,24 @@ namespace BioMetrixCore
 
         }
 
+        public void _disconnet()
+        {
+            objZkeeper.Disconnect();
+        }
+
+        public void _ConnectOnly()
+        {
+            try
+            {                
+                objZkeeper = new ZkemClient(RaiseDeviceEvent);                
+                IsDeviceConnected = objZkeeper.Connect_Net(Program.IP_ADDRESS, Program.PORT);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         public void _Connect()
         {
             try
@@ -105,7 +124,7 @@ namespace BioMetrixCore
                 if (ipAddress == string.Empty || port == string.Empty)
                     throw new Exception("The Device IP Address and Port is mandotory !!");
 
-                int portNumber = 4370;
+                int portNumber = Program.PORT;
                 if (!int.TryParse(port, out portNumber))
                     throw new Exception("Not a valid port number");
 
@@ -120,11 +139,11 @@ namespace BioMetrixCore
                 objZkeeper = new ZkemClient(RaiseDeviceEvent);
                 IsDeviceConnected = objZkeeper.Connect_Net(ipAddress, portNumber);
 
-                if (IsDeviceConnected)
-                {
-                    string deviceInfo = manipulator.FetchDeviceInfo(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
-                    lblDeviceInfo.Text = deviceInfo;
-                }
+                //if (IsDeviceConnected)
+                //{
+                //    string deviceInfo = manipulator.FetchDeviceInfo(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
+                //    lblDeviceInfo.Text = deviceInfo;
+                //}
 
             }
             catch (Exception ex)
@@ -153,7 +172,7 @@ namespace BioMetrixCore
                 if (ipAddress == string.Empty || port == string.Empty)
                     throw new Exception("The Device IP Address and Port is mandotory !!");
 
-                int portNumber = 4370;
+                int portNumber = Program.PORT;
                 if (!int.TryParse(port, out portNumber))
                     throw new Exception("Not a valid port number");
 
@@ -270,6 +289,11 @@ namespace BioMetrixCore
                 DisplayListOutput(ex.Message);
             }
 
+        }
+
+        public void _clearLog()
+        {
+            manipulator.ClearGLog(objZkeeper, Program.DEFAULT_MACHINE_NUMBER);
         }
 
         public  void _getLog()
