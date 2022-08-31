@@ -89,8 +89,8 @@ namespace BioMetrixCore
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
 
-                Program.writeToFile(cnt.ToString()+", "+ dwEnrollNumber1.ToString()+", "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
-                objInfo.IndRegID = int.Parse(dwEnrollNumber1);                
+                //Program.writeToFile(cnt.ToString()+", "+ dwEnrollNumber1.ToString()+", "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
+                //objInfo.IndRegID = int.Parse(dwEnrollNumber1);                
                 objInfo.DateTimeRecord = inputDate;
 
                 //lstEnrollData.Add(objInfo);
