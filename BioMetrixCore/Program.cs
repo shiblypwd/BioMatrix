@@ -17,6 +17,9 @@ namespace BioMetrixCore
         /// The main entry point for the application.
         /// </summary>
         /// 
+        public static int MONTH = 9;
+        public static int DAY = 11;
+
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         private static string logPath = @"E:\Gate\log.txt";
@@ -94,8 +97,8 @@ namespace BioMetrixCore
 
             for(int i=0;i< list.Count;i++)
             {
-                if(i<10)
-                Console.WriteLine(list[i].EntryTime+"  "+list[i].Id+"\t#\t"+list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr +"\n");
+                if(i<50)
+                    Console.WriteLine(list[i].EntryTime.TimeOfDay+"  "+list[i].Id+"#\t"+list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr);
                 File.AppendAllText(@"E:\Gate\today.csv", list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr +"\n");
                 //if (i==10) break;
             }

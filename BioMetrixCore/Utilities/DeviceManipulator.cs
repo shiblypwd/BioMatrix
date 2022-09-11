@@ -88,7 +88,7 @@ namespace BioMetrixCore
                 string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
                 var inputTime = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
 
-                if (dwMonth == 9 && dwDay == 11)
+                if (dwMonth == Program.MONTH && dwDay == Program.DAY)
                 {
                     //Console.WriteLine(dwEnrollNumber1+"  "+inputDate);
                     int id = Convert.ToInt32(dwEnrollNumber1.Trim());
