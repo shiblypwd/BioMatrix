@@ -8,17 +8,20 @@ using System.Threading;
 
 namespace BioMetrixCore
 {
+    
     static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         /// 
-        private static string logPath = @"E:\Gate\log.txt";
-        private static string debugPath = @"E:\Gate\debug.txt";
+        public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        public static string IP_ADDRESS = "172.16.1.72";
-        //public static string IP_ADDRESS = "172.16.1.74";
+        private static string logPath = @"log.txt";
+        private static string debugPath = @"debug.txt";
+
+        //public static string IP_ADDRESS = "172.16.1.72";
+        public static string IP_ADDRESS = "172.16.1.74";
         public static int PORT = 4370;
         public static int DEFAULT_MACHINE_NUMBER = 1;
 
@@ -61,22 +64,23 @@ namespace BioMetrixCore
 
         static void periodicLogFetching()
         {
-            while (true) {
+            while (true) 
+            {
                 Master master = new Master();
 
-                var stopwatch = new Stopwatch();
+                var stopwatchConnection = new Stopwatch();
                 var stopwatchFetch = new Stopwatch();
                 var stopwatchClear = new Stopwatch();
                 long connectingTime = -1;
                 long logReadingTime = -1;
                 long logClearTime = -1;
 
-                stopwatch.Start();
+                stopwatchConnection.Start();
 
                 master._ConnectOnly();
 
-                stopwatch.Stop();
-                connectingTime = stopwatch.ElapsedMilliseconds;                
+                stopwatchConnection.Stop();
+                connectingTime = stopwatchConnection.ElapsedMilliseconds;                
 
                 stopwatchFetch.Start();
                 master._getLog();
@@ -91,8 +95,11 @@ namespace BioMetrixCore
 
                 master._disconnet();
 
+
                 Console.WriteLine("logReadingTime: "+logReadingTime+"\t\tconnectingTime: "+connectingTime.ToString()+ "\t\tlogClearTime: "+logClearTime.ToString());
+                break;
                 Thread.Sleep(waitingTime);
+
             }
         }
 
