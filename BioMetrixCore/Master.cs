@@ -300,8 +300,9 @@ namespace BioMetrixCore
         {
             try
             {                
-                ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
-                
+                //ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
+                ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, 1);
+
             }
             catch (Exception ex)
             {

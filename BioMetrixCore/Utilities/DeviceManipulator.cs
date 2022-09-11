@@ -2,6 +2,7 @@
 ///    Experimented By : Ozesh Thapa
 ///    Email: dablackscarlet@gmail.com
 ///
+using BioMetrixCore.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -85,17 +86,27 @@ namespace BioMetrixCore
                 cnt++;
                 //Program.writeToFile("GetAllGLogData:  Parsing Started");
                 string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
+                var inputTime = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
 
+                if (dwMonth == 9 && dwDay == 11)
+                {
+                    //Console.WriteLine(dwEnrollNumber1+"  "+inputDate);
+                    int id = Convert.ToInt32(dwEnrollNumber1.Trim());
+                    Program.userEntries.Add(new UserEntry(id, "", inputTime));
+                    Program.writeToFile(dwEnrollNumber1.ToString()+"                , "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
+                    //
+                }
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
 
-                //Program.writeToFile(cnt.ToString()+", "+ dwEnrollNumber1.ToString()+", "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
-                //objInfo.IndRegID = int.Parse(dwEnrollNumber1);                
+                objInfo.IndRegID = int.Parse(dwEnrollNumber1);
+                //File.AppendAllText(debugPath, content+"\n");
+                //Program.writeToFile("GetAllGLogData:  Parsing Done 1");
                 objInfo.DateTimeRecord = inputDate;
 
                 //lstEnrollData.Add(objInfo);
                 //if (cnt++<2) Program.writeToFile("GetAllGLogData:  Parsing Done 1");
-                if (cnt %1000 == 0) Console.WriteLine(cnt);
+                //if (cnt %1000 == 0) Console.WriteLine(cnt);
                 
             }
             Console.WriteLine("Entry Count: "+cnt);

@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using BioMetrixCore.Utilities;
+using System.Linq;
 
 namespace BioMetrixCore
 {
@@ -17,7 +19,7 @@ namespace BioMetrixCore
         /// 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        private static string logPath = @"log.txt";
+        private static string logPath = @"E:\Gate\log.txt";
         private static string debugPath = @"debug.txt";
 
         //public static string IP_ADDRESS = "172.16.1.72";
@@ -27,6 +29,11 @@ namespace BioMetrixCore
 
         //static TimeSpan waitingTime = new TimeSpan(0, 10, 0);
         static TimeSpan waitingTime = new TimeSpan(0, 0, 10);
+
+        public static Dictionary<int,string> info = new Dictionary<int,string>();  
+
+        public static List<UserEntry> userEntries = new List<UserEntry>();
+        public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
 
 
         public static void debug(string content)
@@ -53,13 +60,71 @@ namespace BioMetrixCore
 
         [STAThread]
         static void Main()
-        {            
-            writeToFile("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+        {                        
+            string[] lines = System.IO.File.ReadAllLines(@"E:\Gate\usr.csv");
+            for(int i=0;i<lines.Length;i++)
+            {
+                string line = lines[i]; 
+                //Console.WriteLine(line);    
+
+                int ind = line.IndexOf(',');
+                int id = Convert.ToInt32(line.Substring(0, ind));
+                //Console.Write(id+" ");  
+                info[id] = line;
+            }
+            getTodayInData();
+
+            HashSet<int> st = new HashSet<int>();
+
+            foreach(UserEntry entry in userEntries)
+            {
+                if (st.Contains(entry.Id)) continue;
+                st.Add(entry.Id);
+
+                
+                if(info.ContainsKey(entry.Id))
+                {
+                    entry.DataStr = info[entry.Id];
+                }
+
+                uniqueEntrys.Add(entry);
+            }
+
+            var list = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
+
+            for(int i=0;i< list.Count;i++)
+            {
+                if(i<10)
+                Console.WriteLine(list[i].EntryTime+"  "+list[i].Id+"\t#\t"+list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr +"\n");
+                File.AppendAllText(@"E:\Gate\today.csv", list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr +"\n");
+                //if (i==10) break;
+            }
+
             //runUI();
             //runCode();
-            periodicLogFetching();
+            //periodicLogFetching();
             //periodicLogFetchingOneConnection();
+
         }
+
+        static void getTodayInData()
+        {
+             
+            Master master = new Master();
+            master._ConnectOnly();
+            master._getLog();
+            master._disconnet();
+
+            Console.WriteLine(userEntries.Count);
+            IP_ADDRESS = "172.16.1.73";
+
+            Master master73 = new Master();
+            master73._ConnectOnly();
+            master73._getLog();
+            master73._disconnet();
+            Console.WriteLine(userEntries.Count);
+        }
+
 
 
         static void periodicLogFetching()
