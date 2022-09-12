@@ -18,11 +18,15 @@ namespace BioMetrixCore
         /// </summary>
         /// 
         public static int MONTH = 9;
-        public static int DAY = 11;
+        public static int DAY = 12;
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
+        public static string USER_INFO_CSV_FILE_PATH = @"E:\Gate\usr.csv";
+        public static string TODAY_OUTPUT_PATH = @"E:\Gate\today.csv";
+
         private static string logPath = @"E:\Gate\log.txt";
+
         private static string debugPath = @"debug.txt";
 
         //public static string IP_ADDRESS = "172.16.1.72";
@@ -64,7 +68,7 @@ namespace BioMetrixCore
         [STAThread]
         static void Main()
         {                        
-            string[] lines = System.IO.File.ReadAllLines(@"E:\Gate\usr.csv");
+            string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
             for(int i=0;i<lines.Length;i++)
             {
                 string line = lines[i]; 
@@ -79,11 +83,12 @@ namespace BioMetrixCore
 
             HashSet<int> st = new HashSet<int>();
 
+
+            //First Entry of Everyone
             foreach(UserEntry entry in userEntries)
             {
-                if (st.Contains(entry.Id)) continue;
+                if (st.Contains(entry.Id)) continue;    //Skip if not the first entry of persion @entry
                 st.Add(entry.Id);
-
                 
                 if(info.ContainsKey(entry.Id))
                 {
@@ -99,7 +104,8 @@ namespace BioMetrixCore
             {
                 if(i<50)
                     Console.WriteLine(list[i].EntryTime.TimeOfDay+"  "+list[i].Id+"#\t"+list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr);
-                File.AppendAllText(@"E:\Gate\today.csv", list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr +"\n");
+                
+                File.AppendAllText(TODAY_OUTPUT_PATH, list[i].EntryTime.TimeOfDay.ToString()+","+list[i].DataStr +"\n");
                 //if (i==10) break;
             }
 
@@ -155,11 +161,7 @@ namespace BioMetrixCore
                 stopwatchFetch.Stop();
                 logReadingTime = stopwatchFetch.ElapsedMilliseconds;
 
-
-                //stopwatchClear.Start();
-                //master._clearLog();
-                //stopwatchClear.Stop();
-                //logClearTime = stopwatchClear.ElapsedMilliseconds;                
+                
 
                 master._disconnet();
 
@@ -189,8 +191,7 @@ namespace BioMetrixCore
 
             stopwatch.Start();
 
-            master._getLog();
-            //master._clearLog();
+            master._getLog();            
 
             stopwatch.Stop();
             logReadingTime = stopwatch.ElapsedMilliseconds;
@@ -220,8 +221,7 @@ namespace BioMetrixCore
             {                
                 stopwatch.Start();
 
-                master._getLog();
-                //master._clearLog();
+                master._getLog();                
 
                 stopwatch.Stop();
                 logReadingTime = stopwatch.ElapsedMilliseconds;
