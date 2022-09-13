@@ -19,12 +19,12 @@ namespace BioMetrixCore
         /// </summary>
         /// 
         public static int MONTH = 9;
-        public static int DAY = 12;
+        public static int DAY = 13;
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        public static string USER_INFO_CSV_FILE_PATH = @"F:\Bio-matrix-practice\user.csv";
-        public static string TODAY_OUTPUT_PATH = @"F:\Bio-matrix-practice\prac-today.csv";
+        public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
+        public static string TODAY_OUTPUT_PATH = @"F:\today_13_9_22.csv";
 
         private static string logPath = @"log.txt";
 
@@ -104,21 +104,19 @@ namespace BioMetrixCore
                 uniqueEntrys.Add(entry);
             }
 
-            var list = uniqueEntrys.OrderBy(x => x.Id).ToList();
+            var list = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
 
             for (int i = 0; i < list.Count; i++)
             {
-                DateTime t1 = DateTime.Parse("2022/09/12 11:00:00");
+                //DateTime t1 = DateTime.Parse("2022/09/12 11:00:00");
 
 
-                if (i < 50)
-                    Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
-                
-                if(list[i].EntryTime.TimeOfDay > t1.TimeOfDay){
+                //if (i < 50)
+                    //Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
 
-                    File.AppendAllText(TODAY_OUTPUT_PATH, list[i].Id.ToString() + "," + list[i].DataStr + "," + list[i].EntryTime.TimeOfDay + "\n");
+                //if(list[i].EntryTime.TimeOfDay > t1.TimeOfDay){}
+                File.AppendAllText(TODAY_OUTPUT_PATH, list[i].EntryTime.TimeOfDay + "," + list[i].DataStr + ","+ "\n");
 
-                }
                 //if (i==10) break;
             }
 
