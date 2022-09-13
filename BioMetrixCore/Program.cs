@@ -8,6 +8,7 @@ using System.Threading;
 using BioMetrixCore.Utilities;
 using System.Linq;
 using System.Text.RegularExpressions;
+using RestSharp;
 
 namespace BioMetrixCore
 {
@@ -19,7 +20,7 @@ namespace BioMetrixCore
         /// </summary>
         /// 
         public static int MONTH = 9;
-        public static int DAY = 12;
+        public static int DAY = 13;
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
@@ -108,7 +109,7 @@ namespace BioMetrixCore
 
             for (int i = 0; i < list.Count; i++)
             {
-                DateTime t1 = DateTime.Parse("2022/09/12 11:00:00");
+                DateTime t1 = DateTime.Parse("2022/09/12 09:00:00");
 
 
                 if (i < 50)
@@ -121,6 +122,17 @@ namespace BioMetrixCore
                 }
                 //if (i==10) break;
             }
+
+            string url = "https://docs.google.com/spreadsheets/d/1LDuaD8yUPbVvUDOp-Vp5cimSdtIvYB72NGTovxcL1Hs/edit#gid=1571529346";
+
+            var client = new RestClient(url);
+
+            var request = new RestRequest();
+
+            var response = client.Get(request);
+
+            Console.WriteLine(response.Content.ToString());
+            Console.Read();
 
             //runUI();
             //runCode();

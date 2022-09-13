@@ -50,3 +50,30 @@ F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.cspr
 F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.CoreCompileInputs.cache
 F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.exe
 F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.pdb
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Newtonsoft.Json.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.Serializers.Newtonsoft.Json.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.Serializers.NewtonsoftJson.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Buffers.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Memory.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Numerics.Vectors.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Text.Encodings.Web.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Text.Json.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.ValueTuple.dll
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Newtonsoft.Json.pdb
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Newtonsoft.Json.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.Serializers.NewtonsoftJson.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Buffers.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Memory.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Numerics.Vectors.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Text.Encodings.Web.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Text.Json.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.ValueTuple.xml
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.CopyComplete
