@@ -64,7 +64,6 @@ F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Text.Json.dll
 F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.Threading.Tasks.Extensions.dll
 F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\System.ValueTuple.dll
 F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Newtonsoft.Json.pdb
 F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Newtonsoft.Json.xml
 F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.xml
 F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\RestSharp.Serializers.NewtonsoftJson.xml

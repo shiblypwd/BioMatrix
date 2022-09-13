@@ -124,13 +124,13 @@ namespace BioMetrixCore
 
             for (int i = 0; i < list.Count; i++)
             {
-                DateTime t1 = DateTime.Parse("2022/09/13 08:10:00");
+                DateTime t1 = DateTime.Parse("2022/09/13 07:00:00");
 
 
                 //if (i < 10)
                     //Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
 
-                if (list[i].EntryTime.TimeOfDay < t1.TimeOfDay)
+                if (list[i].EntryTime.TimeOfDay > t1.TimeOfDay)
                 {
                     Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
                     File.AppendAllText(TODAY_OUTPUT_PATH, list[i].Id.ToString() + "," + list[i].DataStr + "," + list[i].EntryTime.TimeOfDay + "\n");
