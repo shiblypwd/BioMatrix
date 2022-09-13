@@ -9,6 +9,7 @@ using BioMetrixCore.Utilities;
 using System.Linq;
 using System.Text.RegularExpressions;
 using RestSharp;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BioMetrixCore
 {
@@ -19,8 +20,10 @@ namespace BioMetrixCore
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static int MONTH = 9;
-        public static int DAY = 13;
+        public static int MONTH;
+        public static int DAY;
+
+
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
@@ -70,6 +73,18 @@ namespace BioMetrixCore
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("Enter Month: ");
+             MONTH = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Enter Day: ");
+             DAY = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\n\n");
+
+
+
+
             int id = 0;
             string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
             for (int i = 0; i < lines.Length; i++)
@@ -109,14 +124,15 @@ namespace BioMetrixCore
 
             for (int i = 0; i < list.Count; i++)
             {
-                DateTime t1 = DateTime.Parse("2022/09/12 09:00:00");
+                DateTime t1 = DateTime.Parse("2022/09/13 08:10:00");
 
 
-                if (i < 50)
+                //if (i < 10)
+                    //Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
+
+                if (list[i].EntryTime.TimeOfDay < t1.TimeOfDay)
+                {
                     Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
-                
-                if(list[i].EntryTime.TimeOfDay > t1.TimeOfDay){
-
                     File.AppendAllText(TODAY_OUTPUT_PATH, list[i].Id.ToString() + "," + list[i].DataStr + "," + list[i].EntryTime.TimeOfDay + "\n");
 
                 }
