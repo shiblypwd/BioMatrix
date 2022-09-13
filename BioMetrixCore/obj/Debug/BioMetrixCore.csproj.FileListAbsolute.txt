@@ -36,3 +36,17 @@ F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.GenerateRes
 F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.CoreCompileInputs.cache
 F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.exe
 F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.pdb
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\bin\Debug\BioMetrixCore.exe.config
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\bin\Debug\BioMetrixCore.exe
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\bin\Debug\BioMetrixCore.pdb
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.AssemblyReference.cache
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.SuggestedBindingRedirects.cache
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\Interop.zkemkeeper.dll
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.ResolveComReference.cache
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.DataEmpty.resources
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.Master.resources
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.Properties.Resources.resources
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.GenerateResource.cache
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.CoreCompileInputs.cache
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.exe
+F:\Bio-matrix-practice\BioMatrix-prac\BioMetrixCore\obj\Debug\BioMetrixCore.pdb

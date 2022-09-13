@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Threading;
 using BioMetrixCore.Utilities;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace BioMetrixCore
 {
@@ -22,8 +23,8 @@ namespace BioMetrixCore
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
-        public static string TODAY_OUTPUT_PATH = @"F:\today.csv";
+        public static string USER_INFO_CSV_FILE_PATH = @"F:\Bio-matrix-practice\user.csv";
+        public static string TODAY_OUTPUT_PATH = @"F:\Bio-matrix-practice\prac-today.csv";
 
         private static string logPath = @"log.txt";
 
@@ -103,17 +104,23 @@ namespace BioMetrixCore
                 uniqueEntrys.Add(entry);
             }
 
-            var list = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
+            var list = uniqueEntrys.OrderBy(x => x.Id).ToList();
 
             for (int i = 0; i < list.Count; i++)
             {
+                DateTime t1 = DateTime.Parse("2022/09/12 11:00:00");
+
+
                 if (i < 50)
                     Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
+                
+                if(list[i].EntryTime.TimeOfDay > t1.TimeOfDay){
 
-                File.AppendAllText(TODAY_OUTPUT_PATH, list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr + "\n");
+                    File.AppendAllText(TODAY_OUTPUT_PATH, list[i].Id.ToString() + "," + list[i].DataStr + "," + list[i].EntryTime.TimeOfDay + "\n");
+
+                }
                 //if (i==10) break;
             }
-            //Console.WriteLine("Done!!!!!");
 
             //runUI();
             //runCode();
