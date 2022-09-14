@@ -18,13 +18,15 @@ namespace BioMetrixCore
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static int MONTH = 9;
-        public static int DAY = 14;
+        public static int MONTH;
+        public static int DAY;
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
-        public static string TODAY_OUTPUT_PATH = @"F:\today_14_9_22.csv";
+        public static string TODAY_OUTPUT_PATH_ID = @"F:\9_14_22.csv";
+        public static string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\9_14_22-timeWise.csv";
+
 
         private static string logPath = @"log.txt";
 
@@ -69,6 +71,15 @@ namespace BioMetrixCore
         [STAThread]
         static void Main()
         {
+
+            Console.WriteLine("Enter Month: ");
+            MONTH = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Day: ");
+            DAY = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\n\n");
+
             int id = 0;
             string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
             for (int i = 0; i < lines.Length; i++)
@@ -104,20 +115,24 @@ namespace BioMetrixCore
                 uniqueEntrys.Add(entry);
             }
 
-            var list = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
+            var listTime = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
+            var listID = uniqueEntrys.OrderBy(x => x.Id).ToList();
 
-            for (int i = 0; i < list.Count; i++)
+
+            for (int i = 0; i < listTime.Count; i++)
             {
                 //DateTime t1 = DateTime.Parse("2022/09/12 11:00:00");
 
 
                 //if (i < 50)
-                    //Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
+                //    Console.WriteLine(listID[i].EntryTime.TimeOfDay + "  " + listID[i].Id + "#\t" + listID[i].EntryTime.TimeOfDay.ToString() + "," + listID[i].DataStr);
 
-                //if(list[i].EntryTime.TimeOfDay > t1.TimeOfDay){}
-                File.AppendAllText(TODAY_OUTPUT_PATH, list[i].EntryTime.TimeOfDay + "," + list[i].DataStr + ","+ "\n");
+                //if(listID[i].EntryTime.TimeOfDay > t1.TimeOfDay){}
+                File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + ","+ "\n");
+                File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay +"\n");
 
-                //if (i==10) break;
+
+                //if (i==10) break; 
             }
 
             //runUI();
