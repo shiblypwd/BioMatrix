@@ -22,6 +22,7 @@ namespace BioMetrixCore
         /// 
         public static int MONTH;
         public static int DAY;
+        public static string HOUR;
 
 
 
@@ -74,16 +75,15 @@ namespace BioMetrixCore
         static void Main()
         {
             Console.WriteLine("Enter Month: ");
-             MONTH = Convert.ToInt32(Console.ReadLine());
-
+            MONTH = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter Day: ");
-             DAY = Convert.ToInt32(Console.ReadLine());
+            DAY = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Hour: ");
+            HOUR = Console.ReadLine();
 
             Console.WriteLine("\n\n");
-
-
-
 
             int id = 0;
             string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
@@ -120,20 +120,21 @@ namespace BioMetrixCore
                 uniqueEntrys.Add(entry);
             }
 
-            var list = uniqueEntrys.OrderBy(x => x.Id).ToList();
+            var list = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
 
             for (int i = 0; i < list.Count; i++)
             {
-                DateTime t1 = DateTime.Parse("2022/09/13 07:00:00");
+                DateTime t1 = DateTime.Parse(HOUR +":00:00");
 
 
                 //if (i < 10)
                     //Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
 
-                if (list[i].EntryTime.TimeOfDay > t1.TimeOfDay)
+                if (list[i].EntryTime.TimeOfDay < t1.TimeOfDay)
                 {
                     Console.WriteLine(list[i].EntryTime.TimeOfDay + "  " + list[i].Id + "#\t" + list[i].EntryTime.TimeOfDay.ToString() + "," + list[i].DataStr);
-                    File.AppendAllText(TODAY_OUTPUT_PATH, list[i].Id.ToString() + "," + list[i].DataStr + "," + list[i].EntryTime.TimeOfDay + "\n");
+                    
+                    File.AppendAllText(TODAY_OUTPUT_PATH, +list[i].EntryTime.TimeOfDay + "," + list[i].DataStr + "," + "\n");
 
                 }
                 //if (i==10) break;
