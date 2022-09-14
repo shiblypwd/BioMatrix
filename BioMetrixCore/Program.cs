@@ -19,12 +19,12 @@ namespace BioMetrixCore
         /// </summary>
         /// 
         public static int MONTH = 9;
-        public static int DAY = 13;
+        public static int DAY = 14;
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
-        public static string TODAY_OUTPUT_PATH = @"F:\today_13_9_22.csv";
+        public static string TODAY_OUTPUT_PATH = @"F:\today_14_9_22.csv";
 
         private static string logPath = @"log.txt";
 
