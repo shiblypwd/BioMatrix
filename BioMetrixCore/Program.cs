@@ -20,12 +20,12 @@ namespace BioMetrixCore
         /// 
         public static int MONTH;
         public static int DAY;
+        
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
-        public static string TODAY_OUTPUT_PATH_ID = @"F:\9_14_22.csv";
-        public static string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\9_14_22-timeWise.csv";
+
 
 
         private static string logPath = @"log.txt";
@@ -44,6 +44,11 @@ namespace BioMetrixCore
 
         public static List<UserEntry> userEntries = new List<UserEntry>();
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
+        public static List<int> listPresentIdInt = new List<int>();
+        public static List<int> listFullId = new List<int>();
+        public static List<int> absentList = new List<int>();
+
+
 
 
         public static void debug(string content)
@@ -80,6 +85,10 @@ namespace BioMetrixCore
 
             Console.WriteLine("\n\n");
 
+            string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
+            string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
+            string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
+
             int id = 0;
             string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
             for (int i = 0; i < lines.Length; i++)
@@ -93,7 +102,8 @@ namespace BioMetrixCore
                 {
                     id = Convert.ToInt32(line.Substring(0, ind));
                 }
-                //Console.Write(id+" ");  
+                //Console.Write(id+" ");
+                listFullId.Add(id);
                 info[id] = line;
             }
             getTodayInData();
@@ -104,7 +114,7 @@ namespace BioMetrixCore
             //First Entry of Everyone
             foreach (UserEntry entry in userEntries)
             {
-                if (st.Contains(entry.Id)) continue;    //Skip if not the first entry of persion @entry
+                if (st.Contains(entry.Id)) continue;    //Skip if not the first entry of person @entry
                 st.Add(entry.Id);
 
                 if (info.ContainsKey(entry.Id))
@@ -114,10 +124,13 @@ namespace BioMetrixCore
 
                 uniqueEntrys.Add(entry);
             }
+            
 
-            var listTime = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
+            var listTime = uniqueEntrys.OrderBy(x => x.EntryTime).ToList(); 
+
             var listID = uniqueEntrys.OrderBy(x => x.Id).ToList();
 
+           
 
             for (int i = 0; i < listTime.Count; i++)
             {
@@ -128,12 +141,24 @@ namespace BioMetrixCore
                 //    Console.WriteLine(listID[i].EntryTime.TimeOfDay + "  " + listID[i].Id + "#\t" + listID[i].EntryTime.TimeOfDay.ToString() + "," + listID[i].DataStr);
 
                 //if(listID[i].EntryTime.TimeOfDay > t1.TimeOfDay){}
+
+                listPresentIdInt.Add(Convert.ToInt32(listID[i].Id));
                 File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + ","+ "\n");
                 File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay +"\n");
 
 
                 //if (i==10) break; 
             }
+            foreach (int i in listFullId)
+            {
+                if (!listPresentIdInt.Contains(i))
+                {
+                    File.AppendAllText(TODAY_OUTPUT_ABSENT_PATH_ID, i + "\n");
+
+                }
+            }
+
+
 
             //runUI();
             //runCode();
