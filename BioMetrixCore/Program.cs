@@ -23,6 +23,7 @@ namespace BioMetrixCore
         public static int MONTH;
         public static int DAY;
         public static string HOUR;
+        public static string MINUTE;
 
 
 
@@ -83,6 +84,9 @@ namespace BioMetrixCore
             Console.WriteLine("Enter Hour: ");
             HOUR = Console.ReadLine();
 
+            Console.WriteLine("Enter Minute: ");
+            MINUTE = Console.ReadLine();
+
             Console.WriteLine("\n\n");
 
             int id = 0;
@@ -124,7 +128,7 @@ namespace BioMetrixCore
 
             for (int i = 0; i < list.Count; i++)
             {
-                DateTime t1 = DateTime.Parse(HOUR +":00:00");
+                DateTime t1 = DateTime.Parse(HOUR +":"+ MINUTE +":00");
 
 
                 //if (i < 10)
