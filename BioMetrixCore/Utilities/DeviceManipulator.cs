@@ -76,7 +76,10 @@ namespace BioMetrixCore
                 string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
                 var inputTime = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
 
-                if (dwMonth == Program.MONTH && dwDay == Program.DAY)
+                int hash = dwHour * 60 + dwMinute;
+                int endTimeHash = Program.HOUR * 60 + Program.MINUTE;
+
+                if (dwMonth == Program.MONTH && dwDay == Program.DAY && hash<=endTimeHash)
                 {
 
                     int id = Convert.ToInt32(dwEnrollNumber1.Trim());
