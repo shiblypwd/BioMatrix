@@ -19,7 +19,7 @@ namespace BioMetrixCore
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         //public static string DEFAULT_PATH = @"";
-        public static string DEFAULT_PATH = @"E:\PWD\BioMatrix\";
+        public static string DEFAULT_PATH = @"E:\PWD\";
         public static string USER_INFO_CSV_FILE_PATH = DEFAULT_PATH + "usr.csv";
         public static string NOTIFICATION_FLAG_FILE_PATH = DEFAULT_PATH + "NotificationFlagFile.txt";
 
@@ -43,9 +43,19 @@ namespace BioMetrixCore
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
-
+        Dictionary<int, string> smsDestination = new Dictionary<int, string>();
         public LocalSMS()
         {
+            smsDestination.Add(1, "01710289237");
+            smsDestination.Add(9, "01710289237");
+
+
+
+            smsDestination.Add(15, "01710289237");
+            smsDestination.Add(16, "01710289237");
+            smsDestination.Add(17, "01710289237");
+            smsDestination.Add(18, "01710289237");
+            smsDestination.Add(19, "01710289237");
         }
 
         public void processLocalSMS()
@@ -53,7 +63,11 @@ namespace BioMetrixCore
             HashSet<int> isNotficationSent = new HashSet<int>();
 
             DateTime time = DateTime.Now;
-            
+
+            Console.WriteLine(time.TimeOfDay.Hours);
+            Console.WriteLine(time.TimeOfDay.Minutes);
+            Console.WriteLine(time.TimeOfDay.Seconds);
+
             //Console.WriteLine(time);
             //Console.WriteLine(time.DayOfWeek);
 
@@ -85,11 +99,13 @@ namespace BioMetrixCore
                     if (usrInfoMap.ContainsKey(entry.Id))
                     {
                         info = usrInfoMap[entry.Id];
+                        info.EntryTime = entry.EntryTime;
                         sendNotificationBySmS(info);
                         writeNotificationSentFile(info, entry.EntryTime);
                         uniqueEntrys.Add(entry);
                     }
                 }
+                Console.WriteLine("Process Waiting Interval....");
                 Thread.Sleep(waitingTime);
             }
             
@@ -144,7 +160,23 @@ namespace BioMetrixCore
 
         void sendNotificationBySmS(UserEntry info)
         {
-            Console.WriteLine("Notification Sent to {0}", info.Id);
+            if (smsDestination.ContainsKey(info.Id))
+            {
+                string monileNumberStr = smsDestination[info.Id];
+                string timeStr = info.EntryTime.TimeOfDay.Hours.ToString() + ":"
+                    + info.EntryTime.TimeOfDay.Minutes.ToString() + ":"
+                    + info.EntryTime.TimeOfDay.Seconds.ToString();
+
+                string messageBody = "Purta Bhavan Entrance Notification.\n"
+                                    + "Employee ID: " + info.Id + ",\n"
+                                    + "Employee Name: "+info.Name+" (" + info.Designation
+                                    + ").\nEntry Time: "+ timeStr;
+
+                Console.WriteLine("["+messageBody+"]");
+                //Send SMS;
+            }
+
+            Console.WriteLine("Notification Sent to {0}", info.Id);            
             Thread.Sleep(waitingTimeAfterEachSMS);
         }
 
@@ -248,7 +280,7 @@ namespace BioMetrixCore
             Random rnd = new Random();
             for (int i = 0; i < 5; i++)
             {
-                int id = rnd.Next(15, 40);
+                int id = rnd.Next(15, 25);
                 DateTime time = DateTime.Now;
                 Console.WriteLine(time + "   => "+ id);
                 list.Add(new UserEntry(id, usrInfoMap[id].Name, usrInfoMap[id].Designation, time));
