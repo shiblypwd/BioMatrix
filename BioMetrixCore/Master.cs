@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Diagnostics;
+using BioMetrixCore.Utilities;
 
 namespace BioMetrixCore
 {
@@ -296,19 +297,20 @@ namespace BioMetrixCore
             manipulator.ClearGLog(objZkeeper, Program.DEFAULT_MACHINE_NUMBER);
         }
 
-        public  void _getLog()
+        public List<UserEntry> _getLog()
         {
+            List<UserEntry> list = new List<UserEntry>();
             try
-            {                
+            {
                 //ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
-                ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, 1);
+                list = manipulator._GetLogData(objZkeeper, 1);
 
             }
             catch (Exception ex)
             {
                 
             }
-
+            return list;
         }
 
         private void btnPullData_Click(object sender, EventArgs e)

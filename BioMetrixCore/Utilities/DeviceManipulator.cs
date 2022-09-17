@@ -5,6 +5,7 @@
 using BioMetrixCore.Utilities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace BioMetrixCore
@@ -75,13 +76,18 @@ namespace BioMetrixCore
                 string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
                 var inputTime = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
 
-                if (dwMonth == Program.MONTH && dwDay == Program.DAY)
+                int hash = dwHour * 60 + dwMinute;
+                int endTimeHash = Program.HOUR * 60 + Program.MINUTE;
+
+                if (dwMonth == Program.MONTH && dwDay == Program.DAY && hash<=endTimeHash)
                 {
 
                     int id = Convert.ToInt32(dwEnrollNumber1.Trim());
-                    Program.userEntries.Add(new UserEntry(id, "", inputTime));
-                    Program.writeToFile(dwEnrollNumber1.ToString()+"                , "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
-                    //
+                    //Program.userEntries.Add(new UserEntry(id, "", inputTime));
+                    //Program.writeToFile(dwEnrollNumber1.ToString()+"                , "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
+                   // File.AppendAllText(@"F:\usr.csv", id.ToString()+"\n");
+                    File.AppendAllText(@"E:\PWD\BioMatrix\usr.csv", id.ToString() + "\n");
+
                 }
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
@@ -93,6 +99,59 @@ namespace BioMetrixCore
             }
 
             return lstEnrollData;
+        }
+
+        public List<UserEntry> _GetLogData(ZkemClient objZkeeper, int machineNumber)
+        {
+            List<UserEntry> list = new List<UserEntry>();
+            string dwEnrollNumber1 = "";
+            int dwVerifyMode = 0;
+            int dwInOutMode = 0;
+            int dwYear = 2022;
+            int dwMonth = 8;
+            int dwDay = 28;
+            int dwHour = 8;
+            int dwMinute = 1;
+            int dwSecond = 1;
+            int dwWorkCode = 0;
+
+            ICollection<MachineInfo> lstEnrollData = new List<MachineInfo>();
+
+            objZkeeper.ReadAllGLogData(machineNumber);
+            int dwMachineNumber = machineNumber;
+            int dwTMachineNumber = machineNumber;
+
+            Program.debug("GetAllGLogData# Machine Numbre  " + machineNumber.ToString());
+
+            while (objZkeeper.SSR_GetGeneralLogData(machineNumber, out dwEnrollNumber1, out dwVerifyMode, out dwInOutMode, out dwYear, out dwMonth, out dwDay, out dwHour, out dwMinute, out dwSecond, ref dwWorkCode))
+            {
+
+                string inputDate = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond).ToString();
+                var inputTime = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
+
+                int hash = dwHour * 60 + dwMinute;
+                int endTimeHash = Program.HOUR * 60 + Program.MINUTE;
+
+                int id = Convert.ToInt32(dwEnrollNumber1.Trim());
+                list.Add(new UserEntry(id, "", inputTime));
+
+
+                //Program.userEntries.Add(new UserEntry(id, "", inputTime));
+                //Program.writeToFile(dwEnrollNumber1.ToString() + "                , " + dwHour.ToString() + ":" + dwMinute.ToString() + ":" + dwSecond.ToString() + ", " + dwDay.ToString() + "/" + dwMonth.ToString() + "/" + dwYear.ToString());
+                // File.AppendAllText(@"F:\usr.csv", id.ToString()+"\n");
+                //File.AppendAllText(@"E:\PWD\BioMatrix\usr.csv", id.ToString() + "\n");
+
+                
+                MachineInfo objInfo = new MachineInfo();
+                objInfo.MachineNumber = machineNumber;
+
+                objInfo.IndRegID = int.Parse(dwEnrollNumber1);
+
+                objInfo.DateTimeRecord = inputDate;
+
+            }
+
+            return list;
         }
 
         public ICollection<UserIDInfo> GetAllUserID(ZkemClient objZkeeper, int machineNumber)

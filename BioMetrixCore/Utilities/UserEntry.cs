@@ -9,7 +9,8 @@ namespace BioMetrixCore.Utilities
     public class UserEntry
     {
         public int Id { get; set; }
-        //public string Name { get; set; }
+        public string Name { get; set; }
+        public string Designation { get; set; } 
         public string DataStr { get; set; } 
         public DateTime EntryTime { get; set; }
 
@@ -18,6 +19,27 @@ namespace BioMetrixCore.Utilities
             Id=id;
             DataStr=dataStr;
             EntryTime=entryTime;
+        }
+
+        public UserEntry(int id, string name, string designation, string dataStr, DateTime entryTime)
+        {
+            Id = id;
+            Name = name;
+            this.Designation = designation;
+            DataStr = dataStr;
+            EntryTime = entryTime;
+        }
+
+        public UserEntry(int id, string name, string designation)
+        {
+            Id = id;
+            Name = name;
+            this.Designation = designation;
+        }
+
+        public UserEntry(int id, string name, string designation, DateTime entryTime) : this(id, name, designation)
+        {
+            EntryTime = entryTime;
         }
     }
 }
