@@ -36,5 +36,10 @@ namespace BioMetrixCore.Utilities
             Name = name;
             this.Designation = designation;
         }
+
+        public UserEntry(int id, string name, string designation, DateTime entryTime) : this(id, name, designation)
+        {
+            EntryTime = entryTime;
+        }
     }
 }

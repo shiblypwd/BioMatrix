@@ -53,7 +53,7 @@ namespace BioMetrixCore
             Dictionary<int, UserEntry> usrInfoMap = loadUserInfoFromFile();
 
             //List<UserEntry> userEntries = getAllInDataFromAllMachines();
-            List<UserEntry> userEntries = getTodayInDataDummy();
+            List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
 
             List<UserEntry> notificationSentList = getNotificationSentList();
 
@@ -76,7 +76,7 @@ namespace BioMetrixCore
                 {
                     info = usrInfoMap[entry.Id];
                     sendNotificationBySmS(info);
-                    writeNotificationSentFile(info);
+                    writeNotificationSentFile(info, entry.EntryTime);
                     uniqueEntrys.Add(entry);
                 }                                               
             }
@@ -110,23 +110,23 @@ namespace BioMetrixCore
             return entryList;
         }
 
-        void writeNotificationSentFile(UserEntry info)
+        void writeNotificationSentFile(UserEntry info, DateTime time)
         {
             string content = "";
             
             content = info.Id.ToString();
-            content += "\t$"+info.EntryTime.Day.ToString();
-            content += "$" + info.EntryTime.Month.ToString();
-            content += "$" + info.EntryTime.Year.ToString();
-            content += "\t$" + info.EntryTime.Hour.ToString();
-            content += "$" + info.EntryTime.Minute.ToString();
-            content += "$" + info.EntryTime.Second.ToString();
+            content += "\t$"+ time.Day.ToString();
+            content += "$" + time.Month.ToString();
+            content += "$" + time.Year.ToString();
+            content += "\t$" + time.Hour.ToString();
+            content += "$" + time.Minute.ToString();
+            content += "$" + time.Second.ToString();
             content += "\t$" + info.Name;
             content += "\t$" + info.Designation;
             
             Console.WriteLine(content);
 
-            //File.AppendAllText(NOTIFICATION_FLAG_FILE_PATH, content + "\n");
+            File.AppendAllText(NOTIFICATION_FLAG_FILE_PATH, content + "\n");
         }
 
         void sendNotificationBySmS(UserEntry info)
@@ -215,8 +215,9 @@ namespace BioMetrixCore
 
                     string name = tokens[7];
                     string designation = tokens[8];
+                    DateTime time = new DateTime();
 
-                    list.Add(new UserEntry(id, name, designation, "", new DateTime(year, month, dayOfTheWeek, day, hour, minute, second)));
+                    list.Add(new UserEntry(id, name, designation, "", new DateTime(year, month, day, hour, minute, second, 0)));
                 }
             }
             catch (IOException e)
@@ -227,19 +228,27 @@ namespace BioMetrixCore
             return list;
         }
         
-        List<UserEntry> getTodayInDataDummy()
+        List<UserEntry> getTodayInDataDummy(Dictionary<int, UserEntry> usrInfoMap)
         {
             List<UserEntry> list = new List<UserEntry>();
-            list.Add(new UserEntry(504, "A S M Musa", "7:50:04"));
-            list.Add(new UserEntry(505, "A S M kusa", "8:50:04"));
-            list.Add(new UserEntry(506, "A S M Tusa", "8:52:04"));
-            list.Add(new UserEntry(507, "A S M Nusa", "8:50:04"));
-            list.Add(new UserEntry(508, "A S M Husa", "7:59:04"));
-            list.Add(new UserEntry(604, "A S M Lusa", "8:59:04"));
-            list.Add(new UserEntry(704, "A S M Busa", "7:58:04"));
-            list.Add(new UserEntry(304, "A S M Vusa", "8:57:04"));
-            list.Add(new UserEntry(204, "A S M Cusa", "8:30:04"));
-            list.Add(new UserEntry(104, "A S M Zusa", "8:55:04"));
+            Random rnd = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int id = rnd.Next(15, 40);
+                DateTime time = DateTime.Now;
+                Console.WriteLine(time + "   => "+ id);
+                list.Add(new UserEntry(id, usrInfoMap[id].Name, usrInfoMap[id].Designation, time));
+            }
+            //list.Add(new UserEntry(504, "A S M Musa", "7:50:04"));
+            //list.Add(new UserEntry(505, "A S M kusa", "8:50:04"));
+            //list.Add(new UserEntry(506, "A S M Tusa", "8:52:04"));
+            //list.Add(new UserEntry(507, "A S M Nusa", "8:50:04"));
+            //list.Add(new UserEntry(508, "A S M Husa", "7:59:04"));
+            //list.Add(new UserEntry(604, "A S M Lusa", "8:59:04"));
+            //list.Add(new UserEntry(704, "A S M Busa", "7:58:04"));
+            //list.Add(new UserEntry(304, "A S M Vusa", "8:57:04"));
+            //list.Add(new UserEntry(204, "A S M Cusa", "8:30:04"));
+            //list.Add(new UserEntry(104, "A S M Zusa", "8:55:04"));
             //userEntries.Add(new UserEntry(654, "A S M Qusa", "7:55:04"));
             //userEntries.Add(new UserEntry(54, "A S M Eusa", "8:53:04"));
             //userEntries.Add(new UserEntry(56, "A S M Rusa", "8:34:04"));
