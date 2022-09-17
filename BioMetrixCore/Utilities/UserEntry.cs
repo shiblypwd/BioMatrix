@@ -19,5 +19,9 @@ namespace BioMetrixCore.Utilities
             DataStr=dataStr;
             EntryTime=entryTime;
         }
+
+        public UserEntry(int v1, string v2, string v3)
+        {
+        }
     }
 }

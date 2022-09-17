@@ -121,3 +121,6 @@ GetAllGLogData# Machine Numbre  1
 GetAllGLogData# Machine Numbre  1
 GetAllGLogData# Machine Numbre  1
 GetAllGLogData# Machine Numbre  1
+GetAllGLogData# Machine Numbre  1
+GetAllGLogData# Machine Numbre  1
+GetAllGLogData# Machine Numbre  1

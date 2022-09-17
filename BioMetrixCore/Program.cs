@@ -26,7 +26,12 @@ namespace BioMetrixCore
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
+       // public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
+        public static string USER_INFO_CSV_FILE_PATH = @"E:\PWD\BioMatrix\usr.csv";
+
+        public static string NOTIFICATION_FLAG_FILE_PATH = @"E:\PWD\BioMatrix\NotificationFlagFile.txt";
+
+
 
 
 
@@ -34,7 +39,7 @@ namespace BioMetrixCore
 
         private static string debugPath = @"debug.txt";
 
-        //public static string IP_ADDRESS = "172.16.1.72";
+       // public static string IP_ADDRESS = "172.16.1.72";
         public static string IP_ADDRESS = "172.16.1.74";
         public static int PORT = 4370;
         public static int DEFAULT_MACHINE_NUMBER = 1;
@@ -51,29 +56,6 @@ namespace BioMetrixCore
         //public static List<int> absentList = new List<int>();
 
 
-
-
-        public static void debug(string content)
-        {
-            File.AppendAllText(debugPath, content + "\n");
-        }
-
-        public static void writeToFile(string content)
-        {
-            string path = logPath;
-            File.AppendAllText(path, content + "\n");
-        }
-
-        public static void log(string content)
-        {
-            File.AppendAllText(logPath, content + "\n");
-        }
-
-        public static void writeToFileWithoutNL(string content)
-        {
-            string path = logPath;
-            File.AppendAllText(path, content);
-        }
 
         [STAThread]
         static void Main()
@@ -100,38 +82,42 @@ namespace BioMetrixCore
 
             Console.WriteLine("\n\n");
 
-            string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
-            string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
-            string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
+            //string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
+            //string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
+            //string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
 
-            int id = 0;
-            string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
 
-            for (int i = 0; i < lines.Length; i++)
-            {
-                
-                string line = lines[i];
-                //Console.WriteLine(line);    
+            string TODAY_OUTPUT_PATH_ID = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-idWise.csv";
+            string TODAY_OUTPUT_PATH_TIMEWISE = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-timeWise.csv";
+            string TODAY_OUTPUT_ABSENT_PATH_ID = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-absent.csv";
 
-                int ind = line.IndexOf(',');
-                if (ind != -1)
-                {
-                    id = Convert.ToInt32(line.Substring(0, ind));
-                }
-                //Console.Write(id+" ");
-                listFullId.Add(id);
-                info[id] = line;
-            }
-            getTodayInData();
+            loadInfoFromFile();
+            //userEntries = getTodayInData();
+            userEntries = getTodayInDataDummy();
 
             HashSet<int> st = new HashSet<int>();
 
+            HashSet<int> notificationSentFlat = new HashSet<int>();
+
+            setNotificationSentItemsIntoSet(ref notificationSentFlat);
 
             //First Entry of Everyone
             foreach (UserEntry entry in userEntries)
             {
                 if (st.Contains(entry.Id)) continue;    //Skip if not the first entry of person @entry
                 st.Add(entry.Id);
+
+                if (notificationSentFlat.Contains(entry.Id))
+                {
+                    continue;
+                }
+                string name = ""; //Need to add later
+                string designation = ""; //nedd to add later
+
+                sendNotificationBySmS(entry.Id, name, designation);
+                notificationSentFlat.Add(entry.Id);
+
+                //Write id, date in sent_file
 
                 if (info.ContainsKey(entry.Id))
                 {
@@ -152,7 +138,7 @@ namespace BioMetrixCore
             {
                 //DateTime t1 = DateTime.Parse(HOUR+":"+MINUTE+":"+"00");
 
-                DateTime t1 = DateTime.Parse(HOUR + ":30:00");
+                //DateTime t1 = DateTime.Parse(HOUR + ":30:00");
 
 
 
@@ -163,8 +149,13 @@ namespace BioMetrixCore
                 {
 
                     //listPresentIdInt.Add(Convert.ToInt32(listID[i].Id));
-                    File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + "," + "\n");
-                    File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay + "\n");
+                    //File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + "," + "\n");
+                    //File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay + "\n");
+
+                    File.AppendAllText(TODAY_OUTPUT_PATH_ID, listTime[i].Id + "," + listTime[i].DataStr + listTime[i].EntryTime + "\n");
+                    File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listID[i].EntryTime + "," + listID[i].Id + listID[i].DataStr +"\n");
+
+
                 }
 
 
@@ -191,12 +182,57 @@ namespace BioMetrixCore
 
         }
 
-        static void getTodayInData()
+
+        static void setNotificationSentItemsIntoSet(ref HashSet<int> notificationSentFlat)
         {
+            int id = 0;
+            string[] lines = System.IO.File.ReadAllLines(NOTIFICATION_FLAG_FILE_PATH);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string line = lines[i];
+                //Console.WriteLine(line);    
+
+                int ind = line.IndexOf(',');
+                if (ind != -1)
+                {
+                    id = Convert.ToInt32(line.Substring(0, ind));
+                }
+                //Console.Write(id+" ");
+                listFullId.Add(id);
+                info[id] = line;
+            }
+        }
+        static void loadInfoFromFile() 
+        {
+            int id = 0;
+            string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+
+                string line = lines[i];
+                //Console.WriteLine(line);    
+
+                int ind = line.IndexOf(',');
+                if (ind != -1)
+                {
+                    id = Convert.ToInt32(line.Substring(0, ind));
+                }
+                //Console.Write(id+" ");
+                listFullId.Add(id);
+                info[id] = line;
+            }
+        }
+
+
+        static List<UserEntry> getTodayInData()
+        {
+            List<UserEntry> entryList = new List<UserEntry>();
 
             Master master = new Master();
             master._ConnectOnly();
-            master._getLog();
+            List<UserEntry> machineAList= master._getLog();
             master._disconnet();
 
             Console.WriteLine(userEntries.Count);
@@ -204,9 +240,40 @@ namespace BioMetrixCore
 
             Master master73 = new Master();
             master73._ConnectOnly();
-            master73._getLog();
+            List<UserEntry> machineBList = master73._getLog();
             master73._disconnet();
             Console.WriteLine(userEntries.Count);
+
+            entryList.AddRange(machineAList);
+            entryList.AddRange(machineBList);
+
+            return entryList;
+        }
+
+        static List<UserEntry> getTodayInDataDummy()
+        {
+            List<UserEntry> list = new List<UserEntry>();
+            list.Add(new UserEntry(504, "A S M Musa", "7:50:04"));
+            list.Add(new UserEntry(505, "A S M kusa", "8:50:04"));
+            list.Add(new UserEntry(506, "A S M Tusa", "8:52:04"));
+            list.Add(new UserEntry(507, "A S M Nusa", "8:50:04"));
+            list.Add(new UserEntry(508, "A S M Husa", "7:59:04"));
+            list.Add(new UserEntry(604, "A S M Lusa", "8:59:04"));
+            list.Add(new UserEntry(704, "A S M Busa", "7:58:04"));
+            list.Add(new UserEntry(304, "A S M Vusa", "8:57:04"));
+            list.Add(new UserEntry(204, "A S M Cusa", "8:30:04"));
+            list.Add(new UserEntry(104, "A S M Zusa", "8:55:04"));
+            //userEntries.Add(new UserEntry(654, "A S M Qusa", "7:55:04"));
+            //userEntries.Add(new UserEntry(54, "A S M Eusa", "8:53:04"));
+            //userEntries.Add(new UserEntry(56, "A S M Rusa", "8:34:04"));
+            //userEntries.Add(new UserEntry(44, "A S M Yusa", "8:20:04"));
+            //userEntries.Add(new UserEntry(24, "A S M Gusa", "8:10:04"));
+            return list;
+        }
+
+        static void sendNotificationBySmS(int id, string name, string designation)
+        {
+
         }
 
 
@@ -312,6 +379,28 @@ namespace BioMetrixCore
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Master());
+        }
+
+        public static void debug(string content)
+        {
+            File.AppendAllText(debugPath, content + "\n");
+        }
+
+        public static void writeToFile(string content)
+        {
+            string path = logPath;
+            File.AppendAllText(path, content + "\n");
+        }
+
+        public static void log(string content)
+        {
+            File.AppendAllText(logPath, content + "\n");
+        }
+
+        public static void writeToFileWithoutNL(string content)
+        {
+            string path = logPath;
+            File.AppendAllText(path, content);
         }
     }
 }
