@@ -44,22 +44,26 @@ namespace BioMetrixCore
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
         Dictionary<int, string> smsDestination = new Dictionary<int, string>();
+        AlphaSMS smsManager;
+
         public LocalSMS()
         {
-            smsDestination.Add(1, "01710289237");
+            smsManager = new AlphaSMS();
+
+            smsDestination.Add(1, "01628287273");
             smsDestination.Add(9, "01710289237");
 
-
-
-            smsDestination.Add(15, "01710289237");
-            smsDestination.Add(16, "01710289237");
-            smsDestination.Add(17, "01710289237");
-            smsDestination.Add(18, "01710289237");
-            smsDestination.Add(19, "01710289237");
+            //smsDestination.Add(15, "01710289237");
+            //smsDestination.Add(16, "01710289237");
+            //smsDestination.Add(17, "01710289237");
+            //smsDestination.Add(18, "01710289237");
+            //smsDestination.Add(19, "01710289237");
         }
 
         public void processLocalSMS()
         {
+            //new AlphaSMS().sendSMS("PWD Entrence ID: 23", "01710289237");
+            
             HashSet<int> isNotficationSent = new HashSet<int>();
 
             DateTime time = DateTime.Now;
@@ -162,7 +166,7 @@ namespace BioMetrixCore
         {
             if (smsDestination.ContainsKey(info.Id))
             {
-                string monileNumberStr = smsDestination[info.Id];
+                string reportingOfficerMobileNumberStr = smsDestination[info.Id];
                 string timeStr = info.EntryTime.TimeOfDay.Hours.ToString() + ":"
                     + info.EntryTime.TimeOfDay.Minutes.ToString() + ":"
                     + info.EntryTime.TimeOfDay.Seconds.ToString();
@@ -173,7 +177,9 @@ namespace BioMetrixCore
                                     + ").\nEntry Time: "+ timeStr;
 
                 Console.WriteLine("["+messageBody+"]");
+                
                 //Send SMS;
+                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
             }
 
             Console.WriteLine("Notification Sent to {0}", info.Id);            
