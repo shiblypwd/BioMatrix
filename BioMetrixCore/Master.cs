@@ -303,7 +303,7 @@ namespace BioMetrixCore
             try
             {
                 //ICollection<MachineInfo> lstMachineInfo = manipulator.GetLogData(objZkeeper, int.Parse(tbxMachineNumber.Text.Trim()));
-                List <UserEntry> list = manipulator._GetLogData(objZkeeper, 1);
+                list = manipulator._GetLogData(objZkeeper, 1);
 
             }
             catch (Exception ex)

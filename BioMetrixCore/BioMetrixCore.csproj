@@ -57,6 +57,7 @@
       <DependentUpon>DataEmpty.cs</DependentUpon>
     </Compile>
     <Compile Include="Info\UserIDInfo.cs" />
+    <Compile Include="LocalSMS.cs" />
     <Compile Include="Utilities\DeviceManipulator.cs" />
     <Compile Include="Enums\ClearFlag.cs" />
     <Compile Include="Info\DeviceTimeInfo.cs" />

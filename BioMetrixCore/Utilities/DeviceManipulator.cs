@@ -132,17 +132,16 @@ namespace BioMetrixCore
                 int hash = dwHour * 60 + dwMinute;
                 int endTimeHash = Program.HOUR * 60 + Program.MINUTE;
 
-                if (dwMonth == Program.MONTH && dwDay == Program.DAY && hash <= endTimeHash)
-                {
+                int id = Convert.ToInt32(dwEnrollNumber1.Trim());
+                list.Add(new UserEntry(id, "", inputTime));
 
-                    int id = Convert.ToInt32(dwEnrollNumber1.Trim());
-                    list.Add(new UserEntry(id, "", inputTime));
-                    //Program.userEntries.Add(new UserEntry(id, "", inputTime));
-                    Program.writeToFile(dwEnrollNumber1.ToString() + "                , " + dwHour.ToString() + ":" + dwMinute.ToString() + ":" + dwSecond.ToString() + ", " + dwDay.ToString() + "/" + dwMonth.ToString() + "/" + dwYear.ToString());
-                    // File.AppendAllText(@"F:\usr.csv", id.ToString()+"\n");
-                    File.AppendAllText(@"E:\PWD\BioMatrix\usr.csv", id.ToString() + "\n");
 
-                }
+                //Program.userEntries.Add(new UserEntry(id, "", inputTime));
+                //Program.writeToFile(dwEnrollNumber1.ToString() + "                , " + dwHour.ToString() + ":" + dwMinute.ToString() + ":" + dwSecond.ToString() + ", " + dwDay.ToString() + "/" + dwMonth.ToString() + "/" + dwYear.ToString());
+                // File.AppendAllText(@"F:\usr.csv", id.ToString()+"\n");
+                //File.AppendAllText(@"E:\PWD\BioMatrix\usr.csv", id.ToString() + "\n");
+
+                
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
 
