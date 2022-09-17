@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Security;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
@@ -31,8 +32,14 @@ namespace BioMetrixCore
         public static int DEFAULT_MACHINE_NUMBER = 1;
 
         //static TimeSpan waitingTime = new TimeSpan(0, 10, 0);
-        static TimeSpan waitingTime = new TimeSpan(0, 0, 10);
-                
+
+
+        //static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
+        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 15);
+
+        static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
+        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 2);
+
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
@@ -52,34 +59,40 @@ namespace BioMetrixCore
 
             Dictionary<int, UserEntry> usrInfoMap = loadUserInfoFromFile();
 
-            //List<UserEntry> userEntries = getAllInDataFromAllMachines();
-            List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
 
-            List<UserEntry> notificationSentList = getNotificationSentList();
-
-            foreach (UserEntry userEntry in notificationSentList)
+            while (true)
             {
-                isNotficationSent.Add(userEntry.Id);
-            }
+                //List<UserEntry> userEntries = getAllInDataFromAllMachines();
+                List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
 
-            //First Entry of Everyone
-            foreach (UserEntry entry in userEntries)
-            {
-                if (entry.EntryTime.Day != time.Day || entry.EntryTime.Month != time.Month) continue;
+                List<UserEntry> notificationSentList = getNotificationSentList();
 
-                if (isNotficationSent.Contains(entry.Id)) continue;    //Skip if not the first entry of person @entry
-                isNotficationSent.Add(entry.Id);
-
-                UserEntry info = null;
-
-                if (usrInfoMap.ContainsKey(entry.Id))
+                foreach (UserEntry userEntry in notificationSentList)
                 {
-                    info = usrInfoMap[entry.Id];
-                    sendNotificationBySmS(info);
-                    writeNotificationSentFile(info, entry.EntryTime);
-                    uniqueEntrys.Add(entry);
-                }                                               
+                    isNotficationSent.Add(userEntry.Id);
+                }
+
+                //First Entry of Everyone
+                foreach (UserEntry entry in userEntries)
+                {
+                    if (entry.EntryTime.Day != time.Day || entry.EntryTime.Month != time.Month) continue;
+
+                    if (isNotficationSent.Contains(entry.Id)) continue;    //Skip if not the first entry of person @entry
+                    isNotficationSent.Add(entry.Id);
+
+                    UserEntry info = null;
+
+                    if (usrInfoMap.ContainsKey(entry.Id))
+                    {
+                        info = usrInfoMap[entry.Id];
+                        sendNotificationBySmS(info);
+                        writeNotificationSentFile(info, entry.EntryTime);
+                        uniqueEntrys.Add(entry);
+                    }
+                }
+                Thread.Sleep(waitingTime);
             }
+            
 
             //var listTime = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
 
@@ -124,7 +137,7 @@ namespace BioMetrixCore
             content += "\t$" + info.Name;
             content += "\t$" + info.Designation;
             
-            Console.WriteLine(content);
+            //Console.WriteLine(content);
 
             File.AppendAllText(NOTIFICATION_FLAG_FILE_PATH, content + "\n");
         }
@@ -132,6 +145,7 @@ namespace BioMetrixCore
         void sendNotificationBySmS(UserEntry info)
         {
             Console.WriteLine("Notification Sent to {0}", info.Id);
+            Thread.Sleep(waitingTimeAfterEachSMS);
         }
 
         Dictionary<int, UserEntry> loadUserInfoFromFile()
