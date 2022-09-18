@@ -34,30 +34,39 @@ namespace BioMetrixCore
         //static TimeSpan waitingTime = new TimeSpan(0, 10, 0);
 
 
-        //static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
-        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 15);
+        static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
+        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 10);
 
-        static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
-        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 2);
+        //static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
+        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 2);
 
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
-        Dictionary<int, string> smsDestination = new Dictionary<int, string>();
+        Dictionary<int, string> smsDestination = null;
         AlphaSMS smsManager;
 
         public LocalSMS()
         {
             smsManager = new AlphaSMS();
 
-            smsDestination.Add(1, "01628287273");
-            smsDestination.Add(9, "01710289237");
+            smsDestination = new Dictionary<int, string>()
+            {
+                {   1, "01628287273"},      //CE
+                {  17, "01628287273"},      //ACE Co.& Es.
+                { 546, "01628287273"},      //EE,MIS-1    
+                { 112, "01628287273"},      //EE,MIS-2    
+                { 534, "01628287273"},      //SDE, MIS-2
 
-            //smsDestination.Add(15, "01710289237");
-            //smsDestination.Add(16, "01710289237");
-            //smsDestination.Add(17, "01710289237");
-            //smsDestination.Add(18, "01710289237");
-            //smsDestination.Add(19, "01710289237");
+                //{ 32, "01819207128"},       // SE Nandita
+                //{ 19, "01819207128"},       // SE Shakhawat
+                //{ 30, "01819207128"},       // EE Noor
+
+                {   9, "01710289237"},
+                { 730, "01710289237"},
+                { 808, "01710289237"},
+                { 890, "01710289237"},
+            };
         }
 
         public void processLocalSMS()
@@ -80,8 +89,8 @@ namespace BioMetrixCore
 
             while (true)
             {
-                //List<UserEntry> userEntries = getAllInDataFromAllMachines();
-                List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
+                List<UserEntry> userEntries = getAllInDataFromAllMachines();
+                //List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
 
                 List<UserEntry> notificationSentList = getNotificationSentList();
 
@@ -209,36 +218,7 @@ namespace BioMetrixCore
             }
             return info;
         }
-
-        void generateFileOutput() {
-            //string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
-            //string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
-            //string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
-
-
-            //string TODAY_OUTPUT_PATH_ID = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-idWise.csv";
-            //string TODAY_OUTPUT_PATH_TIMEWISE = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-timeWise.csv";
-            //string TODAY_OUTPUT_ABSENT_PATH_ID = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-absent.csv";
-        }
-    
-
-        DateTime readTodayTime() {
-            DateTime today = new DateTime();
-                //Console.WriteLine("Enter Month: ");
-                //MONTH = Convert.ToInt32(Console.ReadLine());
-
-                //Console.WriteLine("Enter Day: ");
-                //DAY = Convert.ToInt32(Console.ReadLine());
-
-                //Console.WriteLine("Enter Hour: ");
-                //HOUR = Convert.ToInt32(Console.ReadLine());
-
-                //Console.WriteLine("Enter Minute: ");
-                //MINUTE = Convert.ToInt32(Console.ReadLine());        
-                return today;
-        }
-        
-        
+             
         List<UserEntry> getNotificationSentList()
         {
             List<UserEntry> list = new List<UserEntry>();
@@ -262,12 +242,10 @@ namespace BioMetrixCore
                     int year = Convert.ToInt32(tokens[3]);
                     int hour = Convert.ToInt32(tokens[4]);
                     int minute = Convert.ToInt32(tokens[5]);
-                    int second = Convert.ToInt32(tokens[6]);
-                    int dayOfTheWeek = 0;
+                    int second = Convert.ToInt32(tokens[6]);                    
 
                     string name = tokens[7];
-                    string designation = tokens[8];
-                    DateTime time = new DateTime();
+                    string designation = tokens[8];                    
 
                     list.Add(new UserEntry(id, name, designation, "", new DateTime(year, month, day, hour, minute, second, 0)));
                 }
@@ -307,6 +285,36 @@ namespace BioMetrixCore
             //userEntries.Add(new UserEntry(44, "A S M Yusa", "8:20:04"));
             //userEntries.Add(new UserEntry(24, "A S M Gusa", "8:10:04"));
             return list;
+        }
+
+        void generateFileOutput()
+        {
+            //string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
+            //string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
+            //string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
+
+
+            //string TODAY_OUTPUT_PATH_ID = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-idWise.csv";
+            //string TODAY_OUTPUT_PATH_TIMEWISE = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-timeWise.csv";
+            //string TODAY_OUTPUT_ABSENT_PATH_ID = @"E:\PWD\BioMatrix\" + MONTH + "_" + DAY + "_22-absent.csv";
+        }
+
+
+        DateTime readTodayTime()
+        {
+            DateTime today = new DateTime();
+            //Console.WriteLine("Enter Month: ");
+            //MONTH = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter Day: ");
+            //DAY = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter Hour: ");
+            //HOUR = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter Minute: ");
+            //MINUTE = Convert.ToInt32(Console.ReadLine());        
+            return today;
         }
     }
 }
