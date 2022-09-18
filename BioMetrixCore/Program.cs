@@ -26,7 +26,10 @@ namespace BioMetrixCore
 
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        public static string USER_INFO_CSV_FILE_PATH = @"F:\usr.csv";
+        public static string DEFAULT_PATH = @"F:\__Attendance\";
+        //public static string DEFAULT_PATH = @"";
+
+        public static string USER_INFO_CSV_FILE_PATH = DEFAULT_PATH+"usr.csv";
 
 
 
@@ -51,58 +54,34 @@ namespace BioMetrixCore
         //public static List<int> absentList = new List<int>();
 
 
-
-
-        public static void debug(string content)
-        {
-            File.AppendAllText(debugPath, content + "\n");
-        }
-
-        public static void writeToFile(string content)
-        {
-            string path = logPath;
-            File.AppendAllText(path, content + "\n");
-        }
-
-        public static void log(string content)
-        {
-            File.AppendAllText(logPath, content + "\n");
-        }
-
-        public static void writeToFileWithoutNL(string content)
-        {
-            string path = logPath;
-            File.AppendAllText(path, content);
-        }
-
         [STAThread]
         static void Main()
         {
 
-            //Console.WriteLine("Enter Month: ");
-            //MONTH = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Month: ");
+            MONTH = Convert.ToInt32(Console.ReadLine());
 
-            //Console.WriteLine("Enter Day: ");
-            //DAY = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Day: ");
+            DAY = Convert.ToInt32(Console.ReadLine());
 
-            //Console.WriteLine("Enter Hour: ");
-            //HOUR = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Hour: ");
+            HOUR = Convert.ToInt32(Console.ReadLine());
 
-            //Console.WriteLine("Enter Minute: ");
-            //MINUTE = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Minute: ");
+            MINUTE = Convert.ToInt32(Console.ReadLine());
 
-            MONTH = 9;
-            DAY = 18;
-            HOUR = 9;
-            MINUTE = 30;
+            //MONTH = 9;
+            //DAY = 18;
+            //HOUR = 9;
+            //MINUTE = 30;
 
             Console.WriteLine(MONTH+ "-"+ DAY+" :: "+HOUR+":"+MINUTE);
 
             Console.WriteLine("\n\n");
 
-            string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
-            string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
-            string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
+            string TODAY_OUTPUT_PATH_ID = DEFAULT_PATH + MONTH + "_" + DAY + "_22-idWise.csv";
+            string TODAY_OUTPUT_PATH_TIMEWISE = DEFAULT_PATH + MONTH + "_" + DAY + "_22-timeWise.csv";
+            string TODAY_OUTPUT_ABSENT_PATH_ID = DEFAULT_PATH + MONTH + "_" + DAY + "_22-absent.csv";
 
             int id = 0;
             string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
@@ -151,45 +130,9 @@ namespace BioMetrixCore
 
             for (int i = 0; i < listTime.Count; i++)
             {
-                //DateTime t1 = DateTime.Parse(HOUR+":"+MINUTE+":"+"00");
-
-                //DateTime t1 = DateTime.Parse(HOUR + ":30:00");
-
-
-
-                //if (i < 50)
-                //    Console.WriteLine(listID[i].EntryTime.TimeOfDay + "  " + listID[i].Id + "#\t" + listID[i].EntryTime.TimeOfDay.ToString() + "," + listID[i].DataStr);
-
-                //if (listID[i].EntryTime.TimeOfDay < t1.TimeOfDay) 
-                {
-
-                    //listPresentIdInt.Add(Convert.ToInt32(listID[i].Id));
-                    File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + "," + "\n");
-                    File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay + "\n");
-                }
-
-
-
-
-
-                //if (i==10) break; 
+                File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + "," + "\n");
+                File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay + "\n");
             }
-            //foreach (int i in listFullId)
-            //{
-            //    if (!listPresentIdInt.Contains(i))
-            //    {
-            //        File.AppendAllText(TODAY_OUTPUT_ABSENT_PATH_ID, info[i] +"\n");
-
-            //    }
-            //}
-
-
-
-            //runUI();
-            //runCode();
-            //periodicLogFetching();
-            //periodicLogFetchingOneConnection();
-
         }
 
         static void getTodayInData()
@@ -313,6 +256,28 @@ namespace BioMetrixCore
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Master());
+        }
+
+        public static void debug(string content)
+        {
+            //File.AppendAllText(debugPath, content + "\n");
+        }
+
+        public static void writeToFile(string content)
+        {
+            string path = logPath;
+            //File.AppendAllText(path, content + "\n");
+        }
+
+        public static void log(string content)
+        {
+            //File.AppendAllText(logPath, content + "\n");
+        }
+
+        public static void writeToFileWithoutNL(string content)
+        {
+            string path = logPath;
+            //File.AppendAllText(path, content);
         }
     }
 }
