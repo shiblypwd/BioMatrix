@@ -79,22 +79,22 @@ namespace BioMetrixCore
         static void Main()
         {
 
-            Console.WriteLine("Enter Month: ");
-            MONTH = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter Month: ");
+            //MONTH = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Day: ");
-            DAY = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter Day: ");
+            //DAY = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Hour: ");
-            HOUR = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter Hour: ");
+            //HOUR = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Minute: ");
-            MINUTE = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter Minute: ");
+            //MINUTE = Convert.ToInt32(Console.ReadLine());
 
-            //MONTH = 9;
-            //DAY = 18;
-            //HOUR = 9;
-            //MINUTE = 30;
+            MONTH = 9;
+            DAY = 18;
+            HOUR = 9;
+            MINUTE = 30;
 
             Console.WriteLine(MONTH+ "-"+ DAY+" :: "+HOUR+":"+MINUTE);
 
@@ -146,7 +146,8 @@ namespace BioMetrixCore
 
             var listID = uniqueEntrys.OrderBy(x => x.Id).ToList();
 
-           
+            File.WriteAllText(TODAY_OUTPUT_PATH_TIMEWISE, "");
+            File.WriteAllText(TODAY_OUTPUT_PATH_ID, "");
 
             for (int i = 0; i < listTime.Count; i++)
             {
