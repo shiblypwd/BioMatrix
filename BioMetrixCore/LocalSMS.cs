@@ -18,8 +18,8 @@ namespace BioMetrixCore
     {        
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        //public static string DEFAULT_PATH = @"";
-        public static string DEFAULT_PATH = @"E:\PWD\";
+        public static string DEFAULT_PATH = @"F:\";
+        //public static string DEFAULT_PATH = @"E:\PWD\";
         public static string USER_INFO_CSV_FILE_PATH = DEFAULT_PATH + "usr.csv";
         public static string NOTIFICATION_FLAG_FILE_PATH = DEFAULT_PATH + "NotificationFlagFile.txt";
 

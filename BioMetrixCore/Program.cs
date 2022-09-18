@@ -29,8 +29,8 @@ namespace BioMetrixCore
         private static string logPath = DEFAULT_PATH+"log.txt";
         private static string debugPath = DEFAULT_PATH+"debug.txt";
 
-       // public static string IP_ADDRESS = "172.16.1.72";
-        public static string IP_ADDRESS = "172.16.1.74";
+        public static string IP_ADDRESS = "172.16.1.72";
+        //public static string IP_ADDRESS = "172.16.1.74";
         public static int PORT = 4370;
         public static int DEFAULT_MACHINE_NUMBER = 1;
 
@@ -49,7 +49,115 @@ namespace BioMetrixCore
         [STAThread]
         static void Main()
         {
+
             new LocalSMS().processLocalSMS();
+
+
+            //Console.WriteLine("Enter Month: ");
+            //MONTH = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter Day: ");
+            //DAY = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter Hour: ");
+            //HOUR = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("Enter Minute: ");
+            //MINUTE = Convert.ToInt32(Console.ReadLine());
+
+            MONTH = 9;
+            DAY = 15;
+            HOUR = 9;
+            MINUTE = 30;
+
+            Console.WriteLine(MONTH+ "-"+ DAY+" :: "+HOUR+":"+MINUTE);
+
+            Console.WriteLine("\n\n");
+
+            string TODAY_OUTPUT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-idWise.csv";
+            string TODAY_OUTPUT_PATH_TIMEWISE = @"F:\" + MONTH + "_" + DAY + "_22-timeWise.csv";
+            string TODAY_OUTPUT_ABSENT_PATH_ID = @"F:\" + MONTH + "_" + DAY + "_22-absent.csv";
+
+            int id = 0;
+            string[] lines = System.IO.File.ReadAllLines(USER_INFO_CSV_FILE_PATH);
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                
+                string line = lines[i];
+                //Console.WriteLine(line);    
+
+                int ind = line.IndexOf(',');
+                if (ind != -1)
+                {
+                    id = Convert.ToInt32(line.Substring(0, ind));
+                }
+                //Console.Write(id+" ");
+                listFullId.Add(id);
+                info[id] = line;
+            }
+            getTodayInData();
+
+            HashSet<int> st = new HashSet<int>();
+
+
+            //First Entry of Everyone
+            foreach (UserEntry entry in userEntries)
+            {
+                if (st.Contains(entry.Id)) continue;    //Skip if not the first entry of person @entry
+                st.Add(entry.Id);
+
+                if (info.ContainsKey(entry.Id))
+                {
+                    entry.DataStr = info[entry.Id];
+                }
+
+                uniqueEntrys.Add(entry);
+            }
+            
+
+            var listTime = uniqueEntrys.OrderBy(x => x.EntryTime).ToList(); 
+
+            var listID = uniqueEntrys.OrderBy(x => x.Id).ToList();
+
+           
+
+            for (int i = 0; i < listTime.Count; i++)
+            {
+                //DateTime t1 = DateTime.Parse(HOUR+":"+MINUTE+":"+"00");
+
+                DateTime t1 = DateTime.Parse(HOUR + ":30:00");
+
+
+
+                //if (i < 50)
+                //    Console.WriteLine(listID[i].EntryTime.TimeOfDay + "  " + listID[i].Id + "#\t" + listID[i].EntryTime.TimeOfDay.ToString() + "," + listID[i].DataStr);
+
+                //if (listID[i].EntryTime.TimeOfDay < t1.TimeOfDay) 
+                
+
+                    //listPresentIdInt.Add(Convert.ToInt32(listID[i].Id));
+                    File.AppendAllText(TODAY_OUTPUT_PATH_TIMEWISE, listTime[i].EntryTime.TimeOfDay + "," + listTime[i].DataStr + "," + "\n");
+                    File.AppendAllText(TODAY_OUTPUT_PATH_ID, listID[i].DataStr + "," + listID[i].EntryTime.TimeOfDay + "\n");
+                
+
+
+
+
+
+                //if (i==10) break; 
+            }
+            //foreach (int i in listFullId)
+            //{
+            //    if (!listPresentIdInt.Contains(i))
+            //    {
+            //        File.AppendAllText(TODAY_OUTPUT_ABSENT_PATH_ID, info[i] +"\n");
+
+            //    }
+            //}
+
+
+
 
             //runUI();
             //runCode();

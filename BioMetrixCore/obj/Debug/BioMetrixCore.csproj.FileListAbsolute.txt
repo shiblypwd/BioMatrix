@@ -22,3 +22,19 @@ D:\BioMetrix\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.DataEmpty.resources
 D:\BioMetrix\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.Master.resources
 D:\BioMetrix\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.Properties.Resources.resources
 D:\BioMetrix\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.GenerateResource.Cache
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.AssemblyReference.cache
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.SuggestedBindingRedirects.cache
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\Interop.zkemkeeper.dll
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.ResolveComReference.cache
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.DataEmpty.resources
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.Master.resources
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.Properties.Resources.resources
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.GenerateResource.cache
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.CoreCompileInputs.cache
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\BioMetrixCore.exe.config
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\BioMetrixCore.exe
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\BioMetrixCore.pdb
+F:\New folder\BioMatrix\BioMetrixCore\bin\Debug\Newtonsoft.Json.dll
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.csproj.CopyComplete
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.exe
+F:\New folder\BioMatrix\BioMetrixCore\obj\Debug\BioMetrixCore.pdb
