@@ -84,8 +84,7 @@ namespace BioMetrixCore
 
                     int id = Convert.ToInt32(dwEnrollNumber1.Trim());
                     Program.userEntries.Add(new UserEntry(id, "", inputTime));
-                    Program.writeToFile(dwEnrollNumber1.ToString()+"                , "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());
-                    File.AppendAllText(@"F:\usr.csv", id.ToString()+"\n");
+                    Program.writeToFile(dwEnrollNumber1.ToString()+"                , "+dwHour.ToString()+":"+dwMinute.ToString()+":"+dwSecond.ToString()+", "+dwDay.ToString()+"/"+dwMonth.ToString()+"/"+dwYear.ToString());                    
                 }
                 MachineInfo objInfo = new MachineInfo();
                 objInfo.MachineNumber = machineNumber;
