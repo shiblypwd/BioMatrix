@@ -101,7 +101,7 @@ namespace BioMetrixCore
             try
             {                
                 objZkeeper = new ZkemClient(RaiseDeviceEvent);                
-                IsDeviceConnected = objZkeeper.Connect_Net(Program.IP_ADDRESS, Program.PORT);
+                IsDeviceConnected = objZkeeper.Connect_Net(LocalSMS.IP_ADDRESS, LocalSMS.PORT);
             }
             catch (Exception ex)
             {
@@ -125,7 +125,7 @@ namespace BioMetrixCore
                 if (ipAddress == string.Empty || port == string.Empty)
                     throw new Exception("The Device IP Address and Port is mandotory !!");
 
-                int portNumber = Program.PORT;
+                int portNumber = LocalSMS.PORT;
                 if (!int.TryParse(port, out portNumber))
                     throw new Exception("Not a valid port number");
 
@@ -173,7 +173,7 @@ namespace BioMetrixCore
                 if (ipAddress == string.Empty || port == string.Empty)
                     throw new Exception("The Device IP Address and Port is mandotory !!");
 
-                int portNumber = Program.PORT;
+                int portNumber = LocalSMS.PORT;
                 if (!int.TryParse(port, out portNumber))
                     throw new Exception("Not a valid port number");
 
@@ -294,7 +294,7 @@ namespace BioMetrixCore
 
         public void _clearLog()
         {
-            manipulator.ClearGLog(objZkeeper, Program.DEFAULT_MACHINE_NUMBER);
+            manipulator.ClearGLog(objZkeeper, LocalSMS.DEFAULT_MACHINE_NUMBER);
         }
 
         public List<UserEntry> _getLog()
