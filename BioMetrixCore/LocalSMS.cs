@@ -56,27 +56,26 @@ namespace BioMetrixCore
                 {  17, "01628287273"},      //ACE Co.& Es.
                 { 546, "01628287273"},      //EE,MIS-1    
                 { 112, "01628287273"},      //EE,MIS-2    
-                { 534, "01628287273"},      //SDE, MIS-2
+                //{ 534, "01628287273"},      //SDE, MIS-2
 
                 //{ 32, "01819207128"},       // SE Nandita
                 //{ 19, "01819207128"},       // SE Shakhawat
                 //{ 30, "01819207128"},       // EE Noor
 
-                {   9, "01710289237"},
-                { 730, "01710289237"},
-                { 808, "01710289237"},
+                //{   9, "01710289237"},
+                //{ 730, "01710289237"},
+                //{ 808, "01710289237"},
                 { 890, "01710289237"},
 
-                {   17, "01819207128" },    //  ACE, EST
+                //ACE
                 {   19, "01819207128" },    // SE, Coordination
                 {   32, "01819207128" },    // SE, EST
-
-                {  19, "01819207958" },   // SE, Coordination
+                
+                //SE(Co.)
                 {  27, "01819207958" },   // Executive
                 {  28, "01819207958" },   // Executive
 
-
-                {  32,  "01711386959"},     // SE, EST
+                //SE(Est.)
                 {  30,  "01711386959"},    //EE, Establishment
                 {  114, "01711386959"},   //Executive
                 {  206, "01711386959"},   //Executive
@@ -200,13 +199,12 @@ namespace BioMetrixCore
                                     + ").\nEntry Time: "+ timeStr;
 
                 Console.WriteLine("["+messageBody+"]");
-                
+
                 //Send SMS;
+                Thread.Sleep(waitingTimeAfterEachSMS);
                 smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
             }
-
-            Console.WriteLine("Notification Sent to {0}", info.Id);            
-            Thread.Sleep(waitingTimeAfterEachSMS);
+            
         }
 
         Dictionary<int, UserEntry> loadUserInfoFromFile()
