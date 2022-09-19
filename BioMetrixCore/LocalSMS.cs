@@ -54,38 +54,39 @@ namespace BioMetrixCore
             {
                 {   1, "01628287273"},      //CE
                 {  17, "01628287273"},      //ACE Co.& Es.
-                { 546, "01628287273"},      //EE,MIS-1    
-                { 112, "01628287273"},      //EE,MIS-2    
-                { 534, "01628287273"},      //SDE, MIS-2
+                //{ 546, "01628287273"},      //EE,MIS-1    
+                //{ 112, "01628287273"},      //EE,MIS-2    
+                
 
-                //{ 32, "01819207128"},       // SE Nandita
+                { 32, "01819207128"},       // SE Nandita
+                { 30, "01819207128"},       // EE Noor
                 //{ 19, "01819207128"},       // SE Shakhawat
-                //{ 30, "01819207128"},       // EE Noor
+                
 
                 {   9, "01710289237"},
-                { 730, "01710289237"},
-                { 808, "01710289237"},
-                { 890, "01710289237"},
+                //{ 730, "01710289237"},
+                //{ 808, "01710289237"},
+                //{ 890, "01710289237"},
             };
         }
 
         public void processLocalSMS()
-        {
-            //new AlphaSMS().sendSMS("PWD Entrence ID: 23", "01710289237");
-            
-            HashSet<int> isNotficationSent = new HashSet<int>();
+        {                        
+            HashSet<long> isNotficationSent = new HashSet<long>();
 
             DateTime time = DateTime.Now;
 
-            //Console.WriteLine(time.TimeOfDay.Hours);
-            //Console.WriteLine(time.TimeOfDay.Minutes);
-            //Console.WriteLine(time.TimeOfDay.Seconds);
-
-            Console.WriteLine(time);
-            //Console.WriteLine(time.DayOfWeek);
-
+            //while (true)
+            //{
+            //    int id = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine(generateHash(time, id));
+            //}
+            
+            Console.WriteLine("Today: "+ time);
+            
             Dictionary<int, UserEntry> usrInfoMap = loadUserInfoFromFile();
-
+            
+            Console.WriteLine("Num Users in usr.csv file: {0}", usrInfoMap.Count);
 
             while (true)
             {
@@ -96,16 +97,21 @@ namespace BioMetrixCore
 
                 foreach (UserEntry userEntry in notificationSentList)
                 {
-                    isNotficationSent.Add(userEntry.Id);
+                    long hash = generateHash(time, userEntry.Id);
+                    isNotficationSent.Add(hash);
                 }
 
+                int countValidEntries = 0;
+                int notificationCounter = 0;
                 //First Entry of Everyone
                 foreach (UserEntry entry in userEntries)
                 {
                     if (entry.EntryTime.Day != time.Day || entry.EntryTime.Month != time.Month) continue;
 
-                    if (isNotficationSent.Contains(entry.Id)) continue;    //Skip if not the first entry of person @entry
-                    isNotficationSent.Add(entry.Id);
+                    long hash = generateHash(time, entry.Id);
+                    
+                    if (isNotficationSent.Contains(hash)) continue;    //Skip if not the first entry of person @entry
+                    isNotficationSent.Add(hash);
 
                     UserEntry info = null;
 
@@ -113,18 +119,25 @@ namespace BioMetrixCore
                     {
                         info = usrInfoMap[entry.Id];
                         info.EntryTime = entry.EntryTime;
-                        sendNotificationBySmS(info);
+                        bool isNotificationSendingSuccessful = sendNotificationBySmS(info);
+                        
+                        if (isNotificationSendingSuccessful) {
+                            notificationCounter++;
+                        }
+
                         writeNotificationSentFile(info, entry.EntryTime);
                         uniqueEntrys.Add(entry);
+                        countValidEntries++;
                     }
                 }
-                Console.WriteLine("Process Waiting Interval....");
+
+                Console.WriteLine("Today Valid Entries: {0}#  Number of Notification Sent: {1}", countValidEntries, notificationCounter);
+
+                Console.WriteLine("\n\t\tProcess Waiting Interval....\n");
                 Thread.Sleep(waitingTime);
             }
             
-
             //var listTime = uniqueEntrys.OrderBy(x => x.EntryTime).ToList();
-
             //var listID = uniqueEntrys.OrderBy(x => x.Id).ToList();
         }
 
@@ -137,43 +150,24 @@ namespace BioMetrixCore
             List<UserEntry> machineAList = master._getLog();
             master._disconnet();
 
-            Console.WriteLine("NumOfEntry Machine-A: {0}", machineAList.Count);
+            Console.WriteLine("NumOfEntry Machine-A({1}): {0}", machineAList.Count, IP_ADDRESS);
             entryList.AddRange(machineAList);
 
 
-            //IP_ADDRESS = "172.16.1.73";
+            IP_ADDRESS = "172.16.1.73";
 
-            //Master master73 = new Master();
-            //master73._ConnectOnly();
-            //List<UserEntry> machineBList = master73._getLog();
-            //master73._disconnet();
+            Master master73 = new Master();
+            master73._ConnectOnly();
+            List<UserEntry> machineBList = master73._getLog();
+            master73._disconnet();
 
-            //Console.WriteLine(machineBList.Count);            
-            //entryList.AddRange(machineBList);
+            Console.WriteLine("NumOfEntry Machine-B({1}): {0}", machineBList.Count, IP_ADDRESS);
+            entryList.AddRange(machineBList);
 
             return entryList;
         }
 
-        void writeNotificationSentFile(UserEntry info, DateTime time)
-        {
-            string content = "";
-            
-            content = info.Id.ToString();
-            content += "\t$"+ time.Day.ToString();
-            content += "$" + time.Month.ToString();
-            content += "$" + time.Year.ToString();
-            content += "\t$" + time.Hour.ToString();
-            content += "$" + time.Minute.ToString();
-            content += "$" + time.Second.ToString();
-            content += "\t$" + info.Name;
-            content += "\t$" + info.Designation;
-            
-            //Console.WriteLine(content);
-
-            File.AppendAllText(NOTIFICATION_FLAG_FILE_PATH, content + "\n");
-        }
-
-        void sendNotificationBySmS(UserEntry info)
+        bool sendNotificationBySmS(UserEntry info)
         {
             if (smsDestination.ContainsKey(info.Id))
             {
@@ -187,14 +181,47 @@ namespace BioMetrixCore
                                     + "Employee Name: "+info.Name+" (" + info.Designation
                                     + ").\nEntry Time: "+ timeStr;
 
-                Console.WriteLine("["+messageBody+"]");
-                
-                //Send SMS;
-                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
-            }
+                //Console.WriteLine("["+messageBody+"]\n");
 
-            Console.WriteLine("Notification Sent to {0}", info.Id);            
-            Thread.Sleep(waitingTimeAfterEachSMS);
+
+                //SEND SMS API;
+                //smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+                //Thread.Sleep(waitingTimeAfterEachSMS);
+
+                Console.WriteLine("Notification Sent for id:{0}   to  {1}", info.Id, reportingOfficerMobileNumberStr);                
+
+                return true;
+            }
+            return false;
+        }
+
+        long generateHash(DateTime time, int id) { 
+
+            long hash = (time.Year-2022)*370;
+            hash = hash*12+time.Month;
+            hash = hash*31+time.Day;
+            hash = hash*100000+id;
+
+            return hash;            
+        }
+
+        void writeNotificationSentFile(UserEntry info, DateTime time)
+        {
+            string content = "";
+
+            content = info.Id.ToString();
+            content += "\t$"+ time.Day.ToString();
+            content += "$" + time.Month.ToString();
+            content += "$" + time.Year.ToString();
+            content += "\t$" + time.Hour.ToString();
+            content += "$" + time.Minute.ToString();
+            content += "$" + time.Second.ToString();
+            content += "\t$" + info.Name;
+            content += "\t$" + info.Designation;
+
+            //Console.WriteLine(content);
+
+            File.AppendAllText(NOTIFICATION_FLAG_FILE_PATH, content + "\n");
         }
 
         Dictionary<int, UserEntry> loadUserInfoFromFile()
@@ -271,21 +298,7 @@ namespace BioMetrixCore
                 Console.WriteLine(time + "   => "+ id);
                 list.Add(new UserEntry(id, usrInfoMap[id].Name, usrInfoMap[id].Designation, time));
             }
-            //list.Add(new UserEntry(504, "A S M Musa", "7:50:04"));
-            //list.Add(new UserEntry(505, "A S M kusa", "8:50:04"));
-            //list.Add(new UserEntry(506, "A S M Tusa", "8:52:04"));
-            //list.Add(new UserEntry(507, "A S M Nusa", "8:50:04"));
-            //list.Add(new UserEntry(508, "A S M Husa", "7:59:04"));
-            //list.Add(new UserEntry(604, "A S M Lusa", "8:59:04"));
-            //list.Add(new UserEntry(704, "A S M Busa", "7:58:04"));
-            //list.Add(new UserEntry(304, "A S M Vusa", "8:57:04"));
-            //list.Add(new UserEntry(204, "A S M Cusa", "8:30:04"));
-            //list.Add(new UserEntry(104, "A S M Zusa", "8:55:04"));
-            //userEntries.Add(new UserEntry(654, "A S M Qusa", "7:55:04"));
-            //userEntries.Add(new UserEntry(54, "A S M Eusa", "8:53:04"));
-            //userEntries.Add(new UserEntry(56, "A S M Rusa", "8:34:04"));
-            //userEntries.Add(new UserEntry(44, "A S M Yusa", "8:20:04"));
-            //userEntries.Add(new UserEntry(24, "A S M Gusa", "8:10:04"));
+
             return list;
         }
 

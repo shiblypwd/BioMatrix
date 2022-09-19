@@ -97,7 +97,7 @@ namespace BioMetrixCore
 
         public List<UserEntry> _GetLogData(ZkemClient objZkeeper, int machineNumber)
         {
-            Console.WriteLine("_GetLogData#### Running.....");
+            //Console.WriteLine("_GetLogData#### Running.....");
             List<UserEntry> list = new List<UserEntry>();
             string dwEnrollNumber1 = "";
             int dwVerifyMode = 0;
@@ -109,14 +109,14 @@ namespace BioMetrixCore
             int dwMinute = 1;
             int dwSecond = 1;
             int dwWorkCode = 0;
-            Console.WriteLine("_GetLogData#### 1");
+            
             ICollection<MachineInfo> lstEnrollData = new List<MachineInfo>();
-            Console.WriteLine("_GetLogData####MachineNo: {0}", machineNumber);
+            //Console.WriteLine("_GetLogData####MachineNo: {0}", machineNumber);
 
             objZkeeper.ReadAllGLogData(machineNumber);
             int dwMachineNumber = machineNumber;
             int dwTMachineNumber = machineNumber;
-            Console.WriteLine("_GetLogData#### 3");
+            
             
             int cnt = 0;
             while (objZkeeper.SSR_GetGeneralLogData(machineNumber, out dwEnrollNumber1, out dwVerifyMode, out dwInOutMode, out dwYear, out dwMonth, out dwDay, out dwHour, out dwMinute, out dwSecond, ref dwWorkCode))
@@ -126,24 +126,11 @@ namespace BioMetrixCore
 
                 int id = Convert.ToInt32(dwEnrollNumber1.Trim());
                 list.Add(new UserEntry(id, "", inputTime));
-
-
-                //Program.userEntries.Add(new UserEntry(id, "", inputTime));
-                //Program.writeToFile(dwEnrollNumber1.ToString() + "                , " + dwHour.ToString() + ":" + dwMinute.ToString() + ":" + dwSecond.ToString() + ", " + dwDay.ToString() + "/" + dwMonth.ToString() + "/" + dwYear.ToString());
-                // File.AppendAllText(@"F:\usr.csv", id.ToString()+"\n");
-                //File.AppendAllText(@"E:\PWD\BioMatrix\usr.csv", id.ToString() + "\n");
-
                 
-                MachineInfo objInfo = new MachineInfo();
-                objInfo.MachineNumber = machineNumber;
-
-                objInfo.IndRegID = int.Parse(dwEnrollNumber1);
-
-                objInfo.DateTimeRecord = inputDate;
                 cnt++;
             }
             
-            Console.WriteLine("_GetLogData#### CNT: {0}",cnt);
+            //Console.WriteLine("_GetLogData#### Number of entry found: {0}",cnt);
 
             return list;
         }

@@ -21,8 +21,8 @@ namespace BioMetrixCore
                 //{ "api_key_1", "u2AE4IjCC87Z7vDfMnSO8r5b147V4fQYD9055hkP" }
                 { "api_key", "g694IRVD6e72jw2bBT1NKqgJfn6Af03Y68YtXMIe" }
             };
-            Console.WriteLine(body);
-            Console.WriteLine(mobileNo);
+            //Console.WriteLine(body);
+            //Console.WriteLine(mobileNo);
 
             requestInput.Add("msg", body);
             requestInput.Add("to", mobileNo);
