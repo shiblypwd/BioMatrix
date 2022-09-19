@@ -67,7 +67,7 @@
             this.tbxDeviceIP.Name = "tbxDeviceIP";
             this.tbxDeviceIP.Size = new System.Drawing.Size(99, 22);
             this.tbxDeviceIP.TabIndex = 0;
-            this.tbxDeviceIP.Text = Program.IP_ADDRESS;
+            this.tbxDeviceIP.Text = LocalSMS.IP_ADDRESS;
             //this.tbxDeviceIP.Text = "172.16.1.72";
 
             // 

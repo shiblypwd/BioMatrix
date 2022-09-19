@@ -19,7 +19,7 @@ namespace BioMetrixCore
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         //public static string DEFAULT_PATH = @"";
-        public static string DEFAULT_PATH = @"E:\PWD\";
+        public static string DEFAULT_PATH = @"E:\Gate\";
         public static string USER_INFO_CSV_FILE_PATH = DEFAULT_PATH + "usr.csv";
         public static string NOTIFICATION_FLAG_FILE_PATH = DEFAULT_PATH + "NotificationFlagFile.txt";
 
@@ -77,11 +77,11 @@ namespace BioMetrixCore
 
             DateTime time = DateTime.Now;
 
-            Console.WriteLine(time.TimeOfDay.Hours);
-            Console.WriteLine(time.TimeOfDay.Minutes);
-            Console.WriteLine(time.TimeOfDay.Seconds);
+            //Console.WriteLine(time.TimeOfDay.Hours);
+            //Console.WriteLine(time.TimeOfDay.Minutes);
+            //Console.WriteLine(time.TimeOfDay.Seconds);
 
-            //Console.WriteLine(time);
+            Console.WriteLine(time);
             //Console.WriteLine(time.DayOfWeek);
 
             Dictionary<int, UserEntry> usrInfoMap = loadUserInfoFromFile();
@@ -137,17 +137,19 @@ namespace BioMetrixCore
             List<UserEntry> machineAList = master._getLog();
             master._disconnet();
 
-            Console.WriteLine(machineAList.Count);
-            IP_ADDRESS = "172.16.1.73";
-
-            Master master73 = new Master();
-            master73._ConnectOnly();
-            List<UserEntry> machineBList = master73._getLog();
-            master73._disconnet();
-            Console.WriteLine(machineBList.Count);
-
+            Console.WriteLine("NumOfEntry Machine-A: {0}", machineAList.Count);
             entryList.AddRange(machineAList);
-            entryList.AddRange(machineBList);
+
+
+            //IP_ADDRESS = "172.16.1.73";
+
+            //Master master73 = new Master();
+            //master73._ConnectOnly();
+            //List<UserEntry> machineBList = master73._getLog();
+            //master73._disconnet();
+
+            //Console.WriteLine(machineBList.Count);            
+            //entryList.AddRange(machineBList);
 
             return entryList;
         }
