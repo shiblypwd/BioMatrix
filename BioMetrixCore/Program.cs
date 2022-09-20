@@ -1,6 +1,7 @@
-﻿using System;
+﻿
+using System;
 using System.Net;
-using System.Web.Script.Serialization; // requires the reference 'System.Web.Extensions'
+using System.Text.Json;
 using System.IO;
 using System.Text;
 
@@ -11,12 +12,12 @@ class WaMessageSender
     private static string CLIENT_ID = "YOUR_CLIENT_ID_HERE";
     private static string CLIENT_SECRET = "YOUR_CLIENT_SECRET_HERE";
 
-    private static string API_URL = "http://api.whatsmate.net/v3/whatsapp/single/text/message/" + INSTANCE_ID;
+    private static string API_URL = "https://api.whatsmate.net/v3/whatsapp/single/text/message/" + INSTANCE_ID;
 
     static void Main(string[] args)
     {
         WaMessageSender msgSender = new WaMessageSender();
-        msgSender.sendMessage("12025550108", "Isn't this excting?");  //  Specify the recipient's number here. NOT the gateway number
+        msgSender.sendMessage("12025550108", "Isn't this exciting?");  // TODO: Specify the recipient's number here. NOT the gateway number
         Console.WriteLine("Press Enter to exit.");
         Console.ReadLine();
     }
@@ -27,29 +28,51 @@ class WaMessageSender
 
         try
         {
-            using (WebClient client = new WebClient())
+            HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(API_URL);
+            httpRequest.Method = "POST";
+            httpRequest.Accept = "application/json";
+            httpRequest.ContentType = "application/json";
+            httpRequest.Headers["X-WM-CLIENT-ID"] = CLIENT_ID;
+            httpRequest.Headers["X-WM-CLIENT-SECRET"] = CLIENT_SECRET;
+
+            Payload payloadObj = new Payload() { number = number, message = message };
+            string postData = JsonSerializer.Serialize(payloadObj);
+
+            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
             {
-                client.Headers[HttpRequestHeader.ContentType] = "application/json";
-                client.Headers["X-WM-CLIENT-ID"] = CLIENT_ID;
-                client.Headers["X-WM-CLIENT-SECRET"] = CLIENT_SECRET;
+                streamWriter.Write(postData);
+            }
 
-                Payload payloadObj = new Payload() { number = number, message = message };
-                string postData = (new JavaScriptSerializer()).Serialize(payloadObj);
-
-                client.Encoding = Encoding.UTF8;
-                string response = client.UploadString(API_URL, postData);
-                Console.WriteLine(response);
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                Console.WriteLine(result);
             }
         }
-        catch (WebException webEx)
+        catch (WebException webExcp)
         {
-            Console.WriteLine(((HttpWebResponse)webEx.Response).StatusCode);
-            Stream stream = ((HttpWebResponse)webEx.Response).GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
-            String body = reader.ReadToEnd();
-            Console.WriteLine(body);
+            Console.WriteLine("A WebException has been caught.");
+            Console.WriteLine(webExcp.ToString());
+            WebExceptionStatus status = webExcp.Status;
+            if (status == WebExceptionStatus.ProtocolError)
+            {
+                Console.Write("The REST API server returned a protocol error: ");
+                HttpWebResponse? httpResponse = webExcp.Response as HttpWebResponse;
+                Stream stream = httpResponse.GetResponseStream();
+                StreamReader reader = new StreamReader(stream);
+                String body = reader.ReadToEnd();
+                Console.WriteLine((int)httpResponse.StatusCode + " - " + body);
+                success = false;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("A general exception has been caught.");
+            Console.WriteLine(e.ToString());
             success = false;
         }
+
 
         return success;
     }
