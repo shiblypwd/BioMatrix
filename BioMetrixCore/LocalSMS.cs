@@ -18,7 +18,8 @@ namespace BioMetrixCore
     {        
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
-        public static string DEFAULT_PATH = @"F:\";
+        public static string DEFAULT_PATH = @"";
+        //public static string DEFAULT_PATH = @"F:\";
         //public static string DEFAULT_PATH = @"E:\PWD\";
         public static string USER_INFO_CSV_FILE_PATH = DEFAULT_PATH + "usr.csv";
         public static string NOTIFICATION_FLAG_FILE_PATH = DEFAULT_PATH + "NotificationFlagFile.txt";
@@ -34,18 +35,18 @@ namespace BioMetrixCore
         //static TimeSpan waitingTime = new TimeSpan(0, 10, 0);
 
 
-        static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
-        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 15);
+        //static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
+        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 15);
 
-        //static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
-        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 2);
+        static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
+        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 1);
 
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
         Dictionary<int, string> smsDestination = null;
         AlphaSMS smsManager;
-
+        static bool isMessagePrinted = false;
         public LocalSMS()
         {
             smsManager = new AlphaSMS();
@@ -97,21 +98,24 @@ namespace BioMetrixCore
             Console.WriteLine("Today: " + time);
 
             Dictionary<int, UserEntry> usrInfoMap = loadUserInfoFromFile();
+            
+            List<UserEntry> notificationSentList = getNotificationSentList();
+
+            foreach (UserEntry userEntry in notificationSentList)
+            {
+                long hash = generateHash(userEntry.EntryTime, userEntry.Id);
+                isNotficationSent.Add(hash);
+            }
 
             Console.WriteLine("Num Users in usr.csv file: {0}", usrInfoMap.Count);
 
             while (true)
             {
+                time = DateTime.Now;
+                Console.WriteLine("\t\tCurrentDateTime: {0}\n", time);                
                 List<UserEntry> userEntries = getAllInDataFromAllMachines();
                 //List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
-
-                List<UserEntry> notificationSentList = getNotificationSentList();
-
-                foreach (UserEntry userEntry in notificationSentList)
-                {
-                    long hash = generateHash(time, userEntry.Id);
-                    isNotficationSent.Add(hash);
-                }
+                
 
                 int countValidEntries = 0;
                 int notificationCounter = 0;
@@ -144,9 +148,9 @@ namespace BioMetrixCore
                     }
                 }
 
-                Console.WriteLine("Today Valid Entries: {0}#  Number of Notification Sent: {1}", countValidEntries, notificationCounter);
+                Console.WriteLine("\n\t\t[Valid Entries: {0}#  Number of Notification Sent: {1}]", countValidEntries, notificationCounter);
 
-                Console.WriteLine("\n\t\tProcess Waiting Interval....\n");
+                Console.WriteLine("\n............................................Waiting Interval..........................................\n");
                 Thread.Sleep(waitingTime);
             }            
         }
@@ -169,19 +173,21 @@ namespace BioMetrixCore
             master._ConnectOnly();
             List<UserEntry> machineAList = master._getLog();
             master._disconnet();
+            entryList.AddRange(machineAList);
 
-            Console.WriteLine(machineAList.Count);
+            Console.WriteLine("Number of Entries from machine-A :\t{0}", machineAList.Count);
+
+
             IP_ADDRESS = "172.16.1.73";
 
             Master master73 = new Master();
             master73._ConnectOnly();
             List<UserEntry> machineBList = master73._getLog();
             master73._disconnet();
-            Console.WriteLine(machineBList.Count);
-
-            entryList.AddRange(machineAList);
             entryList.AddRange(machineBList);
 
+            Console.WriteLine("Number of Entries from machine-B : \t{0}\n", machineBList.Count);
+                        
             return entryList;
         }
 
@@ -213,17 +219,24 @@ namespace BioMetrixCore
                     + info.EntryTime.TimeOfDay.Minutes.ToString() + ":"
                     + info.EntryTime.TimeOfDay.Seconds.ToString();
 
-                string messageBody = "Purta Bhavan Entrance Notification.\n"
-                                    + "Employee ID: " + info.Id + ",\n"
-                                    + "Employee Name: "+info.Name+" (" + info.Designation
-                                    + ").\nEntry Time: "+ timeStr;
 
-                Console.WriteLine("["+messageBody+"]");
+                string messageBody = "Purta Bhavan Entrance Notification.\n"
+                                        + "Employee ID: " + info.Id + ",\n"
+                                        + "Employee Name: " + info.Name + " (" + info.Designation
+                                        + ").\nEntry Time: " + timeStr;
 
                 //Send SMS;
-                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);                
-                Console.WriteLine("Notification Sent for id:{0}   to  {1}", info.Id, reportingOfficerMobileNumberStr);
-                Thread.Sleep(waitingTimeAfterEachSMS);                
+                //smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);                
+
+                if (isMessagePrinted == false)
+                {
+                    isMessagePrinted = true;
+                    Console.WriteLine("\n[" + messageBody + "]\n\n");
+                }
+                                
+                Console.WriteLine("Notification:\t{2} #\t  {0}\t({1})   #   {3}", info.Name, info.Designation, info.Id, reportingOfficerMobileNumberStr);
+                
+                Thread.Sleep(waitingTimeAfterEachSMS);
 
                 return true;
             }
