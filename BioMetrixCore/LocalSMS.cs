@@ -35,11 +35,11 @@ namespace BioMetrixCore
         //static TimeSpan waitingTime = new TimeSpan(0, 10, 0);
 
 
-        //static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
-        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 15);
+        static TimeSpan waitingTime = new TimeSpan(0, 3, 0);
+        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 15);
 
-        static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
-        static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 1);
+        //static TimeSpan waitingTime = new TimeSpan(0, 0, 20);
+        //static TimeSpan waitingTimeAfterEachSMS = new TimeSpan(0, 0, 1);
 
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
         public static List<int> listPresentIdInt = new List<int>();
