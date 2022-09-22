@@ -60,6 +60,7 @@
     <Compile Include="Controls\DataEmpty.Designer.cs">
       <DependentUpon>DataEmpty.cs</DependentUpon>
     </Compile>
+    <Compile Include="DateOnly.cs" />
     <Compile Include="Info\UserIDInfo.cs" />
     <Compile Include="LocalSMS.cs" />
     <Compile Include="Utilities\DeviceManipulator.cs" />

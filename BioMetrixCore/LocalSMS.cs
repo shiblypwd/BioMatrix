@@ -19,7 +19,7 @@ namespace BioMetrixCore
         public static string CONNECTION_STRING = @"Server=DESKTOP-VGQL2VE\\SQL19;Database=Pwd.Cms;Trusted_Connection=True";
 
         public static string DEFAULT_PATH = @"";
-        //public static string DEFAULT_PATH = @"F:\";
+        //public static string DEFAULT_PATH = @"F:\GateProductionCode\";
         //public static string DEFAULT_PATH = @"E:\PWD\";
         public static string USER_INFO_CSV_FILE_PATH = DEFAULT_PATH + "usr.csv";
         public static string NOTIFICATION_FLAG_FILE_PATH = DEFAULT_PATH + "NotificationFlagFile.txt";
@@ -88,6 +88,7 @@ namespace BioMetrixCore
             HashSet<long> isNotficationSent = new HashSet<long>();
 
             DateTime time = DateTime.Now;
+            
 
             //while (true)
             //{
@@ -95,7 +96,8 @@ namespace BioMetrixCore
             //    Console.WriteLine(generateHash(time, id));
             //}
 
-            Console.WriteLine("Today: " + time);
+            //Console.WriteLine("Today: " + time.ToString("hh:mm:ss tt dd-MM-yyyy"));
+            
 
             Dictionary<int, UserEntry> usrInfoMap = loadUserInfoFromFile();
             
@@ -112,7 +114,8 @@ namespace BioMetrixCore
             while (true)
             {
                 time = DateTime.Now;
-                Console.WriteLine("\t\tCurrentDateTime: {0}\n", time);                
+                Console.WriteLine("\t\tCurrentDateTime: {0}\n", time.ToString("hh:mm:ss tt dd-MM-yyyy"));
+                
                 List<UserEntry> userEntries = getAllInDataFromAllMachines();
                 //List<UserEntry> userEntries = getTodayInDataDummy(usrInfoMap);
                 
@@ -209,24 +212,21 @@ namespace BioMetrixCore
 
             File.AppendAllText(NOTIFICATION_FLAG_FILE_PATH, content + "\n");
         }
-
+        
         bool sendNotificationBySmS(UserEntry info)
         {
             if (smsDestination.ContainsKey(info.Id))
             {
                 string reportingOfficerMobileNumberStr = smsDestination[info.Id];
-                string timeStr = info.EntryTime.TimeOfDay.Hours.ToString() + ":"
-                    + info.EntryTime.TimeOfDay.Minutes.ToString() + ":"
-                    + info.EntryTime.TimeOfDay.Seconds.ToString();
-
 
                 string messageBody = "Purta Bhavan Entrance Notification.\n"
-                                        + "Employee ID: " + info.Id + ",\n"
+                                        + "Employee ID: " + info.Id + ".\n"
                                         + "Employee Name: " + info.Name + " (" + info.Designation
-                                        + ").\nEntry Time: " + timeStr;
+                                        + ").\nTime: " + info.EntryTime.ToString("hh:mm:ss tt dd-MM-yyyy");
+
 
                 //Send SMS;
-                //smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);                
+                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
 
                 if (isMessagePrinted == false)
                 {
