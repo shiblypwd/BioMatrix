@@ -226,7 +226,9 @@ namespace BioMetrixCore
 
 
                 //Send SMS;
-                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+                // smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+
+               
 
                 if (isMessagePrinted == false)
                 {
@@ -349,6 +351,8 @@ namespace BioMetrixCore
         }
 
 
+
+
         DateTime readTodayTime()
         {
             DateTime today = new DateTime();
@@ -365,5 +369,6 @@ namespace BioMetrixCore
             //MINUTE = Convert.ToInt32(Console.ReadLine());        
             return today;
         }
+
     }
 }
