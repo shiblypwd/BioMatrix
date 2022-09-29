@@ -369,5 +369,30 @@ namespace BioMetrixCore
             //MINUTE = Convert.ToInt32(Console.ReadLine());        
             return today;
         }
+
+
+        public void ClearInGateLogs()
+        {            
+            IP_ADDRESS = IP_ADDRESS_IN_GATE_1;
+
+            Master machineA = new Master();
+            machineA._ConnectOnly();
+            machineA._clearLog();
+            List<UserEntry> machineAList = machineA._getLog();
+            machineA._disconnet();
+            
+            Console.WriteLine("Number of Entries from machine-A :\t{0}", machineAList.Count);
+
+
+            IP_ADDRESS = IP_ADDRESS_IN_GATE_2;
+
+            Master machineB = new Master();
+            machineB._ConnectOnly();
+            machineB._clearLog();
+            List<UserEntry> machineBList = machineB._getLog();
+            machineB._disconnet();
+            
+            Console.WriteLine("Number of Entries from machine-B : \t{0}\n", machineBList.Count);            
+        }
     }
 }
