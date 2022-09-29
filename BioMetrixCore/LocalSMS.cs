@@ -27,7 +27,9 @@ namespace BioMetrixCore
         private static string logPath = DEFAULT_PATH + "log.txt";
         private static string debugPath = DEFAULT_PATH + "debug.txt";
 
-        // public static string IP_ADDRESS = "172.16.1.72";
+        public static string IP_ADDRESS_IN_GATE_1 = "172.16.1.74";
+        public static string IP_ADDRESS_IN_GATE_2 = "172.16.1.73";
+
         public static string IP_ADDRESS = "172.16.1.74";
         public static int PORT = 4370;
         public static int DEFAULT_MACHINE_NUMBER = 1;
@@ -172,6 +174,8 @@ namespace BioMetrixCore
         {
             List<UserEntry> entryList = new List<UserEntry>();
 
+            IP_ADDRESS = IP_ADDRESS_IN_GATE_1;
+
             Master master = new Master();
             master._ConnectOnly();
             List<UserEntry> machineAList = master._getLog();
@@ -181,7 +185,7 @@ namespace BioMetrixCore
             Console.WriteLine("Number of Entries from machine-A :\t{0}", machineAList.Count);
 
 
-            IP_ADDRESS = "172.16.1.73";
+            IP_ADDRESS = IP_ADDRESS_IN_GATE_2;
 
             Master master73 = new Master();
             master73._ConnectOnly();
@@ -226,7 +230,7 @@ namespace BioMetrixCore
 
 
                 //Send SMS;
-                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+                //smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
 
                 if (isMessagePrinted == false)
                 {
