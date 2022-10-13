@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Security;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -68,7 +69,7 @@ namespace BioMetrixCore
                 //{   9, "01710289237"},
                 //{ 730, "01710289237"},
                 //{ 808, "01710289237"},
-                { 890, "01710289237"},
+                { 890, "01717435775"},
 
                 //ACE
                 {   19, "01819207128" },    // SE, Coordination
@@ -82,6 +83,11 @@ namespace BioMetrixCore
                 {  30,  "01711386959"},    //EE, Establishment
                 {  114, "01711386959"},   //Executive
                 {  206, "01711386959"},   //Executive
+
+
+                //ACE(E/M P&D Zone)
+                { 211, "01552-403439" }, //XEN, E/M P&D Zone
+                { 234, "01552-403439" }, //SDE, E/M P&D Zone
             };
         }
 
@@ -230,7 +236,7 @@ namespace BioMetrixCore
 
 
                 //Send SMS;
-                //smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
 
                 if (isMessagePrinted == false)
                 {
