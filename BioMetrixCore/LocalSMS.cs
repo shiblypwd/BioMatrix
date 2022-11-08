@@ -91,6 +91,12 @@ namespace BioMetrixCore
 
                  { 211, "01711454577" }, //XEN, E/M P&D Zone
                  { 234, "01711454577" }, //SDE, E/M P&D Zone
+                   
+                //EE(Co)
+                {41, "01711909542" }, //SDE 
+                {38, "01711909542" }, //SDE , (Co.)
+
+
 
                  //XEN(E/M P&D Zone) 
                  { 141, "01711083581" },
