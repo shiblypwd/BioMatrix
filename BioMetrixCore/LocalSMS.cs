@@ -65,7 +65,6 @@ namespace BioMetrixCore
                 //ACE (EST & Co)
                 {   19, "01819207128" },    // SE, Coordination
                 {   32, "01819207128" },    // SE, EST
-                {   174, "01819207128"},   //SE, Maintenance Circle
                 
                 //SE(Co.)
                 {  27, "01819207958" },   // Executive
@@ -79,10 +78,32 @@ namespace BioMetrixCore
                 //SE (Development)
 
 
-                //SE(Maintenance Circle)
-                
+                //ACE (Planning and Special Project)
+                { 5, "01712054178" }, //SE,pro.circle-1
+                { 393, "01712054178" },//SE,pro.circle-2
+                { 26, "01712054178" }, //SE,Design circle-1
+                { 33, "01712054178" }, //SE,Monitoring & Audit Circle
+                { 25, "01712054178" }, //SE,PECU Circle
 
-               
+                //SE(pro. circle-1)
+                { 505, "01819133159" },//XEN,Project Division-1
+                { 286, "01819133159" },//XEN,Project Division-2
+
+                //SE(pro. circle-2)
+                { 151 ,"01552407402"}, //XEN,Project Division-3
+
+
+                //SE(Design circle-1)
+                {229 ,"01711185346" }, //XEN, Design Division-1
+                {703 ,"01711185346" }, //XEN, Design Division-2
+
+                //SE(Monitoring & Audit Circle)
+                { 500,"01714874169" },//XEN, Audit Division
+                { 194,"01714874169" },//XEN, Monitoring Division
+
+                //SE(PECU Circle)
+                {929,"01711469492" },//XEN,PECU Division
+
                 //ACE(E/M P&D Zone)
                  { 211, "01711454577" }, //XEN, E/M P&D Zone
                  { 234, "01711454577" }, //SDE, E/M P&D Zone
@@ -249,7 +270,7 @@ namespace BioMetrixCore
 
 
                 //Send SMS;
-               // smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
 
                 if (isMessagePrinted == false)
                 {
