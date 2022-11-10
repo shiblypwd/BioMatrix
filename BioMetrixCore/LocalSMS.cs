@@ -60,20 +60,12 @@ namespace BioMetrixCore
                 {  17, "01628287273"},      //ACE Co.& Es.
                 { 546, "01628287273"},      //EE,MIS-1    
                 { 112, "01628287273"},      //EE,MIS-2    
-                //{ 534, "01628287273"},      //SDE, MIS-2
+    
 
-                //{ 32, "01819207128"},       // SE Nandita
-                //{ 19, "01819207128"},       // SE Shakhawat
-                //{ 30, "01819207128"},       // EE Noor
-
-                //{   9, "01710289237"},
-                //{ 730, "01710289237"},
-                //{ 808, "01710289237"},
-                { 890, "01712666631"},
-
-                //ACE
+                //ACE (EST & Co)
                 {   19, "01819207128" },    // SE, Coordination
                 {   32, "01819207128" },    // SE, EST
+                {   174, "01819207128"},   //SE, Maintenance Circle
                 
                 //SE(Co.)
                 {  27, "01819207958" },   // Executive
@@ -84,11 +76,14 @@ namespace BioMetrixCore
                 {  114, "01711386959"},   //Executive
                 {  206, "01711386959"},   //Executive
 
+                //SE (Development)
 
+
+                //SE(Maintenance Circle)
+                
+
+               
                 //ACE(E/M P&D Zone)
-                //{ 211, "01552403439" }, //XEN, E/M P&D Zone
-                //{ 234, "01552403439" }, //SDE, E/M P&D Zone
-
                  { 211, "01711454577" }, //XEN, E/M P&D Zone
                  { 234, "01711454577" }, //SDE, E/M P&D Zone
                    
@@ -254,7 +249,7 @@ namespace BioMetrixCore
 
 
                 //Send SMS;
-                smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
+               // smsManager.sendSMS(messageBody, reportingOfficerMobileNumberStr);
 
                 if (isMessagePrinted == false)
                 {
