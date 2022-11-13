@@ -112,6 +112,8 @@ namespace BioMetrixCore
                 {41, "01711909542" }, //SDE 
                 {38, "01711909542" }, //SDE , (Co.)
 
+                //ACE (Dhaka PWD Zone)
+                {39,"01552401158" }, //SE, Dhaka PWD Circle-4
 
 
                  //XEN(E/M P&D Zone) 
