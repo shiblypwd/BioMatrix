@@ -1275,3 +1275,1106 @@
 683	$1$11$2022	$13$33$43	$683	$
 567	$1$11$2022	$13$35$45	$Md Shohidul Haq	$UDA
 681	$1$11$2022	$13$39$21	$Ashiful Islam Vhuya	$SDE
+750	$16$11$2022	$6$18$58	$Hasem Ali	$Ansar
+392	$16$11$2022	$6$35$11	$Sri Mohon Lal	$Sweeper
+386	$16$11$2022	$6$39$15	$Md Hasanuzzman	$Farash
+771	$16$11$2022	$6$40$22	$Md Tanvir Islam	$Cliner-S.D-5
+437	$16$11$2022	$6$43$54	$Honufa Begum	$Farash
+398	$16$11$2022	$6$45$46	$Md Amir Hossain	$Cleaner
+768	$16$11$2022	$6$48$33	$Rabiul	$Cliner-S.D-5
+449	$16$11$2022	$6$50$40	$Md Abdur Rosid	$Farash
+769	$16$11$2022	$6$54$37	$Md Ruhul Amin	$Cliner-S.D-5
+777	$16$11$2022	$6$55$3	$Md Shahadat 2	$Cliner-S.D-5
+776	$16$11$2022	$6$56$4	$Md Mojidul	$Cliner-S.D-5
+774	$16$11$2022	$7$0$17	$Md Shoriful	$Cliner-S.D-5
+489	$16$11$2022	$7$12$37	$Sri Sobash Chandra Das	$Cleaner
+772	$16$11$2022	$7$15$0	$Bashir Ahmed	$Cliner-S.D-5
+660	$16$11$2022	$7$21$43	$Jahangir Hossain	$Office Assistant
+444	$16$11$2022	$7$27$45	$Md Shohidul islam	$Mason
+189	$16$11$2022	$7$32$21	$Md .Enayet Hossain	$Office Assistant
+396	$16$11$2022	$7$36$14	$Sri krisno Lal	$Cleaner
+50	$16$11$2022	$7$46$22	$Md Jafor Ali	$Quard (Help Desk)
+459	$16$11$2022	$7$58$5	$Md Mizanur Rahman	$Office Assistant
+404	$16$11$2022	$8$2$58	$Md Kamrujjaman	$SDE-D.D-2
+831	$16$11$2022	$8$5$13	$Md Hannan	$Office Assistant
+379	$16$11$2022	$8$5$20	$Md Shajalal Biswas	$Farash
+913	$16$11$2022	$8$12$31	$Jibon	$CLEANER
+649	$16$11$2022	$8$13$15	$649	$
+721	$16$11$2022	$8$14$29	$Gate Pass	$Main Gate
+532	$16$11$2022	$8$14$59	$532	$
+783	$16$11$2022	$8$15$42	$Md Faruk Molla	$Driver-D.D-2
+351	$16$11$2022	$8$25$25	$Abdur Rahman	$Designer-D.D-1
+321	$16$11$2022	$8$25$49	$Md Mejnha Uddin	$Office Asst.-Est-4
+575	$16$11$2022	$8$26$28	$575	$
+122	$16$11$2022	$8$33$53	$Mamun	$Office Assistant-MIS
+731	$16$11$2022	$8$34$31	$Md Mojidul Islam	$Software Eng.MIS-1
+428	$16$11$2022	$8$37$6	$Md Abdul Awal	$Guard
+25	$16$11$2022	$8$37$33	$Kazi Md. Firoz Hasan	$SE
+149	$16$11$2022	$8$37$46	$Md Abdur Razzak	$Security-Enq
+570	$16$11$2022	$8$38$31	$570	$
+166	$16$11$2022	$8$38$59	$Sumon KUmar Sarkar	$Office Assistant
+328	$16$11$2022	$8$39$10	$Md Sahalam	$Gardener
+371	$16$11$2022	$8$39$20	$Md Golam Morshed Delowar	$Superintendent
+125	$16$11$2022	$8$39$51	$Md. Abdur Razzak Sakar	$Office Assistant
+242	$16$11$2022	$8$40$51	$Rowshanara Begum	$Higher Assistant
+675	$16$11$2022	$8$41$30	$675	$
+244	$16$11$2022	$8$41$41	$244	$
+46	$16$11$2022	$8$42$6	$Md. Moshraf Hossain	$Office Shoyak
+560	$16$11$2022	$8$42$48	$560	$
+107	$16$11$2022	$8$43$43	$Kabir Hossan Mirdha	$Higher Assistant
+600	$16$11$2022	$8$44$31	$600	$
+67	$16$11$2022	$8$45$22	$Abul Kalam Azad	$SE
+209	$16$11$2022	$8$45$33	$209	$
+354	$16$11$2022	$8$45$59	$Md Emon Hossain	$Office Assistant-MIS
+278	$16$11$2022	$8$46$10	$278	$
+403	$16$11$2022	$8$46$47	$Md Dulal Mia	$Labour
+313	$16$11$2022	$8$46$56	$Md Khairul Bashar	$Office Assistant
+690	$16$11$2022	$8$47$4	$Md Yousuf Ali	$
+822	$16$11$2022	$8$47$34	$Md Shohidul Islam	$Administrative Offic
+477	$16$11$2022	$8$47$49	$Laily Akter	$Office/Compt.-Est-4
+181	$16$11$2022	$8$50$59	$181	$
+141	$16$11$2022	$8$53$43	$Md Raju mIa	$Office /Computer
+176	$16$11$2022	$8$53$54	$176	$Driver P.C-1
+249	$16$11$2022	$8$54$37	$Md Mahabub Alam	$Office Asst.-O&M
+700	$16$11$2022	$8$54$55	$Md Mujibur Rahman	$Office Assistant
+651	$16$11$2022	$8$56$23	$651	$Labour P.C-1
+187	$16$11$2022	$8$56$47	$Selina Akther	$Office Assistant
+257	$16$11$2022	$8$56$54	$Md Zahidul Islam Khan	$XEN- BDU- 1
+699	$16$11$2022	$8$56$58	$Md Mohi Uddin	$Higher Assistant
+226	$16$11$2022	$8$57$1	$Jahirul Islam	$Compuer Typiest
+359	$16$11$2022	$8$57$8	$359	$
+372	$16$11$2022	$8$57$25	$Shanaz Parvin	$Computer Opt.
+472	$16$11$2022	$8$57$34	$Md Mahashin Mallik	$Office/Comt.-Est-4
+129	$16$11$2022	$8$59$0	$Alu Mahmud	$Office Assistant
+384	$16$11$2022	$8$59$51	$384	$SAE P.D-4
+85	$16$11$2022	$9$0$52	$Nasima Parvin	$Higher-Assistant
+336	$16$11$2022	$9$1$19	$Md Liaqiat Ali	$Work assistant
+918	$16$11$2022	$9$1$47	$Asha Moni	$
+275	$16$11$2022	$9$2$21	$275	$
+246	$16$11$2022	$9$2$31	$246	$
+119	$16$11$2022	$9$3$3	$119	$
+552	$16$11$2022	$9$4$38	$552	$
+13	$16$11$2022	$9$6$34	$Muhammad Moniruzzaman	$SE
+245	$16$11$2022	$9$6$52	$245	$SAE P.C-2
+464	$16$11$2022	$9$7$20	$Anjuman Ara	$Office Assistant
+333	$16$11$2022	$9$7$38	$Azad Rahman	$Office/Computer
+224	$16$11$2022	$9$7$48	$224	$
+240	$16$11$2022	$9$8$26	$Nargies Sultana	$Account Assistant
+432	$16$11$2022	$9$9$28	$Md Rezaul Karim	$Pump Driver- POBP
+347	$16$11$2022	$9$9$41	$Ariful Haq	$Designer-D.D-1
+523	$16$11$2022	$9$11$7	$Md Mominul Islam	$SAE
+752	$16$11$2022	$9$11$20	$Md Robayat Hossain	$SDE-D.D-3
+290	$16$11$2022	$9$12$1	$Md Sabin Mia	$Office/Computer
+389	$16$11$2022	$9$12$18	$Bibi Fatema	$Office Assistant
+423	$16$11$2022	$9$12$28	$Forida Yasmin	$Office Ass. P.D-5
+58	$16$11$2022	$9$12$37	$Md. Akhter Hossain	$Computer Operator
+491	$16$11$2022	$9$12$42	$Md Masud Rana	$Guard
+303	$16$11$2022	$9$12$47	$Zahid Hasnine	$SDE-D.D-2
+441	$16$11$2022	$9$13$12	$Mohammad Masrur Foteh	$SDE D.D-1
+907	$16$11$2022	$9$13$25	$Joli Bormon	$AE
+429	$16$11$2022	$9$13$42	$Md Anowar Hossain	$Office/Computer Opt.
+430	$16$11$2022	$9$13$51	$Abu Md. Shokur Rahman	$UDA
+511	$16$11$2022	$9$15$3	$Md Al-Amin	$Draftsman -BDU-1
+153	$16$11$2022	$9$16$19	$Jugol Chandra Rai	$Office Assistant
+785	$16$11$2022	$9$16$45	$Bhabesh Chandro Balo	$Computer.Op-UAP
+123	$16$11$2022	$9$17$39	$Md. Shahab uddin	$Office Assistant
+291	$16$11$2022	$9$17$42	$291	$SAE P.D-4
+96	$16$11$2022	$9$17$47	$Sakila Islam	$XEN
+781	$16$11$2022	$9$17$52	$Md Monir Hossain	$CCTV-EM-1
+320	$16$11$2022	$9$18$12	$320	$Driver P.D-4
+223	$16$11$2022	$9$18$43	$Md Asaduzzaman	$UDA-Est-1
+33	$16$11$2022	$9$19$19	$Md. Mahbub Morshed	$SE
+592	$16$11$2022	$6$28$37	$Banu	$Cleaner
+765	$16$11$2022	$6$39$8	$Avdul Motaleb	$Supervisor.C-S.D-5
+944	$16$11$2022	$6$40$16	$Sri Arjun	$
+766	$16$11$2022	$6$47$28	$Nazmul Haq	$Cliner-S.D-5
+773	$16$11$2022	$7$1$56	$Md Shahadat	$Cliner-S.D-5
+729	$16$11$2022	$7$2$42	$Md Shuvo	$O.A-D-5
+755	$16$11$2022	$7$34$52	$Motalib Hossain	$Ansar
+538	$16$11$2022	$7$40$7	$Md Abu Bakkar Siddik	$Guard
+126	$16$11$2022	$7$57$24	$Md. Abdur Rahim	$Pieon
+644	$16$11$2022	$8$2$54	$644	$Office/Computer Opt.
+496	$16$11$2022	$8$5$12	$Sri Endro Lal	$Sweeper
+782	$16$11$2022	$8$7$47	$Md JosimUddin Vhuiya	$VTA-EM-1
+703	$16$11$2022	$8$9$31	$Md Emdadul Haq	$XEN-D.D-2
+448	$16$11$2022	$8$12$12	$Md Yousuf Hossain	$Farash
+397	$16$11$2022	$8$13$22	$Sri Naraiyon	$Cleaner
+104	$16$11$2022	$8$16$44	$Abdul Mannan	$Printer
+263	$16$11$2022	$8$19$30	$Salam Mia	$Computer Typist
+286	$16$11$2022	$8$33$10	$Abdullah Mohammad Jubaye	$XEN
+715	$16$11$2022	$8$33$28	$Md Sohel	$DD-3 O.A
+53	$16$11$2022	$8$36$0	$Md Abdul Bashed	$
+92	$16$11$2022	$8$37$26	$Ovijit Saha	$Network Engineer-Mis
+456	$16$11$2022	$8$38$6	$456	$
+872	$16$11$2022	$8$38$17	$Ferdos Ara Akter	$Computer Typest
+68	$16$11$2022	$8$38$34	$Md Abdul Rahim	$Higher Assistant
+87	$16$11$2022	$8$39$28	$Md Al-Amin	$Office/Computer opt.
+235	$16$11$2022	$8$39$43	$MOhiuddin	$Office Assistant
+355	$16$11$2022	$8$39$56	$S.K Toufiqur Rahman	$XEN
+283	$16$11$2022	$8$40$6	$283	$
+70	$16$11$2022	$8$40$50	$Md Yousuf Ali Mollah	$Office Assistant
+549	$16$11$2022	$8$41$58	$Farhana Rob	$XEN- POBP
+346	$16$11$2022	$8$42$11	$346	$
+237	$16$11$2022	$8$42$32	$Rubel Hossain	$Gurad
+356	$16$11$2022	$8$43$55	$356	$SDE P.D-4
+282	$16$11$2022	$8$44$17	$282	$
+76	$16$11$2022	$8$45$11	$Md Sakil	$Office Assistant
+469	$16$11$2022	$8$45$46	$Mohammad Nasir Uddin	$P. C - 1 SAE
+574	$16$11$2022	$8$45$51	$574	$
+5	$16$11$2022	$8$47$55	$Md. Khaled Hussain	$SE
+27	$16$11$2022	$8$48$5	$A.H.M. Foyzul Islam	$Executive Engineer(Coordination)
+435	$16$11$2022	$8$48$26	$Mohammad Ali	$SAE- P.D -5
+382	$16$11$2022	$8$49$15	$382	$
+267	$16$11$2022	$8$49$21	$Md Imdadul Haque	$UDA
+182	$16$11$2022	$8$49$28	$Md. Shamim Hossain	$Designer
+458	$16$11$2022	$8$49$47	$Abdus Salam Khan	$Treaser
+411	$16$11$2022	$8$50$2	$Milon Mia	$SAE
+145	$16$11$2022	$8$50$27	$Md Sha Alam	$Higher Asst.
+28	$16$11$2022	$8$51$59	$M Hasan Ibne Siraj	$Executive Engineer(Coordination)
+481	$16$11$2022	$8$52$19	$481	$
+195	$16$11$2022	$8$52$32	$195	$
+589	$16$11$2022	$8$52$40	$589	$
+327	$16$11$2022	$8$52$48	$Md Anwar Hossain	$Office/Computer
+641	$16$11$2022	$8$52$55	$Md Nazrul Islam	$Office Asst. MIS
+270	$16$11$2022	$8$53$22	$270	$
+561	$16$11$2022	$8$53$29	$561	$
+292	$16$11$2022	$8$53$53	$Md Basid Ujjman	$Superintendent
+132	$16$11$2022	$8$54$1	$Anowara Begum	$Superintendent
+41	$16$11$2022	$8$54$11	$Kamnur Nahar	$SDE
+890	$16$11$2022	$8$54$28	$Fazhrul Islam Sadip	$Intern
+480	$16$11$2022	$8$55$28	$Nazma Begum	$UDA
+931	$16$11$2022	$8$55$33	$Shahnaj Begum	$Office/computer OPT
+419	$16$11$2022	$8$55$39	$419	$SAE P.D-4
+344	$16$11$2022	$8$55$44	$344	$
+88	$16$11$2022	$8$55$49	$Md Tajul Islam	$Higher-Assistant
+159	$16$11$2022	$8$56$5	$Nasrin Akter	$Office/computer
+49	$16$11$2022	$8$56$9	$Lata Akther	$Office Sayok
+656	$16$11$2022	$8$56$16	$Md Nur Nobi	$Office Assistant
+247	$16$11$2022	$8$57$59	$Mala Begum	$Office Assistant
+117	$16$11$2022	$8$58$6	$117	$XEN P.D-4
+640	$16$11$2022	$8$58$32	$Uttom Kumar Saha	$Sr. Accountence
+425	$16$11$2022	$8$58$40	$Sukumar Shorma	$Office Ass. P.D-5
+29	$16$11$2022	$8$59$6	$Md. Sanaullah	$XEN
+79	$16$11$2022	$8$59$20	$Abdul Malik Hossan	$Office Assistant
+26	$16$11$2022	$8$59$51	$Md. Rafiqul Islam	$SE
+558	$16$11$2022	$9$0$5	$558	$
+508	$16$11$2022	$9$0$32	$Ruma Rani Mandol	$Office Assistant
+500	$16$11$2022	$9$1$29	$Md Baki Ullah	$XEN
+264	$16$11$2022	$9$1$35	$Md Kitabul hossain	$Office Assistant
+645	$16$11$2022	$9$1$38	$Md Mahatab Hossen	$SAE
+593	$16$11$2022	$9$1$44	$593	$
+387	$16$11$2022	$9$1$49	$Muhammad Riyed Hossain	$P.C - 1 (SAE)
+767	$16$11$2022	$9$2$16	$Md Torikul islam	$Driver-Development
+476	$16$11$2022	$9$3$2	$Siddique Ullah	$UDA-Est-4
+536	$16$11$2022	$9$3$27	$536	$
+725	$16$11$2022	$9$5$35	$Sha Eyamin Ul Islam	$XEN-PRO.
+911	$16$11$2022	$9$6$32	$Md Tarikul Hasan	$AE
+426	$16$11$2022	$9$6$46	$Munny Akter	$Office Assistant
+510	$16$11$2022	$9$7$4	$Sumon Chandra Roy	$Draftsman -BDU-1
+230	$16$11$2022	$9$8$45	$Nurun Nahar	$UDA-Est-1
+507	$16$11$2022	$9$8$50	$Toimur Rahman	$Draftsman
+164	$16$11$2022	$9$9$30	$Somrat Poddar	$Office Assistant
+454	$16$11$2022	$9$10$1	$Mrs. Rehena Begum	$Typist
+365	$16$11$2022	$9$10$13	$Topon Kumar	$SAE D.D-1
+515	$16$11$2022	$9$11$13	$Md Ariful Islam	$Office/Computer OPT.
+376	$16$11$2022	$9$11$20	$376	$SDE P.D-4
+440	$16$11$2022	$9$11$25	$Nitayananda Shil	$Office/Computer
+438	$16$11$2022	$9$11$30	$Md Mamun Hasan	$Office Asst.-Est-4
+135	$16$11$2022	$9$11$35	$Md Yeamin Hossain	$Photocopy Opt.
+198	$16$11$2022	$9$11$41	$198	$
+294	$16$11$2022	$9$12$1	$294	$
+200	$16$11$2022	$9$12$5	$Md Atikul Islam	$AE
+214	$16$11$2022	$9$12$13	$214	$
+265	$16$11$2022	$9$12$46	$Md Bahauddhin	$Printer
+221	$16$11$2022	$9$13$38	$Md Sharif Ahamed	$UDA
+279	$16$11$2022	$9$13$53	$279	$Higher Asst. P.D-4
+302	$16$11$2022	$9$14$11	$Sayed Taufiq Ahmed	$e-GP Consultant-MIS
+82	$16$11$2022	$9$14$33	$Md Monir Hossain	$Office Assistant
+116	$16$11$2022	$9$14$48	$Md Billal Miah	$Office Assistant
+98	$16$11$2022	$9$15$20	$Md Enamul Haq	$Office/Computer
+528	$16$11$2022	$9$17$0	$528	$
+300	$16$11$2022	$9$17$27	$Shajahan	$Higher Assistant
+541	$16$11$2022	$9$20$58	$Md Dulal Hossain	$UDA
+146	$16$11$2022	$9$21$36	$Mohammad Samshul Huda	$Higher Assistant
+173	$16$11$2022	$9$22$36	$173	$Labour- P.C-1
+325	$16$11$2022	$9$22$41	$Dipok Kumar Mohonton	$Office Asst. P.D-1
+835	$16$11$2022	$9$22$53	$Md. Shiam Misbah	$Jr.Business Analyst
+512	$16$11$2022	$9$23$0	$Amir Hossen	$UDA
+228	$16$11$2022	$9$23$31	$Nur Jahan Akter	$Office Asst. Est-1
+285	$16$11$2022	$9$24$24	$Khandoker Khaironnaher	$UDA-Est-1
+577	$16$11$2022	$9$24$30	$Md Fahim Haq	$Office Asst.
+579	$16$11$2022	$9$24$37	$Md Fayjul Kabir	$P.A
+495	$16$11$2022	$9$24$41	$Md Mofijul Islam Sarkar	$superitendence
+329	$16$11$2022	$9$24$46	$Md Nazrul Islam	$Higher Ass. P.D-1
+343	$16$11$2022	$9$24$52	$Sajjad Hossain	$Higher Asst.
+409	$16$11$2022	$9$24$56	$Monowara Begum	$Labour
+202	$16$11$2022	$9$25$0	$202	$
+190	$16$11$2022	$9$25$5	$Md Hajbul Kabir	$Xen - Deisgn 4
+451	$16$11$2022	$9$25$10	$451	$
+539	$16$11$2022	$9$25$16	$Shalina Alam	$Office Asst.-Est-4
+69	$16$11$2022	$9$25$21	$Rehana Sultana	$Assistant Officer
+557	$16$11$2022	$9$25$27	$Md Aminul Islam	$Higher Asst.
+73	$16$11$2022	$9$25$34	$Gul Nahar	$Higher Assistant
+168	$16$11$2022	$9$25$41	$168	$Acc. Assist. P.D-3
+364	$16$11$2022	$9$26$7	$Fahmida Jubayer Mukta	$Office Asst.
+65	$16$11$2022	$9$26$30	$Sona Banu	$Photocopy Operator
+562	$16$11$2022	$9$26$37	$Md Saiful Islam	$SAE
+719	$16$11$2022	$9$27$26	$Khairul Alam	$O.A-P.D-2
+259	$16$11$2022	$9$27$34	$Md Harun Ar Rashid	$UDA
+530	$16$11$2022	$9$28$16	$Md Aminur Rahman	$SAE
+151	$16$11$2022	$9$28$37	$151	$XEN P.D-3
+86	$16$11$2022	$9$28$59	$Alo Akter	$Office Sayok
+308	$16$11$2022	$9$29$12	$308	$
+607	$16$11$2022	$9$29$33	$Salma Begum	$Account assistant
+370	$16$11$2022	$9$29$38	$Sayed Mustafizur Rahman	$Higher Asst.
+204	$16$11$2022	$9$29$43	$Anjuman Ara Vhuiya	$SDE
+568	$16$11$2022	$9$30$16	$568	$
+253	$16$11$2022	$9$30$25	$253	$Higher Asst.
+474	$16$11$2022	$9$30$30	$Md Belal Mia	$Superintendent-Est-4
+713	$16$11$2022	$9$30$42	$Md Sha Alam	$PPC-AE
+273	$16$11$2022	$9$31$4	$273	$
+295	$16$11$2022	$9$31$11	$Runia Sultana	$Account.
+208	$16$11$2022	$9$31$34	$Md Nurul Alam	$Office Assistant
+697	$16$11$2022	$9$32$2	$Md Faruk Hossain	$Office Assistant
+216	$16$11$2022	$9$32$20	$216	$
+206	$16$11$2022	$9$32$30	$Md. Taufiq Alam Siddique	$Executive Engineer (Inquiry cell)
+373	$16$11$2022	$9$33$8	$Ashma Akter	$Office /Computer
+634	$16$11$2022	$9$33$51	$Taj Mia	$Driver
+730	$16$11$2022	$9$34$10	$Shaokat Barma	$Software Eng.MIS-1
+537	$16$11$2022	$9$34$15	$537	$
+78	$16$11$2022	$9$34$23	$Miznur Rahman	$PA
+318	$16$11$2022	$9$34$50	$318	$
+833	$16$11$2022	$9$35$8	$MD Emon Islam	$Driver
+220	$16$11$2022	$9$35$26	$Md Deloar Hossain	$Office/Compt. Est-1
+582	$16$11$2022	$9$35$31	$Md Firoz Khan	$Office Asst.
+342	$16$11$2022	$9$35$34	$Shahin Alam	$Office/Computer
+118	$16$11$2022	$9$36$32	$118	$
+711	$16$11$2022	$9$36$40	$Md Eliyas	$SDU-2 AE
+162	$16$11$2022	$9$36$48	$162	$SDE P.D-3
+405	$16$11$2022	$9$39$24	$405	$
+548	$16$11$2022	$9$40$5	$Md Atiyar Rahman	$Office/Computer
+516	$16$11$2022	$9$40$14	$Md Mahabul Alom	$Computer Operator
+488	$16$11$2022	$9$40$19	$Md Abul Kalam Azad	$Computer opt.
+171	$16$11$2022	$9$40$37	$171	$
+277	$16$11$2022	$9$41$13	$277	$Office Asst. P.D-4
+211	$16$11$2022	$9$41$28	$Kazi Mashfiq Ahmed	$XEN
+147	$16$11$2022	$9$41$59	$Rousonara Begum	$UDA
+93	$16$11$2022	$9$42$35	$Sayeeda Khatun	$Higher -Assistant
+902	$16$11$2022	$9$42$42	$Md Eleyes Ahmed	$XEN
+89	$16$11$2022	$9$43$4	$Md Anarul Islam	$superendent
+207	$16$11$2022	$9$43$19	$207	$
+527	$16$11$2022	$9$43$36	$527	$
+569	$16$11$2022	$9$43$58	$569	$
+576	$16$11$2022	$9$44$10	$Golejannat Akter	$Designner
+64	$16$11$2022	$9$44$25	$Shamsun Nahar	$Office/Computer Opt.
+183	$16$11$2022	$9$44$35	$Md Tara Miya	$Office Assistant-MIS
+266	$16$11$2022	$9$45$18	$Md Hazrat Ali	$Office Assistant
+112	$16$11$2022	$9$45$41	$Md Nafiz Mahmud	$XEN- MIS
+893	$16$11$2022	$9$46$18	$Md Safiqur Rahman	$AE
+543	$16$11$2022	$9$46$35	$Md Mejbha Uddin	$Office/Computer Opt.
+140	$16$11$2022	$9$46$41	$Zia Uddin Bhuiyan	$Computer OPt.
+293	$16$11$2022	$9$47$30	$293	$
+152	$16$11$2022	$9$47$36	$152	$
+191	$16$11$2022	$9$19$19	$191	$
+374	$16$11$2022	$9$19$31	$Salma akter	$SAE-D.D-2
+443	$16$11$2022	$9$19$46	$Md Jalal Uddin	$Driver-POBP
+646	$16$11$2022	$9$20$40	$646	$
+710	$16$11$2022	$9$20$53	$Abdullah Al Sams	$DD-2 AE
+889	$16$11$2022	$9$21$8	$Md. Yousuf Khan	$Intern
+311	$16$11$2022	$9$21$47	$Yasmin Akter	$Computer opt.
+450	$16$11$2022	$9$21$53	$450	$
+473	$16$11$2022	$9$22$47	$Md Faridul Haque	$Office/Comt.-Est-4
+463	$16$11$2022	$9$23$4	$Md Belal Hossain	$Superitendence
+627	$16$11$2022	$9$23$19	$Abdul Rahim	$Superintendent
+733	$16$11$2022	$9$23$24	$Shahana Akter	$Office Assistant
+219	$16$11$2022	$9$23$28	$Md Rafiqul Islam	$UDA-Est-1
+314	$16$11$2022	$9$23$32	$Md Shofiul Alam	$Superitendence
+377	$16$11$2022	$9$23$39	$Nigar Sultana	$Office Assistant
+56	$16$11$2022	$9$23$44	$Md Haider Ali	$SE
+479	$16$11$2022	$9$23$48	$Siddiqur Rahman	$Assist. Plamber
+525	$16$11$2022	$9$23$54	$525	$
+227	$16$11$2022	$9$23$59	$Md Zamir Ali	$Office Asst.-Est-1
+590	$16$11$2022	$9$24$5	$590	$
+52	$16$11$2022	$9$24$11	$Md Belayet Hossain	$
+490	$16$11$2022	$9$24$16	$Hosne Ara	$Typist
+559	$16$11$2022	$9$24$22	$559	$
+414	$16$11$2022	$9$25$6	$Mrs. Sufiya Sultana	$UDA
+535	$16$11$2022	$9$25$42	$Md Rayhan	$SAE P.D - 1
+550	$16$11$2022	$9$25$55	$550	$
+274	$16$11$2022	$9$26$13	$274	$
+728	$16$11$2022	$9$26$25	$Anupoma Roy	$S.D.U-1
+139	$16$11$2022	$9$26$32	$Mohammad Kobir Hossain	$Forash
+3	$16$11$2022	$9$27$4	$Ashraful Haque	$Add. Chief Engineer
+851	$16$11$2022	$9$27$9	$Md Sohag	$Office Assistant
+572	$16$11$2022	$9$27$13	$Md Masud Patowary	$SAE
+281	$16$11$2022	$9$27$48	$281	$Office/Compt.P.D-4
+276	$16$11$2022	$9$27$51	$276	$
+83	$16$11$2022	$9$28$2	$Md Forhad Hossain	$
+133	$16$11$2022	$9$28$14	$Farzana Begum	$Higher Assistant
+161	$16$11$2022	$9$28$20	$161	$SDE P.D-3
+891	$16$11$2022	$9$28$26	$Asmaul Hosna	$AE
+716	$16$11$2022	$9$28$33	$Sazida Khanom	$SD-P.D.U-1
+696	$16$11$2022	$9$28$37	$Tanjina Arifin	$AE
+248	$16$11$2022	$9$28$42	$Md Mizanur Rahmam	$Pieon
+71	$16$11$2022	$9$28$47	$Md Ayub Ali Majumder	$Assistant Officer
+30	$16$11$2022	$9$29$0	$Ahmed Abdullah Noor	$"EE
+385	$16$11$2022	$9$29$5	$Moshiur Rahman	$AE
+353	$16$11$2022	$9$29$13	$Tarik Mahmud	$SDE D.D-1
+919	$16$11$2022	$9$29$16	$Md Mahmudul Hasan	$AE
+896	$16$11$2022	$9$29$31	$Salauddin	$XEN
+317	$16$11$2022	$9$29$36	$317	$
+137	$16$11$2022	$9$29$40	$Abu Nayeem Sarker	$System Engineer-MIS
+667	$16$11$2022	$9$29$55	$667	$
+375	$16$11$2022	$9$30$27	$Raja Md Ahsanul Haq	$Office /Computer
+316	$16$11$2022	$9$30$33	$Abul Kalam Azad	$Office/Computer opt.
+280	$16$11$2022	$9$30$41	$280	$Typist P.D-4
+390	$16$11$2022	$9$31$10	$390	$
+391	$16$11$2022	$9$31$21	$Md Safayet Jamil	$P. C -1 AE
+910	$16$11$2022	$9$31$25	$Jannatil Anar	$AE
+170	$16$11$2022	$9$32$7	$Md. Sirajul Islam	$Computer Operator
+62	$16$11$2022	$9$32$40	$Md Shafiul Azam	$Accountant
+84	$16$11$2022	$9$32$45	$Md Wahidul Islam	$Office /Computer op.
+7	$16$11$2022	$9$32$55	$Md. Khairul Islam	$Add. Chief Engineer
+174	$16$11$2022	$9$33$7	$Mohammad Monirul Islam	$SE - Maintenance Cir
+288	$16$11$2022	$9$33$13	$288	$
+338	$16$11$2022	$9$35$6	$Mohammad Amir Hossain	$UDA
+895	$16$11$2022	$9$35$33	$Md Sajjadul Rahman	$AE
+348	$16$11$2022	$9$35$38	$Topon Kumar Ray	$Designer-D.D-1
+19	$16$11$2022	$9$36$11	$Md. Shakhawat Hossain	$"SE
+51	$16$11$2022	$9$36$21	$Debasish Roy	$AE
+128	$16$11$2022	$9$36$47	$128	$
+17	$16$11$2022	$9$37$32	$Md.Shahidul Alam	$"ACE
+148	$16$11$2022	$9$38$20	$Khadiza Khanom	$P.A-Enq
+54	$16$11$2022	$9$38$28	$Dewan Shamsun Nahar	$SAE
+272	$16$11$2022	$9$38$53	$272	$
+229	$16$11$2022	$9$39$9	$Noor -E-Kawnaine	$XEN D.D-1
+400	$16$11$2022	$9$39$24	$400	$
+66	$16$11$2022	$9$39$49	$Md. Tofazzal Hossain	$Cash
+939	$16$11$2022	$9$40$12	$Saimun Hossain	$XEN
+350	$16$11$2022	$9$40$17	$Sakur Yawadud Sashin	$Designer-D.D-1
+299	$16$11$2022	$9$40$58	$Bishawjid Kumar Ray	$office/Compt.-O&M
+595	$16$11$2022	$9$41$4	$Md Shahjahan Ali	$Office/computer OPT
+633	$16$11$2022	$9$41$9	$Uttam Ghosh	$Office Asst.
+289	$16$11$2022	$9$41$58	$289	$
+596	$16$11$2022	$9$42$12	$Md Shopon	$Cleaner
+243	$16$11$2022	$9$42$21	$Kalen Chandra Ray	$Office Assistant
+156	$16$11$2022	$9$42$33	$Hosnera Khatun	$Higher Asst.
+726	$16$11$2022	$9$44$13	$Samiya Sultana	$XEN-Development
+882	$16$11$2022	$9$44$34	$Md Nasir Uddin Khan	$XEN
+639	$16$11$2022	$9$44$40	$Fahmida Bari	$XEN P.C-1
+367	$16$11$2022	$9$46$28	$Soniya akter	$O.A-D.D-1
+534	$16$11$2022	$9$47$46	$Nabila Nasrin	$SDE- MIS
+584	$16$11$2022	$9$49$45	$584	$SDE P.C-1
+883	$16$11$2022	$9$50$0	$Md Mostafizur Rahman	$XEN
+547	$16$11$2022	$9$50$12	$547	$SAE P.D-3
+158	$16$11$2022	$9$50$42	$Fahmia Begum	$Higher Asst.
+658	$16$11$2022	$9$51$13	$Md Iqbal Bhuiyan	$Higher Asst.
+366	$16$11$2022	$9$51$24	$Mahinur Nessa	$SAE-D.D-1
+483	$16$11$2022	$9$51$53	$483	$SAE P.D-3
+115	$16$11$2022	$9$52$2	$115	$
+567	$16$11$2022	$9$54$19	$Md Shohidul Haq	$UDA
+393	$16$11$2022	$9$54$48	$Hasnat Sabrina	$XEN P.D-5
+74	$16$11$2022	$9$57$9	$Md Abu Sayed	$Computer Operator
+759	$16$11$2022	$9$58$21	$Shakibur Rahman	$Ansar
+652	$16$11$2022	$9$58$35	$652	$
+213	$16$11$2022	$9$59$0	$213	$
+509	$16$11$2022	$10$0$20	$Md Forad Mia	$Office Assistant
+322	$16$11$2022	$10$0$36	$Md Imran Hossain	$Computer opt. P.D-1
+363	$16$11$2022	$10$0$59	$Md Rafiq	$O.A-D.D-1
+271	$16$11$2022	$10$2$40	$271	$
+109	$16$11$2022	$10$2$48	$Sotabdi Lal Chandra	$Programmer-MIS
+401	$16$11$2022	$10$3$25	$Md Younus Bhuiya	$AE- P.D -5
+563	$16$11$2022	$10$3$56	$Rajib Kanti Biwas	$SDE- BDU- 1
+704	$16$11$2022	$10$4$51	$Mahmuda Akter	$Typeset
+225	$16$11$2022	$10$6$34	$225	$
+670	$16$11$2022	$10$6$48	$670	$PA
+185	$16$11$2022	$10$7$46	$Tashlima Akther	$Computer Tyeiest
+61	$16$11$2022	$10$8$8	$61	$
+261	$16$11$2022	$10$8$41	$Md Mohiuddin	$UDA
+44	$16$11$2022	$10$8$48	$Md. Abdul Kalam	$SE
+184	$16$11$2022	$10$9$38	$Sufiya Akther	$Higher Assistant
+499	$16$11$2022	$10$10$15	$Sudip Sarkar	$SDE-D.D-2
+522	$16$11$2022	$10$10$46	$Golam Mostofa	$AE
+80	$16$11$2022	$10$12$30	$Shahinur Begum	$Office Assistant
+540	$16$11$2022	$10$12$39	$Md Amir Hossain	$UDA
+57	$16$11$2022	$10$13$32	$Md. Ruhul Amin	$High - assistant
+897	$16$11$2022	$10$15$29	$897	$Xen
+545	$16$11$2022	$10$16$2	$545	$
+526	$16$11$2022	$9$49$19	$526	$
+585	$16$11$2022	$9$49$25	$585	$
+698	$16$11$2022	$9$50$20	$Md Ashlam Khan	$SAE
+420	$16$11$2022	$9$51$59	$Md Hafizur Rahman	$P. C -1 SAE
+14	$16$11$2022	$9$53$4	$Muhmmad Mahfuzul Alam	$
+942	$16$11$2022	$9$56$9	$Md Rezaul Karim	$Driver
+47	$16$11$2022	$9$57$50	$Md Amanullah	$Photocopy Operator
+894	$16$11$2022	$9$59$26	$Mofijur Islam	$AE
+222	$16$11$2022	$10$1$19	$Zannat Ara	$UDA
+864	$16$11$2022	$10$3$21	$Md Hasan	$Driver
+421	$16$11$2022	$10$4$6	$Aklima Akter	$Office Ass. P.D-5
+368	$16$11$2022	$10$4$13	$368	$
+284	$16$11$2022	$10$4$48	$284	$
+484	$16$11$2022	$10$5$32	$Kazi Romana Eshrat	$Computer Opt. D.D-1
+48	$16$11$2022	$10$6$10	$Md. Mynuddin	$Librarian
+659	$16$11$2022	$10$7$30	$Tania Akter	$Office/Computer Type
+505	$16$11$2022	$10$7$37	$Abu Saleh Mohammad Firoz	$XEN P.D-1
+487	$16$11$2022	$10$11$28	$Md Yawashir Rahman	$UDA
+470	$16$11$2022	$10$11$59	$Md. Moniruzzaman	$P. C -1 SAE
+621	$16$11$2022	$10$14$55	$Nasim Uddin Sarker	$Office Assistant
+553	$16$11$2022	$10$17$43	$553	$
+571	$16$11$2022	$10$18$12	$571	$
+77	$16$11$2022	$10$19$28	$Md Dulal Miah	$Office Assistant
+9	$16$11$2022	$10$19$43	$Mohammad Abdul Kaiyoum	$SE - MIS
+647	$16$11$2022	$10$19$57	$647	$O.A P.C-1
+262	$16$11$2022	$10$20$27	$Farzana Akter	$UDA
+241	$16$11$2022	$10$21$55	$Shanaj Akther	$Account Assistant
+573	$16$11$2022	$10$22$55	$Ibne Azad Nur Ferdous	$UDA
+761	$16$11$2022	$10$23$22	$Shahadat Hossain	$Ansar
+413	$16$11$2022	$10$24$24	$Abu Bakkar Siddique	$work assistant
+807	$16$11$2022	$10$24$47	$Sheikh Mizanur Rahman	$SE-Architecture
+648	$16$11$2022	$10$26$42	$648	$
+460	$16$11$2022	$10$29$8	$Md Mahiuddhin Ahmed	$UDA
+349	$16$11$2022	$10$29$20	$Md Tofajjal Hossain	$Driver-D.D-1
+32	$16$11$2022	$10$30$50	$Nandita Rani Shaha	$"SE
+662	$16$11$2022	$10$33$30	$Rashad	$Driver
+232	$16$11$2022	$10$34$33	$232	$
+312	$16$11$2022	$10$36$7	$Rohima Begum	$Typest.-Est-4
+238	$16$11$2022	$10$38$19	$Rumana Sultana	$Office Assistant
+923	$16$11$2022	$10$38$59	$Md Juyel	$Driver
+157	$16$11$2022	$10$42$32	$Md. Rofikul Islam	$Guard
+870	$16$11$2022	$10$42$53	$Md Adiluzzaman Vhuiya	$Computer Opatator
+424	$16$11$2022	$10$44$48	$Mrs. Nargis Akter	$Office Ass. P.D-5
+757	$16$11$2022	$10$45$24	$Din Islam	$Ansar
+307	$16$11$2022	$10$45$57	$307	$
+55	$16$11$2022	$10$46$31	$Mohammad Ekramul Haque	$Law-Deputy Secretary
+876	$16$11$2022	$10$46$59	$Firazul Islam	$
+556	$16$11$2022	$10$47$24	$Roksana akter	$Office Asst.
+665	$16$11$2022	$10$50$20	$665	$AE P.C-2
+433	$16$11$2022	$10$53$4	$Mahmuda Akter Jahan	$Private Assistant
+705	$16$11$2022	$10$55$35	$705	$
+722	$16$11$2022	$10$56$39	$Md Ayub Ali	$Xen
+319	$16$11$2022	$10$58$7	$319	$
+513	$16$11$2022	$11$0$36	$Md Monirul Islam	$Office/Computer OPT.
+332	$16$11$2022	$11$4$24	$Mahfuza Khatun	$Office/Computer
+331	$16$11$2022	$11$5$24	$Nigar Sultana Poly	$Office/Computer
+180	$16$11$2022	$11$5$47	$180	$
+544	$16$11$2022	$11$8$45	$A H M Moniruzzaman	$SAE
+330	$16$11$2022	$11$14$39	$Jannatul Ferdous	$Higher Ass.t
+871	$16$11$2022	$11$15$0	$Rajiya Sultana	$SDE
+668	$16$11$2022	$11$16$24	$Md Hanif	$Driver P.D-1
+215	$16$11$2022	$10$15$56	$215	$
+791	$16$11$2022	$10$18$34	$Md Forid	$O.A-MIS-1
+143	$16$11$2022	$10$19$40	$Mollah Salahuddin Ahmed	$SAE
+1	$16$11$2022	$10$21$32	$Mohammad Shamim Akter	$Chief Engineer
+751	$16$11$2022	$10$21$38	$Hafizur Rahman	$Ansar
+521	$16$11$2022	$10$24$14	$A K M Nurul Amin	$SDE
+471	$16$11$2022	$10$24$22	$Md Fauque Rahman Sheikh	$Office Asst.-Est-4
+255	$16$11$2022	$10$24$42	$Md Sohug	$Driver
+36	$16$11$2022	$10$30$16	$Aminur Rahman	$SE
+335	$16$11$2022	$10$30$49	$Md Habibur Rahman	$Office asst.
+714	$16$11$2022	$10$33$40	$Md Abdullah Al Mamun	$SAE-M.D
+811	$16$11$2022	$10$35$9	$Mainuddin Shikder	$Driver
+160	$16$11$2022	$10$35$16	$Afroza Khatun	$Office Asst.
+673	$16$11$2022	$10$35$27	$673	$AE P.C-2
+110	$16$11$2022	$10$35$40	$Sheikh Labib Hossain	$SAE- MIS
+702	$16$11$2022	$10$38$31	$Shahanaz Parvin	$Office/Computer Type
+324	$16$11$2022	$10$41$59	$Rejiya Akter	$Office Asst. P.D-1
+566	$16$11$2022	$10$44$30	$566	$
+520	$16$11$2022	$10$44$54	$520	$
+144	$16$11$2022	$10$46$12	$Md Makhsedul Rahman	$P.A/Computer
+239	$16$11$2022	$10$48$14	$A.F.M Riyz Uddin	$Office Assistant
+746	$16$11$2022	$10$51$29	$Md Imam Hossain	$Acc.Officer -Chief E
+167	$16$11$2022	$10$51$45	$Kaniz Fatema Munmun	$Account Assis.
+305	$16$11$2022	$10$52$47	$Foridul Alam Nayem	$Office Assistant
+130	$16$11$2022	$10$53$6	$Md Mizanur Rahman	$Office Assistant
+287	$16$11$2022	$10$56$50	$287	$
+416	$16$11$2022	$10$59$4	$Md Abdullah Al Mamun	$UDA
+203	$16$11$2022	$11$3$8	$Md Akmrun Jaman	$Stonographer
+848	$16$11$2022	$11$6$28	$Mohibul	$XEN-Mirpur
+793	$16$11$2022	$11$10$30	$Md Saidul Karim	$Office/Com-Circle-2
+503	$16$11$2022	$11$12$5	$Md Amir Hossain	$Driver
+597	$16$11$2022	$11$13$4	$Md Abdul Rahim Sarker	$Office/computer OPT
+686	$16$11$2022	$11$23$45	$Md Delowar Hossain	$
+630	$16$11$2022	$11$30$32	$Md Sahidul Islam	$Driver
+586	$16$11$2022	$11$32$53	$Md Shaiful Islam Sajib	$Office Assistant
+415	$16$11$2022	$11$54$39	$415	$O.A/COM P.C-2
+873	$16$11$2022	$11$55$39	$Md Mostofa	$Driver
+956	$16$11$2022	$11$55$53	$Md Abdur Rob	$Driver
+654	$16$11$2022	$11$59$21	$654	$
+935	$16$11$2022	$11$59$42	$Md Rubel Sarkar	$Office Assistant
+422	$16$11$2022	$12$0$12	$Soheli Nasrin	$Higher Ass. P.D-5
+623	$16$11$2022	$12$2$49	$Md Ahsan Habib Monju	$Office Assistant
+514	$16$11$2022	$12$5$4	$Md Jawadul Islam	$Assistant accountanc
+892	$16$11$2022	$12$8$11	$Md Kayser Shaik	$XEN
+754	$16$11$2022	$12$26$4	$Ariful Islam	$Ansar
+749	$16$11$2022	$12$29$7	$Md Tarajul Islam	$Ansar-PC
+352	$16$11$2022	$11$19$36	$Md Saiful Islam	$Designer-D.D-1
+461	$16$11$2022	$11$20$0	$Md Eliyas Robin	$AE D.D-1
+340	$16$11$2022	$11$20$21	$Sheikh Mizanur Rahman	$Office/Computer
+179	$16$11$2022	$11$26$26	$Faysal Rahman	$SAE-MIS
+165	$16$11$2022	$11$27$13	$Md Siddik Islam	$SAE
+218	$16$11$2022	$11$29$19	$218	$
+134	$16$11$2022	$11$31$5	$Shahana Alom	$SDE- MIS
+236	$16$11$2022	$11$36$21	$236	$SAE P.C-2
+930	$16$11$2022	$11$39$19	$Md Mofijul Islam	$Office Assistant
+455	$16$11$2022	$11$44$52	$Md Josim Uddin	$Office/Com. D.D-1
+121	$16$11$2022	$11$54$16	$Abul Fazal Jumman	$Driver
+542	$16$11$2022	$11$56$19	$Md Rabiul Alam	$UDA
+256	$16$11$2022	$12$3$56	$Md Nurul Haque	$Forash
+201	$16$11$2022	$12$4$12	$Fariba Halim Orin	$SDE P.D-1
+609	$16$11$2022	$12$6$0	$Kazi Joynal Abedin	$Office Assistant
+99	$16$11$2022	$12$10$38	$Md Shajahan	$Driver
+954	$16$11$2022	$12$25$12	$Mohasin Alom	$Ansar
+360	$16$11$2022	$12$49$36	$360	$
+453	$16$11$2022	$12$50$59	$Md Ersadul Haque	$Office Assistant
+24	$16$11$2022	$12$51$20	$Sati Nath Bassak	$SE
+920	$16$11$2022	$12$57$11	$MD Raquibul Hasan	$SDE
+418	$16$11$2022	$12$57$49	$Md Ali Akbor	$Driver
+679	$16$11$2022	$13$27$21	$Abu Ryhan Shohag	$Draftsmans
+932	$16$11$2022	$13$29$22	$Md Sohrab	$Driver
+881	$16$11$2022	$13$33$31	$881	$XEN
+465	$16$11$2022	$14$2$54	$Md Syead Ahamed	$Guard
+217	$16$11$2022	$14$3$44	$Md Nazim	$Driver
+951	$16$11$2022	$14$6$43	$Md Morsedul Alom	$Office Assistant
+632	$16$11$2022	$14$10$37	$Mamunur Rasid	$Computer Typist
+602	$16$11$2022	$14$10$41	$Md Abu Naser	$Treaser
+653	$16$11$2022	$14$43$50	$Md Mahbub ul Alam	$SAE
+948	$16$11$2022	$14$55$45	$Md Sazzat Hossen	$Office Assistant
+63	$16$11$2022	$15$9$22	$Md. Josim Uddin	$Higher Assistant
+865	$16$11$2022	$12$53$44	$Md Asadul Islam	$SAE
+663	$16$11$2022	$13$0$40	$663	$
+914	$16$11$2022	$13$7$40	$Ahsan Habib	$XEN-Savar Division
+808	$16$11$2022	$13$24$53	$Hassan Mahmud	$Software Eng.-MIS-1
+717	$16$11$2022	$13$27$49	$Salman	$Software Engineer
+603	$16$11$2022	$13$28$53	$Md Hossain Islam	$Computer Typist
+193	$16$11$2022	$13$35$32	$193	$
+565	$16$11$2022	$13$36$43	$565	$
+482	$16$11$2022	$13$58$30	$Naimur Rahman	$SDE BDU- 1
+407	$16$11$2022	$14$5$37	$Farzana Sarif	$SDE
+901	$16$11$2022	$14$49$54	$901	$
+517	$16$11$2022	$15$9$10	$Md Iqbal Hossen	$Driver
+836	$16$11$2022	$15$12$35	$Majarul Islam	$XEN
+412	$16$11$2022	$15$13$37	$Md Akter Hossain	$work assistant
+742	$16$11$2022	$15$18$37	$Madhob Chandra Sarkar	$O.A-EM D.D-1
+631	$16$11$2022	$15$31$12	$Shah Salauddin	$SDE
+797	$16$11$2022	$15$36$37	$Md Jamal Hossain	$Typer-Circle-2
+578	$16$11$2022	$15$37$29	$Md Mokhlesur Rahman	$Driver
+755	$17$11$2022	$6$4$33	$Motalib Hossain	$Ansar
+437	$17$11$2022	$6$38$49	$Honufa Begum	$Farash
+771	$17$11$2022	$6$42$25	$Md Tanvir Islam	$Cliner-S.D-5
+772	$17$11$2022	$6$48$44	$Bashir Ahmed	$Cliner-S.D-5
+769	$17$11$2022	$6$52$43	$Md Ruhul Amin	$Cliner-S.D-5
+768	$17$11$2022	$6$52$49	$Rabiul	$Cliner-S.D-5
+774	$17$11$2022	$6$55$35	$Md Shoriful	$Cliner-S.D-5
+386	$17$11$2022	$7$0$28	$Md Hasanuzzman	$Farash
+396	$17$11$2022	$7$0$47	$Sri krisno Lal	$Cleaner
+729	$17$11$2022	$7$2$22	$Md Shuvo	$O.A-D-5
+777	$17$11$2022	$7$2$47	$Md Shahadat 2	$Cliner-S.D-5
+379	$17$11$2022	$7$3$12	$Md Shajalal Biswas	$Farash
+776	$17$11$2022	$7$3$34	$Md Mojidul	$Cliner-S.D-5
+773	$17$11$2022	$7$3$42	$Md Shahadat	$Cliner-S.D-5
+489	$17$11$2022	$7$9$31	$Sri Sobash Chandra Das	$Cleaner
+394	$17$11$2022	$7$14$45	$Mrs Nargis Akter	$Mason
+444	$17$11$2022	$7$21$57	$Md Shohidul islam	$Mason
+378	$17$11$2022	$7$22$23	$Monoara Begum	$Farash
+448	$17$11$2022	$7$29$25	$Md Yousuf Hossain	$Farash
+538	$17$11$2022	$7$45$3	$Md Abu Bakkar Siddik	$Guard
+660	$17$11$2022	$7$50$3	$Jahangir Hossain	$Office Assistant
+459	$17$11$2022	$7$53$14	$Md Mizanur Rahman	$Office Assistant
+434	$17$11$2022	$7$55$41	$Md Abul Khayer	$Office Assistant
+913	$17$11$2022	$7$59$0	$Jibon	$CLEANER
+575	$17$11$2022	$7$59$58	$575	$
+721	$17$11$2022	$8$4$13	$Gate Pass	$Main Gate
+644	$17$11$2022	$8$6$41	$644	$Office/Computer Opt.
+532	$17$11$2022	$8$10$35	$532	$
+126	$17$11$2022	$8$12$4	$Md. Abdur Rahim	$Pieon
+410	$17$11$2022	$8$20$42	$410	$
+293	$17$11$2022	$8$23$44	$293	$
+428	$17$11$2022	$8$25$39	$Md Abdul Awal	$Guard
+181	$17$11$2022	$8$30$49	$181	$
+122	$17$11$2022	$8$31$17	$Mamun	$Office Assistant-MIS
+87	$17$11$2022	$8$31$57	$Md Al-Amin	$Office/Computer opt.
+13	$17$11$2022	$8$32$17	$Muhammad Moniruzzaman	$SE
+456	$17$11$2022	$8$33$14	$456	$
+600	$17$11$2022	$8$33$20	$600	$
+190	$17$11$2022	$8$34$55	$Md Hajbul Kabir	$Xen - Deisgn 4
+328	$17$11$2022	$8$36$38	$Md Sahalam	$Gardener
+166	$17$11$2022	$8$38$47	$Sumon KUmar Sarkar	$Office Assistant
+62	$17$11$2022	$8$42$11	$Md Shafiul Azam	$Accountant
+282	$17$11$2022	$8$42$37	$282	$
+116	$17$11$2022	$8$45$8	$Md Billal Miah	$Office Assistant
+175	$17$11$2022	$8$45$38	$Morioum Begum	$Office Assistant
+354	$17$11$2022	$8$45$45	$Md Emon Hossain	$Office Assistant-MIS
+146	$17$11$2022	$8$48$16	$Mohammad Samshul Huda	$Higher Assistant
+464	$17$11$2022	$8$48$52	$Anjuman Ara	$Office Assistant
+216	$17$11$2022	$8$49$8	$216	$
+249	$17$11$2022	$8$49$14	$Md Mahabub Alam	$Office Asst.-O&M
+419	$17$11$2022	$8$49$31	$419	$SAE P.D-4
+188	$17$11$2022	$8$49$34	$Md Fazlul Haq	$Driver
+425	$17$11$2022	$8$49$41	$Sukumar Shorma	$Office Ass. P.D-5
+226	$17$11$2022	$8$49$44	$Jahirul Islam	$Compuer Typiest
+278	$17$11$2022	$8$49$52	$278	$
+159	$17$11$2022	$8$50$4	$Nasrin Akter	$Office/computer
+88	$17$11$2022	$8$50$14	$Md Tajul Islam	$Higher-Assistant
+359	$17$11$2022	$8$50$21	$359	$
+384	$17$11$2022	$8$50$27	$384	$SAE P.D-4
+477	$17$11$2022	$8$50$47	$Laily Akter	$Office/Compt.-Est-4
+237	$17$11$2022	$8$51$1	$Rubel Hossain	$Gurad
+270	$17$11$2022	$8$51$14	$270	$
+220	$17$11$2022	$8$51$41	$Md Deloar Hossain	$Office/Compt. Est-1
+690	$17$11$2022	$8$51$51	$Md Yousuf Ali	$
+648	$17$11$2022	$8$52$26	$648	$
+240	$17$11$2022	$8$53$49	$Nargies Sultana	$Account Assistant
+85	$17$11$2022	$8$54$56	$Nasima Parvin	$Higher-Assistant
+246	$17$11$2022	$8$56$4	$246	$
+267	$17$11$2022	$8$56$25	$Md Imdadul Haque	$UDA
+388	$17$11$2022	$8$56$49	$Md Golam Khibriya	$Computer opt.
+593	$17$11$2022	$8$57$7	$593	$
+347	$17$11$2022	$8$58$23	$Ariful Haq	$Designer-D.D-1
+426	$17$11$2022	$8$59$6	$Munny Akter	$Office Assistant
+198	$17$11$2022	$9$0$32	$198	$
+435	$17$11$2022	$9$0$51	$Mohammad Ali	$SAE- P.D -5
+245	$17$11$2022	$9$0$56	$245	$SAE P.C-2
+645	$17$11$2022	$9$1$20	$Md Mahatab Hossen	$SAE
+675	$17$11$2022	$9$1$22	$675	$
+558	$17$11$2022	$9$1$56	$558	$
+570	$17$11$2022	$9$3$30	$570	$
+346	$17$11$2022	$9$3$35	$346	$
+405	$17$11$2022	$9$3$38	$405	$
+132	$17$11$2022	$9$4$45	$Anowara Begum	$Superintendent
+79	$17$11$2022	$9$4$55	$Abdul Malik Hossan	$Office Assistant
+131	$17$11$2022	$9$5$3	$Jobayer Ahmed	$Higher Assistant
+41	$17$11$2022	$9$5$14	$Kamnur Nahar	$SDE
+429	$17$11$2022	$9$5$20	$Md Anowar Hossain	$Office/Computer Opt.
+153	$17$11$2022	$9$5$36	$Jugol Chandra Rai	$Office Assistant
+311	$17$11$2022	$9$5$44	$Yasmin Akter	$Computer opt.
+141	$17$11$2022	$9$5$47	$Md Raju mIa	$Office /Computer
+195	$17$11$2022	$9$5$52	$195	$
+275	$17$11$2022	$9$6$1	$275	$
+463	$17$11$2022	$9$6$48	$Md Belal Hossain	$Superitendence
+285	$17$11$2022	$9$6$54	$Khandoker Khaironnaher	$UDA-Est-1
+219	$17$11$2022	$9$6$59	$Md Rafiqul Islam	$UDA-Est-1
+343	$17$11$2022	$9$7$9	$Sajjad Hossain	$Higher Asst.
+291	$17$11$2022	$9$7$16	$291	$SAE P.D-4
+314	$17$11$2022	$9$7$21	$Md Shofiul Alam	$Superitendence
+495	$17$11$2022	$9$7$26	$Md Mofijul Islam Sarkar	$superitendence
+329	$17$11$2022	$9$7$30	$Md Nazrul Islam	$Higher Ass. P.D-1
+409	$17$11$2022	$9$7$36	$Monowara Begum	$Labour
+539	$17$11$2022	$9$7$40	$Shalina Alam	$Office Asst.-Est-4
+451	$17$11$2022	$9$7$44	$451	$
+52	$17$11$2022	$9$7$50	$Md Belayet Hossain	$
+559	$17$11$2022	$9$8$22	$559	$
+590	$17$11$2022	$9$8$28	$590	$
+168	$17$11$2022	$9$8$46	$168	$Acc. Assist. P.D-3
+73	$17$11$2022	$9$8$54	$Gul Nahar	$Higher Assistant
+557	$17$11$2022	$9$9$29	$Md Aminul Islam	$Higher Asst.
+560	$17$11$2022	$9$9$39	$560	$
+162	$17$11$2022	$9$9$47	$162	$SDE P.D-3
+440	$17$11$2022	$9$9$51	$Nitayananda Shil	$Office/Computer
+781	$17$11$2022	$9$10$42	$Md Monir Hossain	$CCTV-EM-1
+872	$17$11$2022	$9$11$55	$Ferdos Ara Akter	$Computer Typest
+441	$17$11$2022	$9$12$14	$Mohammad Masrur Foteh	$SDE D.D-1
+515	$17$11$2022	$9$12$35	$Md Ariful Islam	$Office/Computer OPT.
+581	$17$11$2022	$9$13$39	$581	$
+135	$17$11$2022	$9$14$3	$Md Yeamin Hossain	$Photocopy Opt.
+363	$17$11$2022	$9$14$31	$Md Rafiq	$O.A-D.D-1
+513	$17$11$2022	$9$14$35	$Md Monirul Islam	$Office/Computer OPT.
+133	$17$11$2022	$9$15$53	$Farzana Begum	$Higher Assistant
+83	$17$11$2022	$9$15$58	$Md Forhad Hossain	$
+253	$17$11$2022	$9$16$5	$253	$Higher Asst.
+474	$17$11$2022	$9$16$13	$Md Belal Mia	$Superintendent-Est-4
+75	$17$11$2022	$9$16$19	$Md Motaleb Miazi	$Driver
+333	$17$11$2022	$9$16$24	$Azad Rahman	$Office/Computer
+472	$17$11$2022	$9$16$35	$Md Mahashin Mallik	$Office/Comt.-Est-4
+432	$17$11$2022	$9$16$57	$Md Rezaul Karim	$Pump Driver- POBP
+623	$17$11$2022	$9$18$34	$Md Ahsan Habib Monju	$Office Assistant
+313	$17$11$2022	$9$20$20	$Md Khairul Bashar	$Office Assistant
+177	$17$11$2022	$9$20$42	$177	$
+107	$17$11$2022	$9$21$38	$Kabir Hossan Mirdha	$Higher Assistant
+548	$17$11$2022	$9$22$31	$Md Atiyar Rahman	$Office/Computer
+423	$17$11$2022	$9$22$39	$Forida Yasmin	$Office Ass. P.D-5
+530	$17$11$2022	$9$23$32	$Md Aminur Rahman	$SAE
+403	$17$11$2022	$9$24$1	$Md Dulal Mia	$Labour
+528	$17$11$2022	$9$24$15	$528	$
+151	$17$11$2022	$9$24$39	$151	$XEN P.D-3
+572	$17$11$2022	$9$25$28	$Md Masud Patowary	$SAE
+206	$17$11$2022	$9$25$40	$Md. Taufiq Alam Siddique	$Executive Engineer (Inquiry cell)
+667	$17$11$2022	$9$27$0	$667	$
+264	$17$11$2022	$9$27$7	$Md Kitabul hossain	$Office Assistant
+30	$17$11$2022	$9$27$34	$Ahmed Abdullah Noor	$"EE
+711	$17$11$2022	$9$27$43	$Md Eliyas	$SDU-2 AE
+895	$17$11$2022	$9$27$49	$Md Sajjadul Rahman	$AE
+266	$17$11$2022	$9$27$54	$Md Hazrat Ali	$Office Assistant
+833	$17$11$2022	$9$28$8	$MD Emon Islam	$Driver
+582	$17$11$2022	$9$29$29	$Md Firoz Khan	$Office Asst.
+191	$17$11$2022	$9$29$53	$191	$
+488	$17$11$2022	$9$30$19	$Md Abul Kalam Azad	$Computer opt.
+483	$17$11$2022	$9$31$9	$483	$SAE P.D-3
+336	$17$11$2022	$9$31$29	$Md Liaqiat Ali	$Work assistant
+634	$17$11$2022	$9$32$10	$Taj Mia	$Driver
+524	$17$11$2022	$9$33$35	$524	$
+595	$17$11$2022	$9$33$53	$Md Shahjahan Ali	$Office/computer OPT
+152	$17$11$2022	$9$33$59	$152	$
+344	$17$11$2022	$9$34$34	$344	$
+785	$17$11$2022	$9$36$13	$Bhabesh Chandro Balo	$Computer.Op-UAP
+942	$17$11$2022	$9$36$34	$Md Rezaul Karim	$Driver
+373	$17$11$2022	$9$37$25	$Ashma Akter	$Office /Computer
+89	$17$11$2022	$9$37$31	$Md Anarul Islam	$superendent
+140	$17$11$2022	$9$37$59	$Zia Uddin Bhuiyan	$Computer OPt.
+148	$17$11$2022	$9$38$36	$Khadiza Khanom	$P.A-Enq
+577	$17$11$2022	$9$39$17	$Md Fahim Haq	$Office Asst.
+318	$17$11$2022	$9$39$21	$318	$
+516	$17$11$2022	$9$39$41	$Md Mahabul Alom	$Computer Operator
+171	$17$11$2022	$9$39$51	$171	$
+204	$17$11$2022	$9$40$3	$Anjuman Ara Vhuiya	$SDE
+712	$17$11$2022	$9$40$8	$Omar Mowaffok Jaighirdar	$DD-4 SD
+713	$17$11$2022	$9$40$15	$Md Sha Alam	$PPC-AE
+891	$17$11$2022	$9$40$22	$Asmaul Hosna	$AE
+710	$17$11$2022	$9$40$31	$Abdullah Al Sams	$DD-2 AE
+653	$17$11$2022	$9$41$14	$Md Mahbub ul Alam	$SAE
+473	$17$11$2022	$9$42$14	$Md Faridul Haque	$Office/Comt.-Est-4
+535	$17$11$2022	$9$42$44	$Md Rayhan	$SAE P.D - 1
+923	$17$11$2022	$9$42$54	$Md Juyel	$Driver
+369	$17$11$2022	$9$44$55	$369	$
+511	$17$11$2022	$9$45$3	$Md Al-Amin	$Draftsman -BDU-1
+893	$17$11$2022	$9$45$28	$Md Safiqur Rahman	$AE
+471	$17$11$2022	$9$46$55	$Md Fauque Rahman Sheikh	$Office Asst.-Est-4
+325	$17$11$2022	$9$48$26	$Dipok Kumar Mohonton	$Office Asst. P.D-1
+149	$17$11$2022	$9$49$39	$Md Abdur Razzak	$Security-Enq
+229	$17$11$2022	$9$49$44	$Noor -E-Kawnaine	$XEN D.D-1
+76	$17$11$2022	$9$50$27	$Md Sakil	$Office Assistant
+366	$17$11$2022	$9$51$6	$Mahinur Nessa	$SAE-D.D-1
+521	$17$11$2022	$9$51$53	$A K M Nurul Amin	$SDE
+607	$17$11$2022	$9$52$18	$Salma Begum	$Account assistant
+658	$17$11$2022	$9$52$54	$Md Iqbal Bhuiyan	$Higher Asst.
+421	$17$11$2022	$9$54$51	$Aklima Akter	$Office Ass. P.D-5
+393	$17$11$2022	$9$55$56	$Hasnat Sabrina	$XEN P.D-5
+389	$17$11$2022	$9$56$3	$Bibi Fatema	$Office Assistant
+115	$17$11$2022	$9$57$5	$115	$
+584	$17$11$2022	$9$57$23	$584	$SDE P.C-1
+17	$17$11$2022	$9$58$27	$Md.Shahidul Alam	$"ACE
+402	$17$11$2022	$10$0$38	$Md Rubel Hosssin	$Computer/Office
+726	$17$11$2022	$10$0$53	$Samiya Sultana	$XEN-Development
+722	$17$11$2022	$10$1$30	$Md Ayub Ali	$Xen
+78	$17$11$2022	$10$1$38	$Miznur Rahman	$PA
+185	$17$11$2022	$10$2$13	$Tashlima Akther	$Computer Tyeiest
+484	$17$11$2022	$10$4$10	$Kazi Romana Eshrat	$Computer Opt. D.D-1
+308	$17$11$2022	$10$4$27	$308	$
+322	$17$11$2022	$10$6$0	$Md Imran Hossain	$Computer opt. P.D-1
+806	$17$11$2022	$10$6$25	$S.M Golam Kibriya	$0.A-Circle-2
+576	$17$11$2022	$10$7$11	$Golejannat Akter	$Designner
+200	$17$11$2022	$10$11$10	$Md Atikul Islam	$AE
+342	$17$11$2022	$10$11$57	$Shahin Alam	$Office/Computer
+305	$17$11$2022	$6$32$5	$Foridul Alam Nayem	$Office Assistant
+765	$17$11$2022	$6$44$6	$Avdul Motaleb	$Supervisor.C-S.D-5
+592	$17$11$2022	$6$48$32	$Banu	$Cleaner
+766	$17$11$2022	$6$54$29	$Nazmul Haq	$Cliner-S.D-5
+944	$17$11$2022	$6$59$18	$Sri Arjun	$
+11	$17$11$2022	$7$20$7	$Dr.Md. Giasuddin Haider	$Add. Chief Engineer
+674	$17$11$2022	$7$33$11	$Sri Bisu lal	$Sweeper
+189	$17$11$2022	$7$38$47	$Md .Enayet Hossain	$Office Assistant
+496	$17$11$2022	$7$54$39	$Sri Endro Lal	$Sweeper
+750	$17$11$2022	$7$56$20	$Hasem Ali	$Ansar
+731	$17$11$2022	$8$2$22	$Md Mojidul Islam	$Software Eng.MIS-1
+392	$17$11$2022	$8$3$7	$Sri Mohon Lal	$Sweeper
+391	$17$11$2022	$8$6$8	$Md Safayet Jamil	$P. C -1 AE
+917	$17$11$2022	$8$6$11	$Md Ibahim Kholil	$
+104	$17$11$2022	$8$7$21	$Abdul Mannan	$Printer
+397	$17$11$2022	$8$14$20	$Sri Naraiyon	$Cleaner
+277	$17$11$2022	$8$21$46	$277	$Office Asst. P.D-4
+165	$17$11$2022	$8$21$54	$Md Siddik Islam	$SAE
+321	$17$11$2022	$8$22$10	$Md Mejnha Uddin	$Office Asst.-Est-4
+764	$17$11$2022	$8$23$50	$Md Mizanur Rahman	$Information E-Low of
+263	$17$11$2022	$8$23$56	$Salam Mia	$Computer Typist
+283	$17$11$2022	$8$26$18	$283	$
+209	$17$11$2022	$8$26$26	$209	$
+286	$17$11$2022	$8$27$56	$Abdullah Mohammad Jubaye	$XEN
+549	$17$11$2022	$8$39$13	$Farhana Rob	$XEN- POBP
+640	$17$11$2022	$8$40$22	$Uttom Kumar Saha	$Sr. Accountence
+67	$17$11$2022	$8$41$30	$Abul Kalam Azad	$SE
+351	$17$11$2022	$8$41$35	$Abdur Rahman	$Designer-D.D-1
+510	$17$11$2022	$8$42$27	$Sumon Chandra Roy	$Draftsman -BDU-1
+68	$17$11$2022	$8$43$24	$Md Abdul Rahim	$Higher Assistant
+145	$17$11$2022	$8$43$38	$Md Sha Alam	$Higher Asst.
+469	$17$11$2022	$8$44$48	$Mohammad Nasir Uddin	$P. C - 1 SAE
+715	$17$11$2022	$8$45$15	$Md Sohel	$DD-3 O.A
+589	$17$11$2022	$8$45$49	$589	$
+53	$17$11$2022	$8$47$56	$Md Abdul Bashed	$
+656	$17$11$2022	$8$48$5	$Md Nur Nobi	$Office Assistant
+70	$17$11$2022	$8$48$13	$Md Yousuf Ali Mollah	$Office Assistant
+372	$17$11$2022	$8$48$20	$Shanaz Parvin	$Computer Opt.
+187	$17$11$2022	$8$48$27	$Selina Akther	$Office Assistant
+931	$17$11$2022	$8$48$38	$Shahnaj Begum	$Office/computer OPT
+699	$17$11$2022	$8$48$49	$Md Mohi Uddin	$Higher Assistant
+480	$17$11$2022	$8$48$57	$Nazma Begum	$UDA
+25	$17$11$2022	$8$50$27	$Kazi Md. Firoz Hasan	$SE
+274	$17$11$2022	$8$51$1	$274	$
+235	$17$11$2022	$8$51$12	$MOhiuddin	$Office Assistant
+289	$17$11$2022	$8$51$42	$289	$
+371	$17$11$2022	$8$53$34	$Md Golam Morshed Delowar	$Superintendent
+164	$17$11$2022	$8$55$1	$Somrat Poddar	$Office Assistant
+552	$17$11$2022	$8$55$44	$552	$
+244	$17$11$2022	$8$57$6	$244	$
+302	$17$11$2022	$8$57$11	$Sayed Taufiq Ahmed	$e-GP Consultant-MIS
+376	$17$11$2022	$8$59$27	$376	$SDE P.D-4
+681	$17$11$2022	$8$59$39	$Ashiful Islam Vhuya	$SDE
+230	$17$11$2022	$9$0$51	$Nurun Nahar	$UDA-Est-1
+889	$17$11$2022	$9$1$24	$Md. Yousuf Khan	$Intern
+112	$17$11$2022	$9$1$48	$Md Nafiz Mahmud	$XEN- MIS
+224	$17$11$2022	$9$2$19	$224	$
+28	$17$11$2022	$9$2$24	$M Hasan Ibne Siraj	$Executive Engineer(Coordination)
+10	$17$11$2022	$9$3$13	$Md Shafiqul Islam	$Add. Chief Engineer
+382	$17$11$2022	$9$4$52	$382	$
+541	$17$11$2022	$9$6$2	$Md Dulal Hossain	$UDA
+227	$17$11$2022	$9$6$8	$Md Zamir Ali	$Office Asst.-Est-1
+377	$17$11$2022	$9$6$32	$Nigar Sultana	$Office Assistant
+520	$17$11$2022	$9$6$38	$520	$
+907	$17$11$2022	$9$6$42	$Joli Bormon	$AE
+5	$17$11$2022	$9$6$47	$Md. Khaled Hussain	$SE
+19	$17$11$2022	$9$6$57	$Md. Shakhawat Hossain	$"SE
+315	$17$11$2022	$9$7$2	$sheikh Harun Or Roshid	$UDA
+586	$17$11$2022	$9$7$5	$Md Shaiful Islam Sajib	$Office Assistant
+157	$17$11$2022	$9$7$15	$Md. Rofikul Islam	$Guard
+508	$17$11$2022	$9$7$20	$Ruma Rani Mandol	$Office Assistant
+443	$17$11$2022	$9$8$10	$Md Jalal Uddin	$Driver-POBP
+183	$17$11$2022	$9$8$16	$Md Tara Miya	$Office Assistant-MIS
+579	$17$11$2022	$9$8$21	$Md Fayjul Kabir	$P.A
+221	$17$11$2022	$9$8$25	$Md Sharif Ahamed	$UDA
+48	$17$11$2022	$9$8$30	$Md. Mynuddin	$Librarian
+236	$17$11$2022	$9$8$36	$236	$SAE P.C-2
+247	$17$11$2022	$9$9$4	$Mala Begum	$Office Assistant
+96	$17$11$2022	$9$9$44	$Sakila Islam	$XEN
+125	$17$11$2022	$9$9$57	$Md. Abdur Razzak Sakar	$Office Assistant
+192	$17$11$2022	$9$10$3	$192	$
+173	$17$11$2022	$9$10$14	$173	$Labour- P.C-1
+356	$17$11$2022	$9$10$41	$356	$SDE P.D-4
+730	$17$11$2022	$9$10$47	$Shaokat Barma	$Software Eng.MIS-1
+139	$17$11$2022	$9$10$55	$Mohammad Kobir Hossain	$Forash
+641	$17$11$2022	$9$12$35	$Md Nazrul Islam	$Office Asst. MIS
+265	$17$11$2022	$9$12$55	$Md Bahauddhin	$Printer
+288	$17$11$2022	$9$13$6	$288	$
+481	$17$11$2022	$9$14$22	$481	$
+86	$17$11$2022	$9$14$36	$Alo Akter	$Office Sayok
+550	$17$11$2022	$9$14$47	$550	$
+71	$17$11$2022	$9$14$54	$Md Ayub Ali Majumder	$Assistant Officer
+276	$17$11$2022	$9$15$0	$276	$
+154	$17$11$2022	$9$15$5	$154	$Office/Compt. P.D-3
+123	$17$11$2022	$9$15$10	$Md. Shahab uddin	$Office Assistant
+248	$17$11$2022	$9$15$20	$Md Mizanur Rahmam	$Pieon
+697	$17$11$2022	$9$16$10	$Md Faruk Hossain	$Office Assistant
+29	$17$11$2022	$9$16$55	$Md. Sanaullah	$XEN
+512	$17$11$2022	$9$17$5	$Amir Hossen	$UDA
+280	$17$11$2022	$9$17$32	$280	$Typist P.D-4
+596	$17$11$2022	$9$17$52	$Md Shopon	$Cleaner
+33	$17$11$2022	$9$18$47	$Md. Mahbub Morshed	$SE
+918	$17$11$2022	$9$19$4	$Asha Moni	$
+118	$17$11$2022	$9$19$21	$118	$
+172	$17$11$2022	$9$19$35	$Md Saiful Islam	$Driver
+214	$17$11$2022	$9$19$42	$214	$
+279	$17$11$2022	$9$20$23	$279	$Higher Asst. P.D-4
+719	$17$11$2022	$9$20$35	$Khairul Alam	$O.A-P.D-2
+911	$17$11$2022	$9$22$2	$Md Tarikul Hasan	$AE
+202	$17$11$2022	$9$22$7	$202	$
+533	$17$11$2022	$9$22$56	$533	$
+65	$17$11$2022	$9$23$11	$Sona Banu	$Photocopy Operator
+348	$17$11$2022	$9$24$19	$Topon Kumar Ray	$Designer-D.D-1
+273	$17$11$2022	$9$25$54	$273	$
+540	$17$11$2022	$9$26$2	$Md Amir Hossain	$UDA
+400	$17$11$2022	$9$28$33	$400	$
+767	$17$11$2022	$9$28$41	$Md Torikul islam	$Driver-Development
+211	$17$11$2022	$9$30$8	$Kazi Mashfiq Ahmed	$XEN
+574	$17$11$2022	$9$30$19	$574	$
+527	$17$11$2022	$9$30$36	$527	$
+438	$17$11$2022	$9$31$24	$Md Mamun Hasan	$Office Asst.-Est-4
+491	$17$11$2022	$9$31$30	$Md Masud Rana	$Guard
+74	$17$11$2022	$9$31$34	$Md Abu Sayed	$Computer Operator
+300	$17$11$2022	$9$31$46	$Shajahan	$Higher Assistant
+156	$17$11$2022	$9$32$7	$Hosnera Khatun	$Higher Asst.
+223	$17$11$2022	$9$32$12	$Md Asaduzzaman	$UDA-Est-1
+299	$17$11$2022	$9$32$47	$Bishawjid Kumar Ray	$office/Compt.-O&M
+272	$17$11$2022	$9$32$52	$272	$
+633	$17$11$2022	$9$33$7	$Uttam Ghosh	$Office Asst.
+411	$17$11$2022	$9$33$35	$Milon Mia	$SAE
+556	$17$11$2022	$9$33$51	$Roksana akter	$Office Asst.
+507	$17$11$2022	$9$33$57	$Toimur Rahman	$Draftsman
+208	$17$11$2022	$9$34$12	$Md Nurul Alam	$Office Assistant
+292	$17$11$2022	$9$36$19	$Md Basid Ujjman	$Superintendent
+196	$17$11$2022	$9$36$23	$196	$Office/Compt. P.C-1
+543	$17$11$2022	$9$36$45	$Md Mejbha Uddin	$Office/Computer Opt.
+84	$17$11$2022	$9$36$50	$Md Wahidul Islam	$Office /Computer op.
+663	$17$11$2022	$9$37$11	$663	$
+64	$17$11$2022	$9$37$48	$Shamsun Nahar	$Office/Computer Opt.
+184	$17$11$2022	$9$38$6	$Sufiya Akther	$Higher Assistant
+51	$17$11$2022	$9$38$12	$Debasish Roy	$AE
+161	$17$11$2022	$9$38$38	$161	$SDE P.D-3
+696	$17$11$2022	$9$39$0	$Tanjina Arifin	$AE
+260	$17$11$2022	$9$39$17	$Roksana Begum	$Office Assistant
+128	$17$11$2022	$9$39$55	$128	$
+569	$17$11$2022	$9$40$2	$569	$
+414	$17$11$2022	$9$40$23	$Mrs. Sufiya Sultana	$UDA
+242	$17$11$2022	$9$41$12	$Rowshanara Begum	$Higher Assistant
+54	$17$11$2022	$9$41$47	$Dewan Shamsun Nahar	$SAE
+182	$17$11$2022	$9$43$54	$Md. Shamim Hossain	$Designer
+134	$17$11$2022	$9$44$7	$Shahana Alom	$SDE- MIS
+365	$17$11$2022	$9$44$22	$Topon Kumar	$SAE D.D-1
+350	$17$11$2022	$9$45$32	$Sakur Yawadud Sashin	$Designer-D.D-1
+562	$17$11$2022	$9$45$43	$Md Saiful Islam	$SAE
+367	$17$11$2022	$9$45$49	$Soniya akter	$O.A-D.D-1
+281	$17$11$2022	$9$46$4	$281	$Office/Compt.P.D-4
+295	$17$11$2022	$9$47$19	$Runia Sultana	$Account.
+728	$17$11$2022	$9$48$29	$Anupoma Roy	$S.D.U-1
+170	$17$11$2022	$9$49$1	$Md. Sirajul Islam	$Computer Operator
+374	$17$11$2022	$9$49$59	$Salma akter	$SAE-D.D-2
+66	$17$11$2022	$9$51$1	$Md. Tofazzal Hossain	$Cash
+271	$17$11$2022	$9$51$8	$271	$
+534	$17$11$2022	$9$52$52	$Nabila Nasrin	$SDE- MIS
+243	$17$11$2022	$9$52$57	$Kalen Chandra Ray	$Office Assistant
+119	$17$11$2022	$9$53$5	$119	$
+9	$17$11$2022	$9$54$51	$Mohammad Abdul Kaiyoum	$SE - MIS
+109	$17$11$2022	$9$56$15	$Sotabdi Lal Chandra	$Programmer-MIS
+98	$17$11$2022	$9$57$6	$Md Enamul Haq	$Office/Computer
+547	$17$11$2022	$9$57$10	$547	$SAE P.D-3
+670	$17$11$2022	$9$57$36	$670	$PA
+35	$17$11$2022	$9$59$54	$Md. Sarwar	$SE
+470	$17$11$2022	$10$1$22	$Md. Moniruzzaman	$P. C -1 SAE
+487	$17$11$2022	$10$3$49	$Md Yawashir Rahman	$UDA
+544	$17$11$2022	$10$3$57	$A H M Moniruzzaman	$SAE
+57	$17$11$2022	$10$4$40	$Md. Ruhul Amin	$High - assistant
+368	$17$11$2022	$10$5$2	$368	$
+929	$17$11$2022	$10$5$53	$Sohel Mahmud	$XEN
+450	$17$11$2022	$10$6$22	$450	$
+673	$17$11$2022	$10$6$48	$673	$AE P.C-2
+36	$17$11$2022	$10$7$28	$Aminur Rahman	$SE
+420	$17$11$2022	$10$7$58	$Md Hafizur Rahman	$P. C -1 SAE
+338	$17$11$2022	$10$8$17	$Mohammad Amir Hossain	$UDA
+571	$17$11$2022	$10$8$21	$571	$
+169	$17$11$2022	$10$8$32	$169	$SAE P.D-3
+894	$17$11$2022	$10$8$48	$Mofijur Islam	$AE
+578	$17$11$2022	$10$9$9	$Md Mokhlesur Rahman	$Driver
+290	$17$11$2022	$10$9$36	$Md Sabin Mia	$Office/Computer
+3	$17$11$2022	$10$11$14	$Ashraful Haque	$Add. Chief Engineer
+851	$17$11$2022	$10$11$17	$Md Sohag	$Office Assistant
+160	$17$11$2022	$10$11$23	$Afroza Khatun	$Office Asst.
+261	$17$11$2022	$10$12$38	$Md Mohiuddin	$UDA
+692	$17$11$2022	$10$12$46	$Md Alauddin	$
+791	$17$11$2022	$10$12$58	$Md Forid	$O.A-MIS-1
+896	$17$11$2022	$10$14$36	$Salauddin	$XEN
+158	$17$11$2022	$10$14$50	$Fahmia Begum	$Higher Asst.
+401	$17$11$2022	$10$15$17	$Md Younus Bhuiya	$AE- P.D -5
+928	$17$11$2022	$10$17$6	$Md Rabbi Mia	$Driver
+537	$17$11$2022	$10$17$15	$537	$
+312	$17$11$2022	$10$19$37	$Rohima Begum	$Typest.-Est-4
+124	$17$11$2022	$10$20$51	$Md Rakibul Islam	$Driver - MIS 2
+883	$17$11$2022	$10$21$11	$Md Mostafizur Rahman	$XEN
+935	$17$11$2022	$10$22$5	$Md Rubel Sarkar	$Office Assistant
+80	$17$11$2022	$10$13$25	$Shahinur Begum	$Office Assistant
+7	$17$11$2022	$10$15$36	$Md. Khairul Islam	$Add. Chief Engineer
+143	$17$11$2022	$10$16$2	$Mollah Salahuddin Ahmed	$SAE
+647	$17$11$2022	$10$18$48	$647	$O.A P.C-1
+665	$17$11$2022	$10$22$16	$665	$AE P.C-2
+330	$17$11$2022	$10$23$19	$Jannatul Ferdous	$Higher Ass.t
+526	$17$11$2022	$10$23$30	$526	$
+337	$17$11$2022	$10$23$43	$Md Dulal Mia	$Gardener
+957	$17$11$2022	$10$23$51	$Abdul Hamid Siddiki	$Driver
+1	$17$11$2022	$10$24$37	$Mohammad Shamim Akter	$Chief Engineer
+222	$17$11$2022	$10$25$27	$Zannat Ara	$UDA
+751	$17$11$2022	$10$25$54	$Hafizur Rahman	$Ansar
+262	$17$11$2022	$10$26$47	$Farzana Akter	$UDA
+250	$17$11$2022	$10$27$50	$Shahida Khanom	$Computer/Office
+387	$17$11$2022	$10$33$38	$Muhammad Riyed Hossain	$P.C - 1 (SAE)
+349	$17$11$2022	$10$33$57	$Md Tofajjal Hossain	$Driver-D.D-1
+652	$17$11$2022	$10$35$51	$652	$
+32	$17$11$2022	$10$38$37	$Nandita Rani Shaha	$"SE
+241	$17$11$2022	$10$39$3	$Shanaj Akther	$Account Assistant
+238	$17$11$2022	$10$40$39	$Rumana Sultana	$Office Assistant
+930	$17$11$2022	$10$40$48	$Md Mofijul Islam	$Office Assistant
+453	$17$11$2022	$10$43$57	$Md Ersadul Haque	$Office Assistant
+455	$17$11$2022	$10$47$30	$Md Josim Uddin	$Office/Com. D.D-1
+522	$17$11$2022	$10$48$50	$Golam Mostofa	$AE
+207	$17$11$2022	$10$49$27	$207	$
+901	$17$11$2022	$10$49$38	$901	$
+897	$17$11$2022	$10$52$46	$897	$Xen
+167	$17$11$2022	$10$55$59	$Kaniz Fatema Munmun	$Account Assis.
+822	$17$11$2022	$10$56$10	$Md Shohidul Islam	$Administrative Offic
+757	$17$11$2022	$10$24$45	$Din Islam	$Ansar
+77	$17$11$2022	$10$29$20	$Md Dulal Miah	$Office Assistant
+545	$17$11$2022	$10$31$56	$545	$
+239	$17$11$2022	$10$32$13	$A.F.M Riyz Uddin	$Office Assistant
+702	$17$11$2022	$10$33$0	$Shahanaz Parvin	$Office/Computer Type
+339	$17$11$2022	$10$34$25	$Munni Akter	$Office Assistant
+370	$17$11$2022	$10$35$4	$Sayed Mustafizur Rahman	$Higher Asst.
+324	$17$11$2022	$10$35$26	$Rejiya Akter	$Office Asst. P.D-1
+870	$17$11$2022	$10$35$42	$Md Adiluzzaman Vhuiya	$Computer Opatator
+433	$17$11$2022	$10$37$54	$Mahmuda Akter Jahan	$Private Assistant
+416	$17$11$2022	$10$39$33	$Md Abdullah Al Mamun	$UDA
+782	$17$11$2022	$10$45$50	$Md JosimUddin Vhuiya	$VTA-EM-1
+332	$17$11$2022	$10$48$58	$Mahfuza Khatun	$Office/Computer
+714	$17$11$2022	$10$50$5	$Md Abdullah Al Mamun	$SAE-M.D
+335	$17$11$2022	$10$55$13	$Md Habibur Rahman	$Office asst.
+296	$17$11$2022	$10$55$47	$Sheikh Sakhawat Hossain	$Office Assistant
+55	$17$11$2022	$10$57$3	$Mohammad Ekramul Haque	$Law-Deputy Secretary
+180	$17$11$2022	$10$58$46	$180	$
+661	$17$11$2022	$11$0$29	$661	$
+193	$17$11$2022	$11$1$4	$193	$
+203	$17$11$2022	$10$58$32	$Md Akmrun Jaman	$Stonographer
+733	$17$11$2022	$11$3$29	$Shahana Akter	$Office Assistant
+284	$17$11$2022	$11$3$39	$284	$
+413	$17$11$2022	$11$23$34	$Abu Bakkar Siddique	$work assistant
+99	$17$11$2022	$11$26$48	$Md Shajahan	$Driver
+130	$17$11$2022	$11$29$58	$Md Mizanur Rahman	$Office Assistant
+407	$17$11$2022	$11$36$26	$Farzana Sarif	$SDE
+364	$17$11$2022	$11$37$7	$Fahmida Jubayer Mukta	$Office Asst.
+255	$17$11$2022	$11$39$2	$Md Sohug	$Driver
+717	$17$11$2022	$11$51$23	$Salman	$Software Engineer
+760	$17$11$2022	$11$51$27	$Md Sha Alam	$Ansar
+761	$17$11$2022	$11$51$41	$Shahadat Hossain	$Ansar
+837	$17$11$2022	$11$54$26	$Amina Katun	$Office Assistant
+398	$17$11$2022	$11$55$54	$Md Amir Hossain	$Cleaner
+793	$17$11$2022	$12$3$10	$Md Saidul Karim	$Office/Com-Circle-2
+360	$17$11$2022	$12$6$28	$360	$
+361	$17$11$2022	$12$19$3	$361	$SAE P.D-4
+865	$17$11$2022	$12$19$11	$Md Asadul Islam	$SAE
+82	$17$11$2022	$12$20$35	$Md Monir Hossain	$Office Assistant
+340	$17$11$2022	$12$26$27	$Sheikh Mizanur Rahman	$Office/Computer
+536	$17$11$2022	$12$42$15	$536	$
+844	$17$11$2022	$13$18$10	$Md Delowar Hossain	$Feroprinter
+659	$17$11$2022	$13$21$21	$Tania Akter	$Office/Computer Type
+375	$17$11$2022	$13$31$38	$Raja Md Ahsanul Haq	$Office /Computer
+840	$17$11$2022	$13$37$27	$Md Sujon	$Driver
+567	$17$11$2022	$13$37$44	$Md Shohidul Haq	$UDA
+418	$17$11$2022	$13$37$47	$Md Ali Akbor	$Driver
+632	$17$11$2022	$13$47$10	$Mamunur Rasid	$Computer Typist
+465	$17$11$2022	$13$49$21	$Md Syead Ahamed	$Guard
+705	$17$11$2022	$13$56$58	$705	$
+468	$17$11$2022	$13$59$31	$468	$
+892	$17$11$2022	$14$1$43	$Md Kayser Shaik	$XEN
+50	$17$11$2022	$14$1$54	$Md Jafor Ali	$Quard (Help Desk)
+951	$17$11$2022	$14$10$23	$Md Morsedul Alom	$Office Assistant
+523	$17$11$2022	$14$12$40	$Md Mominul Islam	$SAE
+945	$17$11$2022	$14$21$36	$Md Johir Uddhin	$Guard
+228	$17$11$2022	$11$9$41	$Nur Jahan Akter	$Office Asst. Est-1
+316	$17$11$2022	$11$12$33	$Abul Kalam Azad	$Office/Computer opt.
+114	$17$11$2022	$11$13$13	$Ainun Nahar Annie	$Executive Engineer(O & M)
+566	$17$11$2022	$11$15$58	$566	$
+61	$17$11$2022	$11$22$3	$61	$
+941	$17$11$2022	$11$23$8	$Md Sahidul Islam	$Driver
+352	$17$11$2022	$11$24$56	$Md Saiful Islam	$Designer-D.D-1
+63	$17$11$2022	$11$31$9	$Md. Josim Uddin	$Higher Assistant
+415	$17$11$2022	$11$33$2	$415	$O.A/COM P.C-2
+819	$17$11$2022	$11$45$9	$Md Shahinur Rahman	$Support Eng.MIS-1
+144	$17$11$2022	$11$51$26	$Md Makhsedul Rahman	$P.A/Computer
+954	$17$11$2022	$11$54$34	$Mohasin Alom	$Ansar
+862	$17$11$2022	$12$5$40	$Shipon Mia	$Office Assistant
+525	$17$11$2022	$12$13$36	$525	$
+176	$17$11$2022	$12$19$23	$176	$Driver P.C-1
+485	$17$11$2022	$12$36$2	$Mrs Nargis Parvin	$SAE - P.D - 1
+914	$17$11$2022	$13$15$19	$Ahsan Habib	$XEN-Savar Division
+479	$17$11$2022	$13$24$27	$Siddiqur Rahman	$Assist. Plamber
+462	$17$11$2022	$13$29$14	$Md Morshed Iqbal	$XEN-EM PL.D-2
+179	$17$11$2022	$13$29$22	$Faysal Rahman	$SAE-MIS
+808	$17$11$2022	$13$34$5	$Hassan Mahmud	$Software Eng.-MIS-1
+24	$17$11$2022	$13$35$42	$Sati Nath Bassak	$SE
+708	$17$11$2022	$13$57$40	$Joydev Chandra Roy	$Designer
+501	$17$11$2022	$14$32$59	$501	$
+823	$17$11$2022	$14$36$3	$823	$
+890	$17$11$2022	$9$16$3	$Fazhrul Islam Sadip	$Intern
+835	$17$11$2022	$9$23$31	$Md. Shiam Misbah	$Jr.Business Analyst

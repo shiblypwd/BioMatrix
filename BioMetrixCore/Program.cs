@@ -42,7 +42,6 @@ namespace BioMetrixCore
         public static List<UserEntry> uniqueEntrys = new List<UserEntry>();
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
-        //public static List<int> absentList = new List<int>();
 
 
 

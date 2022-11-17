@@ -1,6 +1,10 @@
 ﻿using BioMetrixCore.Utilities;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -10,6 +14,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
@@ -48,83 +53,141 @@ namespace BioMetrixCore
         public static List<int> listPresentIdInt = new List<int>();
         public static List<int> listFullId = new List<int>();
         Dictionary<int, string> smsDestination = null;
+        //Dictionary<string, List<int>> smsDestination2 = new Dictionary<string, List<int>>();
+        List<int> idList = new List<int>();
+
         AlphaSMS smsManager;
         static bool isMessagePrinted = false;
         public LocalSMS()
         {
-            smsManager = new AlphaSMS();
 
-            smsDestination = new Dictionary<int, string>()
+            string query = @"select destination_mbl_no, sourse_emp_id
+                            from dbo.sms_destinations 
+                            group by destination_mbl_no, sourse_emp_id";
+
+            DataTable table = new DataTable();
+            using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString))
+            using (var cmd = new SqlCommand(query, con))
+            using (var da = new SqlDataAdapter(cmd))
             {
-                {   1, "01628287273"},      //CE
-                {  17, "01628287273"},      //ACE Co.& Es.
-                { 546, "01628287273"},      //EE,MIS-1    
-                { 112, "01628287273"},      //EE,MIS-2    
-    
+                cmd.CommandType = CommandType.Text;
+                da.Fill(table);
 
-                //ACE (EST & Co)
-                {   19, "01819207128" },    // SE, Coordination
-                {   32, "01819207128" },    // SE, EST
+                //string tempKey = table.Rows[0].ItemArray[0].ToString();
+                smsDestination = new Dictionary<int, string>();
+                foreach (DataRow dataRow in table.Rows)
+                {
+                    int empId = Convert.ToInt32(dataRow.ItemArray[1]);
+                    if (!smsDestination.ContainsKey(empId))
+                         smsDestination.Add(empId, dataRow.ItemArray[0].ToString());
+                    //if (tempKey == dataRow.ItemArray[0].ToString())
+                    //{
+                    //    idList.Add(Convert.ToInt32(dataRow.ItemArray[1]));
+
+                    //}
+                    //else
+                    //{
+                    //    smsDestination2.Add(tempKey, idList);
+                    //    tempKey = dataRow.ItemArray[0].ToString();
+                    //    idList=new List<int>();
+                    //    idList.Add(Convert.ToInt32(dataRow.ItemArray[1]));
+
+
+                    //}
+
+
+                }
+                //smsDestination2.Add(tempKey, idList);
+
                 
-                //SE(Co.)
-                {  27, "01819207958" },   // Executive
-                {  28, "01819207958" },   // Executive
+                //foreach (var contents in smsDestination2.Keys)
+                //{
 
-                //SE(Est.)
-                {  30,  "01711386959"},    //EE, Establishment
-                {  114, "01711386959"},   //Executive
-                {  206, "01711386959"},   //Executive
+                //    foreach (var listMember in smsDestination2[contents])
+                //    {
+                //        Console.WriteLine("PhoneNumber : " + contents + "   Emp_ID :" + listMember);
+                //    }
+                //}
+                //Console.WriteLine("\n\n\n");
 
-                //SE (Development)
-
-
-                //ACE (Planning and Special Project)
-                { 5, "01712054178" }, //SE,pro.circle-1
-                { 393, "01712054178" },//SE,pro.circle-2
-                { 26, "01712054178" }, //SE,Design circle-1
-                { 33, "01712054178" }, //SE,Monitoring & Audit Circle
-                { 25, "01712054178" }, //SE,PECU Circle
-
-                //SE(pro. circle-1)
-                { 505, "01819133159" },//XEN,Project Division-1
-                { 286, "01819133159" },//XEN,Project Division-2
-
-                //SE(pro. circle-2)
-                { 151 ,"01552407402"}, //XEN,Project Division-3
+            }
+            
+            smsManager = new AlphaSMS();
+            
+            
 
 
-                //SE(Design circle-1)
-                {229 ,"01711185346" }, //XEN, Design Division-1
-                {703 ,"01711185346" }, //XEN, Design Division-2
-
-                //SE(Monitoring & Audit Circle)
-                { 500,"01714874169" },//XEN, Audit Division
-                { 194,"01714874169" },//XEN, Monitoring Division
-
-                //SE(PECU Circle)
-                {929,"01711469492" },//XEN,PECU Division
-
-                //ACE(E/M P&D Zone)
-                 { 211, "01711454577" }, //XEN, E/M P&D Zone
-                 { 234, "01711454577" }, //SDE, E/M P&D Zone
-                   
-                //EE(Co)
-                {41, "01711909542" }, //SDE 
-                {38, "01711909542" }, //SDE , (Co.)
-
-                //ACE (Dhaka PWD Zone)
-                {39,"01552401158" }, //SE, Dhaka PWD Circle-4
+            //smsDestination = new Dictionary<int, string>()
+            //{
+            //    {   1, "01628287273"},      //CE
+            //    {  17, "01628287273"},      //ACE Co.& Es.
+            //    { 546, "01628287273"},      //EE,MIS-1    
+            //    { 112, "01628287273"},      //EE,MIS-2    
 
 
-                 //XEN(E/M P&D Zone) 
-                 { 141, "01711083581" },
-                 { 164, "01711083581" },
-                 { 166, "01711083581" },
-                 { 135, "01711083581" },
-                 { 140, "01711083581" },
-                 { 235, "01711083581" },
+            //    //ACE (EST & Co)
+            //    {   19, "01819207128" },    // SE, Coordination
+            //    {   32, "01819207128" },    // SE, EST
 
-            };
+            //    //SE(Co.)
+            //    {  27, "01819207958" },   // Executive
+            //    {  28, "01819207958" },   // Executive
+
+            //    //SE(Est.)
+            //    {  30,  "01711386959"},    //EE, Establishment
+            //    {  114, "01711386959"},   //Executive
+            //    {  206, "01711386959"},   //Executive
+
+            //    //SE (Development)
+
+
+            //    //ACE (Planning and Special Project)
+            //    { 5, "01712054178" }, //SE,pro.circle-1
+            //    { 393, "01712054178" },//SE,pro.circle-2
+            //    { 26, "01712054178" }, //SE,Design circle-1
+            //    { 33, "01712054178" }, //SE,Monitoring & Audit Circle
+            //    { 25, "01712054178" }, //SE,PECU Circle
+
+            //    //SE(pro. circle-1)
+            //    { 505, "01819133159" },//XEN,Project Division-1
+            //    { 286, "01819133159" },//XEN,Project Division-2
+
+            //    //SE(pro. circle-2)
+            //    { 151 ,"01552407402"}, //XEN,Project Division-3
+
+
+            //    //SE(Design circle-1)
+            //    {229 ,"01711185346" }, //XEN, Design Division-1
+            //    {703 ,"01711185346" }, //XEN, Design Division-2
+
+            //    //SE(Monitoring & Audit Circle)
+            //    { 500,"01714874169" },//XEN, Audit Division
+            //    { 194,"01714874169" },//XEN, Monitoring Division
+
+            //    //SE(PECU Circle)
+            //    {929,"01711469492" },//XEN,PECU Division
+
+            //    //ACE(E/M P&D Zone)
+            //     { 211, "01711454577" }, //XEN, E/M P&D Zone
+            //     { 234, "01711454577" }, //SDE, E/M P&D Zone
+
+            //    //EE(Co)
+            //    {41, "01711909542" }, //SDE 
+            //    {38, "01711909542" }, //SDE , (Co.)
+
+            //    //ACE (Dhaka PWD Zone)
+            //    {39,"01552401158" }, //SE, Dhaka PWD Circle-4
+
+
+            //     //XEN(E/M P&D Zone) 
+            //     { 141, "01711083581" },
+            //     { 164, "01711083581" },
+            //     { 166, "01711083581" },
+            //     { 135, "01711083581" },
+            //     { 140, "01711083581" },
+            //     { 235, "01711083581" },
+
+            //};
         }
 
         public void processLocalSMS()
@@ -279,9 +342,9 @@ namespace BioMetrixCore
                     isMessagePrinted = true;
                     Console.WriteLine("\n[" + messageBody + "]\n\n");
                 }
-                                
+
                 Console.WriteLine("Notification:\t{2} #\t  {0}\t({1})   #   {3}", info.Name, info.Designation, info.Id, reportingOfficerMobileNumberStr);
-                
+
                 Thread.Sleep(waitingTimeAfterEachSMS);
 
                 return true;
@@ -289,6 +352,8 @@ namespace BioMetrixCore
 
             return false;
         }
+
+
 
         Dictionary<int, UserEntry> loadUserInfoFromFile()
         {
