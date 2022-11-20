@@ -2376,5 +2376,14 @@
 708	$17$11$2022	$13$57$40	$Joydev Chandra Roy	$Designer
 501	$17$11$2022	$14$32$59	$501	$
 823	$17$11$2022	$14$36$3	$823	$
-890	$17$11$2022	$9$16$3	$Fazhrul Islam Sadip	$Intern
 835	$17$11$2022	$9$23$31	$Md. Shiam Misbah	$Jr.Business Analyst
+754	$17$11$2022	$15$38$44	$Ariful Islam	$Ansar
+449	$17$11$2022	$15$57$46	$Md Abdur Rosid	$Farash
+662	$17$11$2022	$16$21$3	$Rashad	$Driver
+882	$17$11$2022	$16$30$7	$Md Nasir Uddin Khan	$XEN
+686	$17$11$2022	$14$42$40	$Md Delowar Hossain	$
+110	$17$11$2022	$15$4$32	$Sheikh Labib Hossain	$SAE- MIS
+256	$17$11$2022	$15$57$3	$Md Nurul Haque	$Forash
+921	$17$11$2022	$16$39$4	$Harun AR Rashid	$
+531	$17$11$2022	$16$52$31	$MD Jahural Haque	$Driver
+890	$17$11$2022	$9$16$3	$Fazhrul Islam Sadip	$Intern
